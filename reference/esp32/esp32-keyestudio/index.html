@@ -7317,12 +7317,14 @@
 <li>Note how the ESP32 GPIO pin numbers are used, and the Arduino pin locations are shown/commented.</li>
 </ul>
 <p>Add the following lines to your <code>config.h</code> and remove any existing <code>#define MOTOR_SHIELD_TYPE ...</code> line.</p>
-<p><code>#define EX8874_KEYES_ESP32 F("EX8874_KEYES_ESP32"),\</code>
-<code>new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 32/*A0*/, 1.52, 5000, 36 /*A4*/), \</code>
-<code>new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 33/*A1*/, 1.52, 5000, 39 /*A5*/)</code>
-<code>#define MOTOR_SHIELD_TYPE EX8874_KEYES_ESP32</code></p>
-<p><code>MotorDriver(int16_t power_pin, byte signal_pin, byte signal_pin2, int16_t brake_pin,</code>
-<code>byte current_pin, float senseFactor, unsigned int tripMilliamps, int16_t fault_pin);</code></p>
+<p><code>cpp
+  #define EX8874_KEYES_ESP32 F("EX8874_KEYES_ESP32"),\
+    new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 32/*A0*/, 1.52, 5000, 36 /*A4*/), \
+    new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 33/*A1*/, 1.52, 5000, 39 /*A5*/)
+    #define MOTOR_SHIELD_TYPE EX8874_KEYES_ESP32</code></p>
+<p><code>cpp
+  MotorDriver(int16_t power_pin, byte signal_pin, byte signal_pin2, int16_t brake_pin, 
+    byte current_pin, float senseFactor, unsigned int tripMilliamps, int16_t fault_pin);</code></p>
 <ul>
 <li>When one EX8874 motor shield is used with Keyestudio IOT ESP32 PLUS Development Board, the default EX8874 pins are used.  </li>
 </ul>
@@ -7389,7 +7391,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 1, 2026 08:41:14 UTC">May 1, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 1, 2026 08:46:13 UTC">May 1, 2026</span>
   </span>
 
     
