@@ -5999,7 +5999,7 @@
         <li class="md-nav__item">
   <a href="#keyestudio-iot-esp32-plus-development-board-vs-wemos-r1-d32" class="md-nav__link">
     <span class="md-ellipsis">
-      Keyestudio IOT ESP32 PLUS Development Board vs WeMos R1 D32
+      Keyestudio IOT ESP32 PLUS Development Board VS WeMos R1 D32
     </span>
   </a>
   
@@ -6011,30 +6011,6 @@
       Incorrect IOREF voltage
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Incorrect IOREF voltage">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#option-a-recommended" class="md-nav__link">
-    <span class="md-ellipsis">
-      Option A (Recommended)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#option-b-not-recommneded" class="md-nav__link">
-    <span class="md-ellipsis">
-      Option B (not recommneded)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -6068,6 +6044,21 @@
       Stacked EX8874
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Stacked EX8874">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stacked-ex8874-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stacked EX8874 Checklist
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -7172,7 +7163,7 @@
         <li class="md-nav__item">
   <a href="#keyestudio-iot-esp32-plus-development-board-vs-wemos-r1-d32" class="md-nav__link">
     <span class="md-ellipsis">
-      Keyestudio IOT ESP32 PLUS Development Board vs WeMos R1 D32
+      Keyestudio IOT ESP32 PLUS Development Board VS WeMos R1 D32
     </span>
   </a>
   
@@ -7184,30 +7175,6 @@
       Incorrect IOREF voltage
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Incorrect IOREF voltage">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#option-a-recommended" class="md-nav__link">
-    <span class="md-ellipsis">
-      Option A (Recommended)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#option-b-not-recommneded" class="md-nav__link">
-    <span class="md-ellipsis">
-      Option B (not recommneded)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -7242,6 +7209,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Stacked EX8874">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stacked-ex8874-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stacked EX8874 Checklist
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -7271,48 +7253,35 @@
 <ul>
 <li>Limited testing has been done with this board.</li>
 <li>Please report any anomalies when using the pins in the suggested custom motor defines.</li>
-<li>A custom motor define is required when using the Keyestudio IOT ESP32 PLUS Development board, as the pins are in different locations vs. the WeMos ESP32.</li>
+<li>A custom motor define is required when using the <strong>Keyestudio IOT ESP32 PLUS Development board</strong>, as the pins are in different locations <em>VS</em> the WeMos ESP32.</li>
+<li>Do not be fooled by the <code>V</code> pin on the I²C header block as it is 5V, and there is no onboard level shifting of the SDA SCL pins.</li>
 </ul>
-<h2 id="keyestudio-iot-esp32-plus-development-board-vs-wemos-r1-d32">Keyestudio IOT ESP32 PLUS Development Board <em>vs</em> WeMos R1 D32<a class="headerlink" href="#keyestudio-iot-esp32-plus-development-board-vs-wemos-r1-d32" title="Permanent link">&para;</a></h2>
+<h2 id="keyestudio-iot-esp32-plus-development-board-vs-wemos-r1-d32">Keyestudio IOT ESP32 PLUS Development Board <em>VS</em> WeMos R1 D32<a class="headerlink" href="#keyestudio-iot-esp32-plus-development-board-vs-wemos-r1-d32" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Fewer modifications are required.  </li>
+<li>Fewer modifications may be required.  </li>
 <li>WiFi does not need the resistor.  </li>
 <li>Pin locations A0, A1 can be used for current sensing.  </li>
 <li>The default pins can be used on EX8874.  </li>
 </ul>
 <h2 id="incorrect-ioref-voltage">Incorrect IOREF voltage<a class="headerlink" href="#incorrect-ioref-voltage" title="Permanent link">&para;</a></h2>
-<p>The IOREF GPOI is labeled a <code>5V</code> on the board.</p>
+<p>The IOREF pin is labeled a <code>5V</code> on the board.</p>
 <p><img alt="ACEBOTT IOREF" src="../../../_static/images/esp32/esp32-keyestudio-ioref.png" width="15%" /></p>
-<p>The IOREF voltage will not be correct. The ADC inputs will receive up to 5V when the IOREF pin is 5V wich will damage the board and likely destroy it.  As such it is vital that the modifications below are made.</p>
-<p><img align="right" alt="EX8874 IOREF" src="../../../_static/images/esp32/esp32-keyestudio-bent-pin.png" width="25%" /></p>
-<p><img align="right" alt="EX8874 IOREF" src="../../../_static/images/esp32/ioref-override.png" width="25%" /></p>
-<h3 id="option-a-recommended">Option A (Recommended)<a class="headerlink" href="#option-a-recommended" title="Permanent link">&para;</a></h3>
+<p>The IOREF voltage will not be correct for this board combination.</p>
+<p><span style="color:red">Warning:</span> The ADC inputs will receive up to 5V when the IOREF pin is 5V which will damage the board and likely destroy it. <strong><em>As such it is vital that the modifications below are made.</em></strong></p>
 <ul>
-<li>The prefered work-around for the incorrect 5V pin is to modify the EX8874, using the <strong>3V3 IOREF Override</strong> solder pad on the EX8874.</li>
 <li>
-<p>When using the 3V3 IOREF Override:</p>
-<ol>
-<li>Bend the IOREF pin out, <em>or</em></li>
-<li>Confirm that the trace connecting the 5v pad is completely cut. (The red line in the image.) Scratch it with a blade till there is no contact between the two pads and check with a multimeter. Then solder from the center pad to the 3.3v pad.</li>
-<li>or both the above to be really sure</li>
-</ol>
+<p>Option A: The preferable work-around to the incorrect 5V pin is to modify the EX8874, using the <code>3V3 IOREF Override</code> solder pad on the EX8874.</p>
+</li>
+<li>
+<p>Option B: The <code>IOREF</code> pin location has the 5V pin.  The pin on the EX8874 can be bent out, and the <code>IOREF</code> should be jumpered to <code>3V3</code> pin on the EX8874.</p>
 </li>
 </ul>
-<p>Double check that that you have it correct by checking wth a multimeter on the EX8874 before you connect it to the ES32:</p>
-<ul>
-<li>There should be an open circuit between the IOREF GPIO and the GND pin on the I2C pins</li>
-<li>There should be an open circuit between the other 5v GPIO (beside the two GND GPIOs) and the Vdd pin on the I2C pins</li>
-<li>There should be a closed circuit between the 3.3v GPIO and the Vdd pin on the I2C pins</li>
-</ul>
-<h3 id="option-b-not-recommneded">Option B (not recommneded)<a class="headerlink" href="#option-b-not-recommneded" title="Permanent link">&para;</a></h3>
-<ul>
-<li>The IOREF pin location is the 5V GPIO pin.  If the pin on the EX8874 is bent out, the IOREF could be jumpered to 3V3 pin on the EX8874.</li>
-</ul>
+<p>See the <a href="../ioref-incorrect-voltage-fix/">Incorrect IOREF voltage page</a> for details on how to correct the IOREF voltage for this board combination.</p>
 <hr />
 <h2 id="one-ex8874">One EX8874<a class="headerlink" href="#one-ex8874" title="Permanent link">&para;</a></h2>
 <p>Note:</p>
 <ul>
-<li>Keyestudio IOT ESP32 PLUS Development Board motor defines are not included in <code>MotorDrivers.h</code></li>
+<li><em>Keyestudio IOT ESP32 PLUS Development Board motor</em> defines are not included in <code>MotorDrivers.h</code></li>
 <li>Do not edit <code>MotorDrivers.h</code>; a custom motor define should be added in <code>config.h</code></li>
 <li>Note how the ESP32 GPIO pin numbers are used, and the Arduino pin locations are shown/commented.</li>
 </ul>
@@ -7370,6 +7339,106 @@
 </ul>
 <hr />
 <h2 id="stacked-ex8874">Stacked EX8874<a class="headerlink" href="#stacked-ex8874" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Reminder: No modifications are needed when installing EX8874 for 4 track outputs on EX-CSB1.</li>
+<li><strong>IOREF:</strong> The IOREF override is also needed for the top shield. See the <a href="../ioref-incorrect-voltage-fix/">Incorrect IOREF voltage page</a> for details.</li>
+<li>
+<p><strong>VIN:</strong> Refer to instructions on <a href="../../../products/ex-motorshield8874/ex-motorshield8874/#steps-to-stack">cutting the VIN trace and disabling the regulator</a> for the top shield.</p>
+</li>
+<li>
+<p>Stacking motor shields on Keystudio ESP32 requires<br />
+    a. use of solder pad for 8 alternate pins<br />
+    b. for Fault pins, bend A4 and A5 pins and jumper to the GPIO headers  </p>
+</li>
+</ul>
+<p>First EX8874</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">output</th>
+<th style="text-align: center;">Current<br/>Sense</th>
+<th style="text-align: center;">PWM<br/>Enable</th>
+<th style="text-align: center;">DIR<br/>Signal</th>
+<th style="text-align: center;">Brake</th>
+<th style="text-align: center;">Fault</th>
+<th style="text-align: center;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">32 pA0</td>
+<td style="text-align: center;">25 p3</td>
+<td style="text-align: center;">19 p12</td>
+<td style="text-align: center;">9 p9</td>
+<td style="text-align: center;">36 pA4</td>
+<td style="text-align: center;">Default pins</td>
+</tr>
+<tr>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">33 pA1</td>
+<td style="text-align: center;">23 p11</td>
+<td style="text-align: center;">18 p13</td>
+<td style="text-align: center;">8 p8</td>
+<td style="text-align: center;">39 pA8</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>Second EX8874</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">output</th>
+<th style="text-align: center;">Current<br/>Sense</th>
+<th style="text-align: center;">PWM<br/>Enable</th>
+<th style="text-align: center;">DIR<br/>Signal</th>
+<th style="text-align: center;">Brake</th>
+<th style="text-align: center;">Fault</th>
+<th style="text-align: center;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">34 pA2</td>
+<td style="text-align: center;">26 p2</td>
+<td style="text-align: center;">5 p10</td>
+<td style="text-align: center;">14 p7</td>
+<td style="text-align: center;"><span style="color:red">2 pA4</span></td>
+<td style="text-align: center;">use alternates for 8 pins</td>
+</tr>
+<tr>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">35 pA3</td>
+<td style="text-align: center;">16 p5</td>
+<td style="text-align: center;">17 p4</td>
+<td style="text-align: center;">27 p6</td>
+<td style="text-align: center;"><span style="color:red">4 pA5</span></td>
+<td style="text-align: center;"><span style="color:red">Bend A4,A5; odd jumpers</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>A custom motor define will be needed in <code>config.h</code></li>
+</ul>
+<p><code>cpp
+  #define EX8874X2_KEYES_ESP32 F("EX8874X2_KEYES_ESP32"), \  
+    new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 32/*A0*/, 1.52, 5000, 36/*A4*/), \  
+    new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 33/*A1*/, 1.52, 5000, 39/*A5*/), \  
+    new MotorDriver(26/* 2*/,  5/*10*/, UNUSED_PIN, 14/*7*/, 34/*A4*/, 1.52, 5000, 2 /*A4*/), \  
+    new MotorDriver(16/* 5*/, 17/* 4*/, UNUSED_PIN, 27/*6*/, 35/*A5*/, 1.52, 5000, 4 /*A5*/)  
+  #define MOTOR_SHIELD_TYPE EX8874X2_KEYES_ESP32</code></p>
+<h3 id="stacked-ex8874-checklist">Stacked EX8874 Checklist<a class="headerlink" href="#stacked-ex8874-checklist" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Cover the barrel connector on Keyestudio IOT ESP32 PLUS Development Board, as VIN power will be provided by one EX8874  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> IOREF Override set to 3v3 on both EX8874 boards  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Confirm that IOREF pin is bent or trace is cut</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> VIN trace cut and regulator disabled on top EX8874  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Alternate pins enabled via solder pads  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Jumpers added for GPIO 2 and 4  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Add the custom motor define - 6 lines in config.h  </li>
+</ul>
 <p><mark>TODO</mark></p>
 
 
@@ -7391,7 +7460,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 1, 2026 08:46:13 UTC">May 1, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 2, 2026 01:18:11 UTC">May 2, 2026</span>
   </span>
 
     
