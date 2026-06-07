@@ -7101,6 +7101,16 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#command-variations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Variations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command Variations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#defining-and-deleting-turnoutspoints" class="md-nav__link">
     <span class="md-ellipsis">
       Defining and deleting Turnouts/Points
@@ -7115,6 +7125,11 @@
       Managing Turnouts/Points
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -7209,9 +7224,10 @@
 <h2 id="command">Command<a class="headerlink" href="#command" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>T</code></li>
+<li><code>J T</code></li>
 </ul>
-<p>Command Variations</p>
-<h3 id="defining-and-deleting-turnoutspoints">Defining and deleting Turnouts/Points<a class="headerlink" href="#defining-and-deleting-turnoutspoints" title="Permanent link">&para;</a></h3>
+<h3 id="command-variations">Command Variations<a class="headerlink" href="#command-variations" title="Permanent link">&para;</a></h3>
+<h4 id="defining-and-deleting-turnoutspoints">Defining and deleting Turnouts/Points<a class="headerlink" href="#defining-and-deleting-turnoutspoints" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>&lt;T «id» DCC «addr» «subadd»&gt;</code> Create DCC turnout/point</li>
 <li><code>&lt;T «id» DCC «»&gt;</code> Create DCC turnout/point</li>
@@ -7219,14 +7235,13 @@
 <li><code>&lt;T «id» VPIN «vpin»&gt;</code> Create pin turnout/point</li>
 <li><code>&lt;T «id»&gt;</code> Delete turnout/point</li>
 </ul>
-<h3 id="managing-turnoutspoints">Managing Turnouts/Points<a class="headerlink" href="#managing-turnoutspoints" title="Permanent link">&para;</a></h3>
+<h4 id="managing-turnoutspoints">Managing Turnouts/Points<a class="headerlink" href="#managing-turnoutspoints" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>&lt;T&gt;</code> List all turnouts/points<br/> Equivalent to <code>&lt;J T&gt;</code></li>
 <li><code>&lt;J T&gt;</code> List all turnouts/points<br/> Equivalent to <code>&lt;T&gt;</code></li>
 <li><code>&lt;T «id» X&gt;</code> List turnout/point details<br/> Equivalent to <code>&lt;J T «id»&gt;</code></li>
 <li><code>&lt;J T «id»&gt;</code> List turnout/point details<br/> Equivalent to <code>&lt;T «id» X&gt;</code></li>
 <li><code>&lt;T «id» «state»&gt;</code> Throw/Close turnout/point</li>
-<li><code>&lt;T «id» «value»&gt;</code> Close (value=0) ot Throw turnout/point</li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>
@@ -7237,21 +7252,22 @@
 <li><strong>vpin</strong> vpin to which the servo is attached</li>
 <li><strong>closedValue</strong> the PWM value corresponding to the servo position for CLOSED state, normally in the range <code>102</code> to <code>490</code></li>
 <li><strong>thrownValue</strong> the PWM value corresponding to the servo position for THROWN state, normally in the range <code>102</code> to <code>490</code></li>
-<li><strong>value</strong></li>
 <li><strong>state</strong> one of<ul>
 <li><code>1</code> = Throw</li>
 <li><code>T</code> = Throw  (not seen in responses)</li>
 <li><code>0</code> = Close</li>
 <li><code>C</code> = Close  (not seen in responses)</li>
-<li><code>X</code> = eXamine  (not seen in responses)</li>
+<li><code>X</code> = eXamine. Equivalent to using <code>&lt;J T «id»&gt;</code></li>
 </ul>
 </li>
-<li><strong>profile</strong>  one of
-    • <code>0</code> = Instant
-    • <code>1</code> = Fast (0.5 sec)
-    • <code>2</code> = Medium (1 sec)
-    • <code>3</code> = Slow (2 sec)
-    • <code>4</code> = Bounce (subject to revision)</li>
+<li><strong>Profile</strong> one of:<ul>
+<li><code>Instant</code></li>
+<li><code>Fast</code></li>
+<li><code>Medium</code></li>
+<li><code>Slow</code></li>
+<li><code>Bounce</code></li>
+</ul>
+</li>
 </ul>
 <h2 id="response"><em>Response</em><a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
 <p>The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.</p>
@@ -7263,13 +7279,17 @@
 <li><code>&lt;T «id» VPIN «vpin»&gt;</code></li>
 <li><code>&lt;T «id»&gt;</code></li>
 </ul>
-<p>There is no response.</p>
+<p>The response will be:</p>
+<ul>
+<li>(successful): <code>&lt;O&gt;</code></li>
+<li>(fail): <code>&lt;X&gt;</code></li>
+</ul>
 <p><strong>For</strong> <code>&lt;T&gt;</code> and <code>&lt;J T&gt;</code> <strong>the response/broadcast is:</strong></p>
 <p>Repeated for each defined Turnout/Point:</p>
 <ul>
-<li>Response: <code>&lt;H «id» «state»&gt;</code></li>
-<li>Response (fail): N/A</li>
-<li>Response (no defined turnouts/points): <code>X</code><ul>
+<li>(successful): <code>&lt;H «id» «state»&gt;</code></li>
+<li>(fail): N/A</li>
+<li>(no defined turnouts/points): <code>X</code><ul>
 <li><strong>id</strong> - The numeric ID (0-32767) of the turnout/point to control.</li>
 <li><strong>state:</strong> one of<ul>
 <li>1 = Thrown,</li>
@@ -7287,6 +7307,14 @@
 <li>(LCN): <code>&lt;H «id» LCN «state»&gt;</code></li>
 <li>(fail/no such turnout/point): <code>&lt;X&gt;</code><ul>
 <li><strong>id</strong> - The numeric ID (0-32767) of the turnout/point to control.</li>
+<li><strong>profile</strong>  one of<ul>
+<li><code>0</code> = Instant</li>
+<li><code>1</code> = Fast (0.5 sec)</li>
+<li><code>2</code> = Medium (1 sec)</li>
+<li><code>3</code> = Slow (2 sec)</li>
+<li><code>4</code> = Bounce (subject to revision)</li>
+</ul>
+</li>
 <li><strong>state</strong> one of<ul>
 <li><code>1</code> = Thrown,</li>
 <li><code>0</code> = Closed</li>
@@ -7309,22 +7337,21 @@
 </li>
 <li>(fail): <code>&lt;X&gt;</code></li>
 </ul>
-<p><strong>For</strong> <code>&lt;T «id» «value»&gt;</code> <strong>the response/broadcast is:</strong></p>
-<p><mark>TODO</mark></p>
 <p><strong>For</strong> <code>&lt;T «id»&gt;</code> <strong>the response/broadcast is:</strong></p>
+<p>The response will be:</p>
 <ul>
-<li><em>Response:</em>
-  Successful: <code>&lt;O&gt;</code>
-  Fail: <code>&lt;X&gt;</code>  (Id does not exist)<ul>
+<li>(successful): <code>&lt;O&gt;</code></li>
+<li>(fail): <code>&lt;X&gt;</code>  (Id does not exist)<ul>
 <li><strong>id</strong> - The numeric ID (0-32767) of the turnout/point to control.</li>
 </ul>
 </li>
 </ul>
 <h2 id="notes"><em>Notes</em><a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
-<li><em>Servos are not supported on the minimal HAL (Uno or Nano target).</em></li>
+<li><em>Servos are not supported on the minimal HAL (Uno or Nano target).</em><br/><br/></li>
 <li>The active and inactive positions are defined in terms of the PWM parameter (0-4095 corresponds to 0-100% PWM). The limits for an SG90 servo are about 102 to 490. The standard range of 1ms to 2ms pulses correspond to values 205 to 409.
-Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec) and 4=Bounce (subject to revision).</li>
+Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec) and 4=Bounce (subject to revision).<br/><br/></li>
+<li>vpin is the pin number of the output to be controlled by the turnout/point object. <br/>For Arduino output pins, this is the same as the digital pin number. For servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module, 116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.<br/><br/></li>
 <li><code>&lt;T «id» «vpin «closedValue» «thrownValue&gt;</code> is a depricated version of the command. It is not documented here.</li>
 <li><code>&lt;T «id» «addr» «subadd»&gt;</code> is a depricated version of the command. It is not documented here.</li>
 </ul>
@@ -7335,7 +7362,7 @@ Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=
 <ul>
 <li>
 <p><em>Example:</em> <code>&lt;T 23 DCC 5 0&gt;</code></p>
-<p><em>Example:</em> You have a turnout/point on your main line going to warehouse industry. The turnout/point is controlled by an accessory decoder with a address of 123 and is wired to output 3. You want it to have the ID of 10. You would send the following command to the CommandStation: <code>&lt;T 10 DCC 123 3&gt;</code></p>
+<p><em>Example:</em> You have a turnout/point on your main line going to warehouse industry. The turnout/point is controlled by an accessory decoder with a address of 123 and is wired to output 3. You want it to have the ID of 10. You would send the following command to the CommandStation: <br/><code>&lt;T 10 DCC 123 3&gt;</code></p>
 <p>This Command means:</p>
 <ul>
 <li><strong>T</strong> = (Upper case T) Define a turnout/point</li>
@@ -7375,7 +7402,7 @@ Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 7, 2026 22:52:05 UTC">June 7, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 7, 2026 23:18:14 UTC">June 7, 2026</span>
   </span>
 
     
