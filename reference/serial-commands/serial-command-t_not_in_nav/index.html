@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-e_not_in_nav/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-t_not_in_nav/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title><= [«trackletter» «mode»] [«id»]> Request or Configure Track Manager _equals _equals_track_MAIN - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title><t «loco» [«tSpeed» «direction»]>- Request or set loco status - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#trackletter-mode-id-request-or-configure-track-manager-_equals-_equals_track_main" class="md-skip">
+        <a href="#t-loco-tspeed-direction-request-or-set-loco-status" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              &lt;= [«trackletter» «mode»] [«id»]&gt; Request or Configure Track Manager _equals _equals_track_MAIN
+              &lt;t «loco» [«tSpeed» «direction»]&gt;- Request or set loco status
             
           </span>
         </div>
@@ -7180,68 +7180,62 @@
   
 
 
-<h1 id="trackletter-mode-id-request-or-configure-track-manager-_equals-_equals_track_main"><code>&lt;= [«trackletter» «mode»] [«id»]&gt;</code><br/> Request or Configure Track Manager <span style="display:none;">_equals _equals_track_MAIN</span><a class="headerlink" href="#trackletter-mode-id-request-or-configure-track-manager-_equals-_equals_track_main" title="Permanent link">&para;</a></h1>
-<p>Serial command to request infomation about the mode of all tracks or alter the mode of a track.</p>
+<h1 id="t-loco-tspeed-direction-request-or-set-loco-status"><code>&lt;t «loco» [«tSpeed» «direction»]&gt;</code><br/>- Request or set loco status<a class="headerlink" href="#t-loco-tspeed-direction-request-or-set-loco-status" title="Permanent link">&para;</a></h1>
+<p>Serial command to request information about a loco or set its speed and direction</p>
 <h2 id="command">Command<a class="headerlink" href="#command" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>=</code></li>
+<li><code>t</code></li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p><strong>trackletter:</strong> <em>optional</em></p>
-<ul>
-<li>blank = Request the current Track Manager configuration</li>
-<li><code>A</code> through <code>H</code> representing one of the outputs of the/a motor shield.</li>
-</ul>
+<p><strong>loco:</strong> <em>Required</em> <br/> Loco to request information about a loco or set its speed and direction</p>
 </li>
 <li>
-<p><strong>mode:</strong> <em>required if track letter supplied.</em> One of:</p>
+<p>blank or <strong>tSpeed</strong> and <strong>direction</strong></p>
 <ul>
-<li><code>MAIN</code></li>
-<li><code>MAIN_INV</code></li>
-<li><code>MAIN_AUTO</code> <BR/> Deprecated alias of <code>AUTO</code> but only when preceeded by a sperate <code>MAIN</code> command.</li>
-<li><code>PROG</code></li>
-<li><code>DC</code></li>
-<li><code>DC_INV</code> = DC reversed polarity</li>
-<li><code>DCX</code> = DC reversed polarity (same as DC_INV) <br/>With special alias of <code>DCX</code> for <code>DC_INV</code></li>
-<li><code>NONE</code></li>
+<li>if blank = Request a deliberate update on the loco speed/functions</li>
+<li>if <strong>tSpeed</strong> and <strong>direction</strong> are supplied<ul>
+<li><strong>tSpeed</strong> = <code>0</code>-<code>127</code> or <code>-1</code> for Emergency Stop</li>
+<li><strong>direction</strong> = one of:<ul>
+<li><code>1</code> = forward</li>
+<li><code>0</code> = reverse</li>
 </ul>
 </li>
-<li>
-<p><strong>id:</strong> the cab (loco) ID. <em>Required when specifying DC or DC_INV / DCX</em></p>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 <h2 id="response"><em>Response</em><a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
 <p>The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.</p>
-<p>(for each track/channel) <br/><code>&lt;= [«trackletter» «state»] [«cab»]&gt;</code></p>
+<p><code>&lt;response&gt;</code></p>
 <ul>
-<li><code>=</code> = the 'message identifer'</li>
-<li><strong>trackletter:</strong> <code>A</code>-<code>H</code></li>
-<li><strong>state:</strong> <code>PROG</code>, <code>MAIN</code>, <code>MAIN_INV</code>, <code>MAIN A</code>, <code>DC</code>, <code>DCX</code>, <code>NONE</code></li>
-<li><strong>id:</strong> cab(loco) equivalent to a fake DCC Address for DC and DCX only</li>
+<li><strong>paramater:</strong> explanation of the parameter</li>
 </ul>
+<p><l «loco» «reg» «speedByte» «functMap»></p>
+<div class="language-text highlight"><pre><span></span><code>* **loco** = DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder (this has to be already programmed in the decoder)
+* **reg** not used. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit. &gt; * **speedbyte**:** Speed in DCC speedstep format
+    * reverse - ``2``-``127`` = speed ``1``-``126``, ``0`` = stop, ``1`` = Emergency Stop
+    * forward - ``130``-``255`` = speed ``1``-``126``, ``128`` = stop, ``129`` = Emergency Stop
+* **FunctMap** individual function states represented by the bits in a byte
+</code></pre></div>
 <h2 id="notes"><em>Notes</em><a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Whenever a track's mode is changed, track power is automatically turned off on that track.</li>
-<li>Since only one channel can be <code>PROG</code>, changing a second channel to <code>PROG</code>, will force the other to <code>NONE</code></li>
-<li>The response to <code>DC_INV</code> is <code>DCX</code></li>
-<li>The response to <code>DCC_MAIN</code> is <code>MAIN A</code></li>
+<li>The speedbyte value is different to the speed sent, as it is an encoded (1,7 bits) byte.</li>
+<li>This starts a reminder process for any external updates to the loco's status.
+<code>&lt;t «reg» «loco» «speed» «direction»&gt;</code> is a depricated version of the command. It is not documented here.</li>
 </ul>
 <hr />
 <h2 id="examples"><em>Examples</em><a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<p><a href="?_equals">Also search for !</a></p>
+<p><a href="?_T">Also search for !</a></p>
 <h3 id="examples-commands"><em>Examples Commands</em><a class="headerlink" href="#examples-commands" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Request track status <code>&lt;=&gt;</code></li>
-<li>Set track A to DC with address 10 <code>&lt;= A 10&gt;</code></li>
-<li>TBA</li>
+<li><mark>TODO</mark></li>
 </ul>
 <h3 id="example-responses"><em>Example Responses:</em><a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Response/broadcast to track status for a default EX-CommandStation<br/> <code>&lt;= A MAIN&gt;</code><br/><code>&lt;= B PROG&gt;</code></li>
-<li>Response/broadcast to setting track <em>A</em> to <em>DC</em> with address 10<BR/><code>&lt;= A 10&gt;</code><br/><code>&lt;= B PROG&gt;</code><br/><code>&lt;p1 A&gt;</code><br/><code>&lt;p0 B&gt;</code></li>
-<li>TBA</li>
+<li><mark>TODO</mark></li>
 </ul>
 
 
