@@ -645,14 +645,6 @@
          <lastmod>2026-06-07</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/exrail-commands/exrail-1-0-command_not_in_nav/</loc>
-         <lastmod>2026-06-07</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/exrail-commands/exrail-equals-command_not_in_nav/</loc>
-         <lastmod>2026-06-07</lastmod>
-    </url>
-    <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/hardware/motorboards/l298-shields/</loc>
          <lastmod>2026-06-07</lastmod>
     </url>
@@ -694,6 +686,22 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/nucleo/nucleo-power/</loc>
+         <lastmod>2026-06-07</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-1-0_not_in_nav/</loc>
+         <lastmod>2026-06-07</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-J-R_not_in_nav/</loc>
+         <lastmod>2026-06-07</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-e_not_in_nav/</loc>
+         <lastmod>2026-06-07</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/serial-commands/shell_serial-command-xyz_not_in_nav/</loc>
          <lastmod>2026-06-07</lastmod>
     </url>
     <url>
