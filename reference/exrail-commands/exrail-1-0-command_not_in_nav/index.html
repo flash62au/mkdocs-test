@@ -23,7 +23,7 @@
     
     
       
-        <title><= [«trackletter» «mode»] [«id»]> - Request or Configure Track Manager - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title><«onOff» «track»> - Turn track power on or off - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#trackletter-mode-id-request-or-configure-track-manager" class="md-skip">
+        <a href="#onoff-track-turn-track-power-on-or-off" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              &lt;= [«trackletter» «mode»] [«id»]&gt; - Request or Configure Track Manager
+              &lt;«onOff» «track»&gt; - Turn track power on or off
             
           </span>
         </div>
@@ -7180,59 +7180,75 @@
   
 
 
-<h1 id="trackletter-mode-id-request-or-configure-track-manager"><code>&lt;= [«trackletter» «mode»] [«id»]&gt;</code> - Request or Configure Track Manager<a class="headerlink" href="#trackletter-mode-id-request-or-configure-track-manager" title="Permanent link">&para;</a></h1>
+<h1 id="onoff-track-turn-track-power-on-or-off"><code>&lt;«onOff» «track»&gt;</code> - Turn track power on or off<a class="headerlink" href="#onoff-track-turn-track-power-on-or-off" title="Permanent link">&para;</a></h1>
 <p>Serial command to turn power on or off to all or specific tracks.  Also allows joining the MAIN and PROG tracks together.</p>
 <h2 id="command">Command<a class="headerlink" href="#command" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>=</strong></li>
+<li>
+<p><strong>onOff:</strong> one of</p>
+<ul>
+<li>1 = on</li>
+<li>0 = off</li>
+</ul>
+</li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p><strong>trackletter:</strong> <em>optional</em></p>
+<p><strong>track:</strong> one of</p>
 <ul>
-<li>blank = Request the current Track Manager configuration</li>
-<li><code>A</code> through <code>H</code> representing one of the outputs of the/a |motor shield|.</li>
-</ul>
+<li>blank = Both Main and Programming Tracks (All tracks)</li>
+<li>MAIN = Main track</li>
+<li>PROG = Programming Track</li>
+<li>
+<p>JOIN = Join the Main and Programming tracks temporarily <br/>Note: While <code>&lt;1 JOIN&gt;</code> is valid, <code>&lt;0 JOIN&gt;</code> is not.</p>
 </li>
 <li>
-<p><strong>mode:</strong> <em>required if track letter supplied.</em> One of:</p>
-<ul>
-<li><code>MAIN</code></li>
-<li><code>MAIN_INV</code></li>
-<li><code>MAIN_AUTO</code> <BR/> Deprecated alias of <code>AUTO</code> but only when preceeded by a sperate <code>MAIN</code> command.</li>
-<li><code>PROG</code></li>
-<li><code>DC</code></li>
-<li><code>DC_INV</code> = DC reversed polarity</li>
-<li><code>DCX</code> = DC reversed polarity (same as DC_INV) <br/>With special alias of <code>DCX</code> for <code>DC_INV</code></li>
-<li><code>NONE</code></li>
-</ul>
+<p>A = Track A</p>
 </li>
-<li>
-<p><strong>id:</strong> the cab (loco) ID. <em>Required when specifying DC or DC_INV / DCX</em></p>
+<li>B = Track B</li>
+<li>C = Track C</li>
+<li>D = Track D</li>
+<li>E = Track E</li>
+<li>F = Track F</li>
+<li>G = Track G</li>
+<li>H = Track H</li>
+</ul>
 </li>
 </ul>
 <h2 id="response"><em>Response</em><a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
-<p>The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.</p>
-<p>(for each track/channel that has changed) <code>&lt;= trackletter state cab&gt;</code></p>
+<p>The following is not a direct response, but rather a broadcast that will be triggered as a result of any power state changes.</p>
 <ul>
-<li><strong>trackletter:</strong> A-H |BR|</li>
-<li><strong>state:</strong> 'PROG', 'MAIN', 'MAIN_INV', 'MAIN A', 'DC', 'DCX', 'NONE' |BR|</li>
-<li><strong>cab:</strong> cab(loco) equivalent to a fake DCC Address for DC and DCX onl</li>
+<li><code>&lt;p«OnOFF» «track»&gt;</code></li>
 </ul>
 <h2 id="notes"><em>Notes</em><a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Whenever a track's mode is changed, track power is automatically turned off on that track.</li>
-<li>Since only one channel can be PROG, changing a second channel to PROG, will force the other to <code>NONE</code></li>
-<li>The response to <code>DC_INV</code> is <code>DCX</code></li>
-<li>The response to <code>DCC_MAIN</code> is <code>MAIN A</code></li>
+<li>
+<p>The use of the JOIN function allows the DCC signal for the MAIN track to also be sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output.</p>
+<p>However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work.</p>
+</li>
+<li>
+<p>If you drive onto a programming track that is "joined" and enter a programming command, the track will automatically switch to a programming track. If you use a compatible Throttle, you can then send the join command again and drive off the track onto the rest of your layout!</p>
+<ul>
+<li>In some split motor shield hardware configurations JOIN will not be able to work.</li>
+<li>While <code>&lt;1 JOIN&gt;</code> is valid, <code>&lt;0 JOIN&gt;</code> is not.</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h2 id="examples"><em>Examples</em><a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <h3 id="examples-commands"><em>Examples Commands</em><a class="headerlink" href="#examples-commands" title="Permanent link">&para;</a></h3>
-<p>TBA</p>
+<ul>
+<li>all tracks off: <code>&lt;0&gt;</code></li>
+<li>all tracks on <code>&lt;1&gt;</code></li>
+<li>join: <code>&lt;1 JOIN&gt;</code></li>
+</ul>
 <h3 id="example-responses"><em>Example Responses:</em><a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
-<p>TBA</p>
+<ul>
+<li>all tracks off: <code>&lt;p0&gt;</code></li>
+<li>all tracks on <code>&lt;p1&gt;</code></li>
+<li>join: <code>&lt;p1 JOIN&gt;</code></li>
+</ul>
 
 
 
@@ -7253,7 +7269,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 7, 2026 00:33:08 UTC">June 7, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 7, 2026 00:37:30 UTC">June 7, 2026</span>
   </span>
 
     
