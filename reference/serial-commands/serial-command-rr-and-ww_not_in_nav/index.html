@@ -7091,13 +7091,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#command" class="md-nav__link">
+  <a href="#commands" class="md-nav__link">
     <span class="md-ellipsis">
-      Command
+      Commands
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Command">
+    <nav class="md-nav" aria-label="Commands">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -7245,7 +7245,7 @@
 
 <h1 id="r-cvlocoidconsist-r-loco-cv-w-lococv-valueloco-cv-bitvalue-bitconsist-loco-reverse-v-cv-valuecv-bit-bitvalue-b-cv-bit-bitvalue-b-loco-cv-bit-bitvalue-read-and-write-cvs"><code>&lt;R [«cv»|LOCOID|CONSIST]&gt;</code> <br/><code>&lt;r «loco» «cv»&gt;</code> <br/><code>&lt;W [«loco»]|[«cv» «value»]|[«loco» «cv» «bitValue» «bit»]|[CONSIST «loco» [REVERSE]]&gt;</code> <br/><code>&lt;V [«cv» «value»]|[«cv» «bit» «bitValue»]&gt;</code> <br/><code>&lt;B «cv» «bit» «bitValue»&gt;</code> <br/><code>&lt;b «loco» «cv» «bit» «bitValue»&gt;</code> <br/>Read and write CVs<a class="headerlink" href="#r-cvlocoidconsist-r-loco-cv-w-lococv-valueloco-cv-bitvalue-bitconsist-loco-reverse-v-cv-valuecv-bit-bitvalue-b-cv-bit-bitvalue-b-loco-cv-bit-bitvalue-read-and-write-cvs" title="Permanent link">&para;</a></h1>
 <p>Serial command to Read and write CVs on the PROG track (Service mode) or on the MAIN track (PoM).</p>
-<h2 id="command">Command<a class="headerlink" href="#command" title="Permanent link">&para;</a></h2>
+<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>R</code> <br/></li>
 <li><code>r</code> <br/></li>
@@ -7262,7 +7262,7 @@
 <li><code>&lt;R «cv»&gt;</code> Read cv</li>
 <li><code>&lt;R LOCOID&gt;</code> read loco id (ignoring consist) on PROG track</li>
 <li><code>&lt;R CONSIST&gt;</code> read consist id on PROG track</li>
-<li><code>&lt;r «loco» «cv»&gt;</code> POM read cv on main track - <span style="color:red">Requires RailCom</span></li>
+<li><code>&lt;r «loco» «cv»&gt;</code> PoM read cv on MAIN track - <span style="color:red">Requires RailCom</span></li>
 <li><code>&lt;V «cv» bit «bitValue»&gt;</code> Fast read bit with expected value</li>
 <li><code>&lt;V «cv» «value»&gt;</code> Fast read cv with expected value</li>
 </ul>
@@ -7273,14 +7273,15 @@
 <li><code>&lt;W CONSIST «loco» REVERSE&gt;</code> Write consist address and reverse flag on PROG track</li>
 <li><code>&lt;W «cv» «value»&gt;</code> Write cv value on PROG track</li>
 <li><code>&lt;W «cv» «bitValue» «bit»&gt;</code> Write cv bit on prog track</li>
-<li><code>&lt;w «loco» «cv» «value»&gt;</code> POM write cv on main track</li>
+<li><code>&lt;w «loco» «cv» «value»&gt;</code> PoM write cv on MAIN track</li>
 <li><code>&lt;B «cv» «bitValue» «bit»&gt;</code> Write cv bit</li>
-<li><code>&lt;b «loco» «cv» «bitValue» «bit»&gt;</code> POM write cv bit on main track</li>
+<li><code>&lt;b «loco» «cv» «bitValue» «bit»&gt;</code> PoM write cv bit on MAIN track</li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>loco</strong>: DCC address to read or change. This can be a long or short address.</li>
-<li><strong>cv</strong>: CV to read or change</li>
+<li><strong>loco</strong>: DCC address to read or change. <br/>This can be a long or short address.  See note below.</li>
+<li><strong>cv</strong>: CV to read or change <br/>
+Avoid writing CV1, CV17 &amp; CV18 directly. Use the <code>&lt;W «loco»&gt;</code> command instead.</li>
 <li><strong>value</strong>: value to read or change the CV to</li>
 <li><strong>bit</strong>:  cv bit to read or change</li>
 <li><strong>bitValue</strong>: value to read or change the bit to - one of:<ul>
@@ -7423,13 +7424,21 @@
 <p><mark>TODO</mark></p>
 <h2 id="notes"><em>Notes</em><a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>IMPORTANT: If the loco is in a consist (CV19), the address returned by <code>&lt;R&gt;</code> will be the consist address, not the decoder address.</li>
-<li>By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track. A loco WILL NOT MOVE on the service track! Don’t let the little ‘jumps’ you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an ‘ACK’ (acknowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.</li>
-<li>When combined with the <code>&lt;D ACK ON&gt;</code> Command, the <code>&lt;R&gt;</code> Command (with or without parameters) can be used for diagnostics, for example when you get a <code>-1</code> response.</li>
-<li>the <code>&lt;V ..&gt;</code> commands are designed to offer faster verification of the value held in a CV and can be used instead of the <code>&lt;R&gt;</code> commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply 'read'. If the verify fails, it will perform a read bit command and return the value read.</li>
-<li><code>&lt;R cv callbacknum callbacksub&gt;</code> (Deprecated) read cv value on PROG track. Do not use. Not explained here</li>
-<li><code>&lt;W cv value callbacknum callbacksub&gt;</code> (Deprecated) Write cv value on PROG track. Do not use. Not explained here.</li>
-<li><code>&lt;B cv bit value callbacknum callbacksub&gt;</code> (Deprecated) Do not use. Not explained here.</li>
+<li>
+<p><code>&lt;W «address»&gt;</code> will write a short arddress (CV1) or long address (CV17 plus CV18) depending on the value entered.  It will also adjust CV29 automatically depending on whist address type is required.</p>
+<ul>
+<li><code>1</code>-<code>127</code> will be a short address</li>
+<li><code>128</code>-<code>10293</code> will be along address</li>
+</ul>
+<p>Also note that addresses above <code>9999</code> cannont be used by <em>some</em> other command station brands. So if you plan to take your loco to other layouts it is recommended that you avoid the <code>1000</code>-<code>10293</code> (inclusive) range.
+* IMPORTANT: If the loco is in a consist (CV19), the address returned by <code>&lt;R&gt;</code> will be the consist address, not the decoder address. To always get the decoder address, use <code>&lt;R LOCOID&gt;</code> instead.
+* When combined with the <code>&lt;D ACK ON&gt;</code> Command, the <code>&lt;R&gt;</code> Command (with or without parameters) can be used for diagnostics, for example when you get a <code>-1</code> response.
+* By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track. A loco WILL NOT MOVE on the service track! Don’t let the little ‘jumps’ you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an ‘ACK’ (acknowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.
+* the <code>&lt;V ..&gt;</code> commands are designed to offer faster verification of the value held in a CV and can be used instead of the <code>&lt;R&gt;</code> commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply 'read'. If the verify fails, it will perform a read bit command and return the value read.
+* <code>&lt;R cv callbacknum callbacksub&gt;</code> (Deprecated) read cv value on PROG track. Do not use. Not explained here
+* <code>&lt;W cv value callbacknum callbacksub&gt;</code> (Deprecated) Write cv value on PROG track. Do not use. Not explained here.
+* <code>&lt;B cv bit value callbacknum callbacksub&gt;</code> (Deprecated) Do not use. Not explained here.</p>
+</li>
 </ul>
 <hr />
 <h2 id="examples"><em>Examples</em><a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
@@ -7469,7 +7478,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 8, 2026 01:20:05 UTC">June 8, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 8, 2026 01:40:31 UTC">June 8, 2026</span>
   </span>
 
     
