@@ -23,7 +23,7 @@
     
     
       
-        <title><C WIFI [«various parameters»]> Setup the WiFi - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title><C WIFI ON|OFF|AP|HIDDENAP|TEMP|DEFAULT|HOSTNAME [«various parameters»]> Setup the WiFi - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#c-wifi-various-parameters-setup-the-wifi" class="md-skip">
+        <a href="#c-wifi-onoffaphiddenaptempdefaulthostname-various-parameters-setup-the-wifi" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              &lt;C WIFI [«various parameters»]&gt; Setup the WiFi
+              &lt;C WIFI ON|OFF|AP|HIDDENAP|TEMP|DEFAULT|HOSTNAME [«various parameters»]&gt; Setup the WiFi
             
           </span>
         </div>
@@ -7195,7 +7195,7 @@
   
 
 
-<h1 id="c-wifi-various-parameters-setup-the-wifi"><code>&lt;C WIFI [«various parameters»]&gt;</code> <br/> Setup the WiFi<a class="headerlink" href="#c-wifi-various-parameters-setup-the-wifi" title="Permanent link">&para;</a></h1>
+<h1 id="c-wifi-onoffaphiddenaptempdefaulthostname-various-parameters-setup-the-wifi"><code>&lt;C WIFI ON|OFF|AP|HIDDENAP|TEMP|DEFAULT|HOSTNAME [«various parameters»]&gt;</code> <br/> Setup the WiFi<a class="headerlink" href="#c-wifi-onoffaphiddenaptempdefaulthostname-various-parameters-setup-the-wifi" title="Permanent link">&para;</a></h1>
 <p>Serial command to setup the WiFi on the EX-Command Stations.
 <span style="color:red">For EX-CSB1 and ESP32 based command stations only. Version 5.7.0 or later only.</span></p>
 <p>See <a href="../../../products/ex-commandstation/config-wifi-esp32/">WiFi configuration</a> for more infomation on these commands.</p>
@@ -7206,27 +7206,31 @@
 </ul>
 <h3 id="command-variations">Command Variations<a class="headerlink" href="#command-variations" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>&lt;C WIFI AP "«ssid»" "«password»" [«channel»]&gt;</code> set Wifi to AP mode with given ssid and password</li>
-<li><code>&lt;C WIFI AP "«ssid»" "«password»"&gt;</code> set Wifi to AP mode with given ssid and password</li>
+<li><code>&lt;C WIFI AP "«ssid»" "«password»" [«channel»]&gt;</code> set Wifi to Access Point mode (AP) with given ssid and password</li>
 <li><code>&lt;C WIFI DEFAULT&gt;</code> set Wifi to default credentials</li>
-<li><code>&lt;C WIFI HIDDENAP "«ssid»" "«password»" [«channel»]&gt;</code> set Wifi to AP mode with given ssid and password</li>
-<li><code>&lt;C WIFI HIDDENAP "«ssid»" "«password»&gt;</code> set Wifi to AP mode with given ssid and password</li>
+<li><code>&lt;C WIFI HIDDENAP "«ssid»" "«password»" [«channel»]&gt;</code> set Wifi to Access Point mode (AP) with given ssid and password, but not advertised</li>
 <li><code>&lt;C WIFI HOSTNAME "«hostname»"&gt;</code> set Wifi hostname</li>
 <li><code>&lt;C WIFI OFF&gt;</code> Disable Wifi</li>
 <li><code>&lt;C WIFI ON&gt;</code> Enable Wifi</li>
-<li><code>&lt;C WIFI "«ssid»" "«password»"&gt;</code> set Wifi ssid and password</li>
-<li><code>&lt;C WIFI TEMP "«ssid»" "«password»"&gt;</code> set Wifi ssid and password temporarily</li>
+<li><code>&lt;C WIFI "«ssid»" "«password»"&gt;</code> set Wifi ssid and password - Station Mode (STA)</li>
+<li><code>&lt;C WIFI TEMP "«ssid»" "«password»"&gt;</code> set Wifi ssid and password temporarily - Station Mode (STA)</li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>ssid</strong>: ssid to set the commandstation to use or connect to</li>
-<li><strong>password</strong>: password to set the commandstation to use or to use whne connecting to an existing ssid</li>
 <li>
-<p><strong>channel</strong>: <em>optional</em> - channel to set the commandstation to use <code>1</code>-<code>11</code></p>
-<p>The default channel is set to “11”. If you need to use an alternate channel (we recommend using only 1,6, or 11) you may change it with the command</p>
+<p><strong>ssid</strong>: ssid to set the command station to use (AP) or connect to (STA). Must be in quotes.</p>
+<p>Recommend that you avoid space characters in the ssid.</p>
 </li>
 <li>
-<p><strong>hostname</strong>: the name that appears in your Throttle app, once you have connected to the appropriate network for the Command Station</p>
+<p><strong>password</strong>: password to set the commandstation to use (AP) or to use when connecting to an existing ssid (STA) Must be in quotes.</p>
+<p>Passwords must be at least 8 characters long.</p>
+</li>
+<li>
+<p><strong>channel</strong>: <em>optional</em> - channel to set the commandstation to use <code>1</code>-<code>11</code> (AP only)</p>
+<p>The default channel is set to <code>11</code>. If you need to use an alternate channel (we recommend using only <code>1</code>,<code>6</code>, or <code>11</code>) you may change it with the command</p>
+</li>
+<li>
+<p><strong>hostname</strong>: the name that appears in your Throttle app, once you have connected to the appropriate network (ssid) for the Command Station.</p>
 </li>
 </ul>
 <h2 id="response"><em>Response</em><a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
@@ -7275,7 +7279,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 8, 2026 23:17:43 UTC">June 8, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 8, 2026 23:31:10 UTC">June 8, 2026</span>
   </span>
 
     
