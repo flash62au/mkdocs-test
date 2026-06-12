@@ -7578,6 +7578,14 @@
     padding-right: 2px !important;
     line-height: 110% !important;
  }
+.md-typeset table tr th:first-child,
+.md-typeset table tr td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1; /* Keeps the column on top of the scrolling content */
+    background: var(--md-accent-fg-color--light);
+}
+
 </style>
 
 <table>
@@ -8106,13 +8114,13 @@
 <p>CV programming is only available in Engine Driver when connected using the DCC-EX Native protocol.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
-<p>Note: The Android throttle apps listed above can be made to made to run on Windows PCs. See :doc:<code>Running Android apps on Microsoft Windows &lt;software/android-apps-on-windows&gt;</code>.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>Note: The Android throttle apps listed above can be made to made to run on Windows PCs.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:3">
 <p>JMRI is a suite of applications.  This table only refers the Web based throttle component of JMRI.  To use the Web throttle you will need to be running the JMRI suite of applications on a PC (Windows, OSX or Linux) or RPi. e.g. <strong>Decoder Pro</strong> or <strong>Panel Pro</strong>.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 <li id="fn:4">
-<p>Connecting JMRI to an EX-CommandStation over WiFi works, but is not recommended and is not supported&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+<p>Connecting JMRI to an EX-CommandStation over WiFi works, but is not recommended and is not supported.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
 </li>
 <li id="fn:5">
 <p>Free version is functionally limited. (No track power control, only one throttle and no consists/MUs.)&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
@@ -8121,7 +8129,7 @@
 <p>Free version is advertisement supported and time limited.&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
 </li>
 <li id="fn:7">
-<p>ESU Mobile Control Pro is an Android device with additional hardware, so can also run the :doc:<code>Engine Driver &lt;software/engine-driver&gt;</code> app. As such it can use the DCC-EX Native protocol when connected to a DCC-EX Command Station. It uses the WiThrottle protocol when connected to a WiThrottle server. When using Engine Driver and the Native Protocol it is capable of CV programming.&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+<p>ESU Mobile Control Pro is an Android device with additional hardware, so can also run the Engine Driver app. As such it can use the DCC-EX Native protocol when connected to a DCC-EX Command Station. It uses the WiThrottle protocol when connected to a WiThrottle server. When using Engine Driver and the Native Protocol it is capable of CV programming.&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
@@ -8145,7 +8153,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 12, 2026 02:36:31 UTC">June 12, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 12, 2026 02:52:55 UTC">June 12, 2026</span>
   </span>
 
     
