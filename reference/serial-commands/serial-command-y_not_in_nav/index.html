@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-qq-and-ss_not_in_nav/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-y_not_in_nav/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title><Q>   <S «id» [«vpin» «pullup»>] Manage Sensors - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title><y «vpin» EQ|FOLDER|PAUSE|PLAY|REPEAT|RESET|RESUME|STOP|VOL [«various parameters»]> Play DF Player sounds - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#q-s-id-vpin-pullup-manage-sensors" class="md-skip">
+        <a href="#y-vpin-eqfolderpauseplayrepeatresetresumestopvol-various-parameters-play-df-player-sounds" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              &lt;Q&gt; &nbsp; &lt;S «id» [«vpin» «pullup»&gt;] Manage Sensors
+              &lt;y «vpin» EQ|FOLDER|PAUSE|PLAY|REPEAT|RESET|RESUME|STOP|VOL [«various parameters»]&gt; Play DF Player sounds
             
           </span>
         </div>
@@ -7093,7 +7093,7 @@
         <li class="md-nav__item">
   <a href="#commands" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands
+      Command(s)
     </span>
   </a>
   
@@ -7109,53 +7109,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#responses" class="md-nav__link">
+  <a href="#response" class="md-nav__link">
     <span class="md-ellipsis">
-      Responses
+      Response
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Responses">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#response-for-q" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;Q&gt;
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response-for-s" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;S&gt;
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response-for-s-id-vpin-pullup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;S «id» «vpin» «pullup»&gt;
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response-for-s-id" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;S «id»&gt;
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -7222,77 +7180,41 @@
   
 
 
-<h1 id="q-s-id-vpin-pullup-manage-sensors"><small><code>&lt;Q&gt;</code></small> &nbsp; <small><code>&lt;S «id» [«vpin» «pullup»&gt;]</code></small> <br/>Manage Sensors<a class="headerlink" href="#q-s-id-vpin-pullup-manage-sensors" title="Permanent link">&para;</a></h1>
-<p>Serial commands to create and manage sensors</p>
-<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
+<h1 id="y-vpin-eqfolderpauseplayrepeatresetresumestopvol-various-parameters-play-df-player-sounds"><small><code>&lt;y «vpin» EQ|FOLDER|PAUSE|PLAY|REPEAT|RESET|RESUME|STOP|VOL [«various parameters»]&gt;</code></small> <br/> Play DF Player sounds<a class="headerlink" href="#y-vpin-eqfolderpauseplayrepeatresetresumestopvol-various-parameters-play-df-player-sounds" title="Permanent link">&para;</a></h1>
+<p>Serial commands to play sounds on a DFPlayer.</p>
+<p>The DFPlayer device can be used to play pre-recorded sounds from an onboard SD-card.</p>
+<p>See the <a href="../../../products/ex-commandstation/accessories/various-devices/dfplayer/dfplayer/">DFPlayer page</a> for more information.</p>
+<h2 id="commands">Command(s)<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>&lt;Q&gt;</code> List all sensors</li>
-<li><code>&lt;S&gt;</code> List sensors</li>
-<li><code>&lt;S «id» «vpin» «pullup»&gt;</code> Create Sensor</li>
-<li><code>&lt;S «id»&gt;</code> Delete sensor</li>
+<li><code>&lt;y «vpin» EQ «eq»&gt;</code> Set sound EQ</li>
+<li><code>&lt;y «vpin» FOLDER «folder»&gt;</code> Switch to sound track folder</li>
+<li><code>&lt;y «vpin» PAUSE&gt;</code> Pause sound</li>
+<li><code>&lt;y «vpin» PLAY «tracknumber» «volume»&gt;</code> Play sound track with volume</li>
+<li><code>&lt;y «vpin» PLAY «tracknumber»&gt;</code> Play sound track with default volume</li>
+<li><code>&lt;y «vpin» REPEAT «tracknumber» «volume»&gt;</code> Repeat sound track with volume</li>
+<li><code>&lt;y «vpin» REPEAT «tracknumber»&gt;</code> Repeat sound track with default volume</li>
+<li><code>&lt;y «vpin» RESET&gt;</code> Reset sound module</li>
+<li><code>&lt;y «vpin» RESUME&gt;</code> Resume sound</li>
+<li><code>&lt;y «vpin» STOP&gt;</code> Stop playing sound</li>
+<li><code>&lt;y «vpin» VOL «volume»&gt;</code> Set sound volume</li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>id</strong>: identifier of the Sensor. (0-32767)</li>
-<li><strong>vpin</strong>: pin number of the input to be controlled by the sensor object</li>
-<li><strong>pullup</strong>: one of:<ul>
-<li><code>1</code> = Use pull-up resistor ACTIVE=LOW</li>
-<li><code>0</code>= don’t use pull-up resistor ACTIVE=HIGH</li>
+<li><strong>vpin</strong>: <em>Required</em> vpin of the DFPlayer</li>
+<li><strong>eq</strong>: <mark>TODO</mark></li>
+<li><strong>folder</strong>: folder on the SD Card to switch to / play from</li>
+<li><strong>tracknumber</strong>: track/file on the SD Card to play</li>
+<li><strong>volume</strong>: <mark>TODO</mark></li>
 </ul>
-</li>
-</ul>
-<h2 id="responses">Responses<a class="headerlink" href="#responses" title="Permanent link">&para;</a></h2>
-<h3 id="response-for-q">Response for <code>&lt;Q&gt;</code><a class="headerlink" href="#response-for-q" title="Permanent link">&para;</a></h3>
-<p>(successful) Repeated for each inactive defined sensor: <code>&lt;q «id»&gt;</code><br/>
-(fail): N/A</p>
-<h3 id="response-for-s">Response for <code>&lt;S&gt;</code><a class="headerlink" href="#response-for-s" title="Permanent link">&para;</a></h3>
-<p>(successful) Repeated for each inactive defined sensor: <code>&lt;Q «id» «vpin» «pullup»&gt;</code><br/>
-(fail): <code>X</code></p>
-<ul>
-<li><strong>id</strong>: identifier of the Sensor. (0-32767)</li>
-<li><strong>vpin</strong>: pin number of the input to be controlled by the sensor object</li>
-<li><strong>pullup</strong>: one of:<ul>
-<li><code>1</code> = Use pull-up resistor ACTIVE=LOW</li>
-<li><code>0</code>= don’t use pull-up resistor ACTIVE=HIGH</li>
-</ul>
-</li>
-</ul>
-<h3 id="response-for-s-id-vpin-pullup">Response for <code>&lt;S «id» «vpin» «pullup»&gt;</code><a class="headerlink" href="#response-for-s-id-vpin-pullup" title="Permanent link">&para;</a></h3>
-<p>(Successful): <code>&lt;O&gt;</code><br/>
-(Fail): <code>&lt;X&gt;</code> (e.g. out of memory)</p>
-<h3 id="response-for-s-id">Response for <code>&lt;S «id»&gt;</code><a class="headerlink" href="#response-for-s-id" title="Permanent link">&para;</a></h3>
-<p>(Successful): <code>&lt;O&gt;</code><br/>
-(Fail): <code>&lt;X&gt;</code> (e.g. ID does not exist)</p>
+<h2 id="response">Response<a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
+<p><mark>TODO</mark></p>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p>EX‑CommandStation supports Sensor inputs that can be connected to any Arduino Pin not in use by this program, as well as pins on external I/O expanders and other devices. Physical sensors can be of any type (infrared, magnetic, mechanical…). They may be configured to pull-up or not. When configured for pull-up, the input is connected (within the CS) to +5V via a resistor. This sort of input is suited to sensors that have two wires - a switch or relay contacts, or a device with an 'open collector'’' or '‘'open drain'’' output. Some sensors may be sensitive to the pull-up resistor and not operate as expected - in this case you can turn off the pull-up. <br/> <br/>
-The sensor is considered INACTIVE when at +5V potential, and ACTIVE when the pin is pulled down to 0V. <br/> <br/>
-To ensure proper voltage levels, some part of the Sensor circuitry MUST be tied back to the same ground as used by the Arduino. <br/> <br/>
-The Sensor code utilises debouncing logic to eliminate contact ‘bounce’ generated by mechanical switches on transitions. This avoids the need to create smoothing circuitry for each sensor. You may need to change the parameters in Sensor.cpp through trial and error for your specific sensors, but the default parameters protect against contact bounces for up to 20 milliseconds, which should be adequate for almost all mechanical switches and all electronic sensors. <br/> <br/>
-To monitor one or more Arduino pins for sensor triggers, first define/edit/delete sensor definitions using one of the variations of the <code>&lt;S&gt;</code> command.</p>
-</li>
-<li>
-<p><strong>Arduino Mega only (not EX-CSB1 or ESP32):</strong> Once all sensors have been properly defined, you can use the <code>&lt;E&gt;</code> command to store their definitions to EEPROM. If you later make edits/additions/deletions to the sensor definitions, you must invoke the <code>&lt;E&gt;</code> command if you want those new definitions updated in the EEPROM. You can also clear everything (turnouts, sensors, and outputs) stored in the EEPROM by invoking the <code>&lt;e&gt;</code>command. (There is NO UN-Delete)</p>
-</li>
-<li>
-<p>All sensors defined as per above are repeatedly and sequentially checked within the main loop of this sketch. If a Sensor Pin is found to have transitioned from one state to another, one of the following serial messages are generated:</p>
-<ul>
-<li>
-<p><code>&lt;Q id&gt;</code> - for transition of Sensor ID from INACTIVE state to ACTIVE state (i.e. the sensor is triggered)</p>
-</li>
-<li>
-<p><code>&lt;q id&gt;</code> - for transition of Sensor ID from ACTIVE state to INACTIVE state (i.e. the sensor is no longer triggered)</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Depending on whether the physical sensor is acting as an 'event-trigger' or a 'detection-sensor', you may decide to ignore the <code>&lt;q id&gt;` return and only react to</code><Q id>`` triggers.</p>
-</li>
+<li>See the <a href="../../../products/ex-commandstation/accessories/various-devices/dfplayer/dfplayer/">DFPlayer page</a> for more information.</li>
 </ul>
 <hr />
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<p><a href="?_/_latch">Also search for '/ latch'</a> or <a href="?_/_unlatch">search for '/ unlatch'</a></p>
+<p><a href="?DFPLayer">Also search for 'DFPlayer'</a> or <a href="?sounds">search for 'sounds'</a></p>
 <h3 id="example-commands"><em>Example Commands</em><a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h3>
 <ul>
 <li><mark>TODO</mark></li>
