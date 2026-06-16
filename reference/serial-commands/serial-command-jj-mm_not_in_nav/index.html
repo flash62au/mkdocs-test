@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/shell_serial-command-xyz_not_in_nav/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-jj-mm_not_in_nav/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title><cmd «required parameter» [«optional parameter»]> Short command decription - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title><J M [«various parameters»]> Manage Stash Values - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cmd-required-parameter-optional-parameter-short-command-decription" class="md-skip">
+        <a href="#j-m-various-parameters-manage-stash-values" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              &lt;cmd «required parameter» [«optional parameter»]&gt; Short command decription
+              &lt;J M [«various parameters»]&gt; Manage Stash Values
             
           </span>
         </div>
@@ -6958,9 +6958,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#response-for-cmd" class="md-nav__link">
+  <a href="#response-for-j-m-stashid" class="md-nav__link">
     <span class="md-ellipsis">
-      Response for &lt;cmd&gt;
+      Response for &lt;J M «stashId»&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-for-j-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response for &lt;J M&gt;
     </span>
   </a>
   
@@ -7034,63 +7043,50 @@
   
 
 
-<h1 id="cmd-required-parameter-optional-parameter-short-command-decription"><small><code>&lt;cmd «required parameter» [«optional parameter»]&gt;</code></small> <br/> Short command decription<a class="headerlink" href="#cmd-required-parameter-optional-parameter-short-command-decription" title="Permanent link">&para;</a></h1>
-<p>Serial command to ...</p>
+<h1 id="j-m-various-parameters-manage-stash-values"><small><code>&lt;J M [«various parameters»]&gt;</code></small> <br/> Manage Stash Values<a class="headerlink" href="#j-m-various-parameters-manage-stash-values" title="Permanent link">&para;</a></h1>
+<p>Serial command to manage Stash values.</p>
 <h2 id="commands">Command(s)<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>&lt;cmd «required parameter» [«optional parameter»]&gt;</code></li>
+<li><code>&lt;J M&gt;</code> List stash values</li>
+<li><code>&lt;J M CLEAR ALL&gt;</code> Clear all stash values</li>
+<li><code>&lt;J M CLEAR ANY «locoId»&gt;</code> Clear all stash entries that contain * locoId</li>
+<li><code>&lt;J M CLEAR «stashId»&gt;</code> Clear given stash</li>
+<li><code>&lt;J M «stashId»&gt;</code> Get stash value</li>
+<li><code>&lt;J M «stashId» «locoId»&gt;</code> Stash the specified loco in the numbered stash</li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p><strong>parameter</strong>: <em>Required</em>|<em>optional</em> description</p>
-</li>
-<li>
-<p><strong>parameter</strong>: <em>Required</em>|<em>optional</em> description - one of:</p>
-<ul>
-<li><code>option</code> = explanation of option</li>
-<li><code>option</code> = explanation of option</li>
-<li>...</li>
-</ul>
-</li>
-<li>
-<p>...</p>
-</li>
+<li><strong>locoId</strong>: loco Id to set or clear</li>
+<li><strong>StashId</strong>: Id of the stash to set, clear or get (<code>0</code> - <mark>TODO</mark>)</li>
 </ul>
 <h2 id="response">Response<a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
-<p>The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.</p>
-<p><code>&lt;response&gt;</code></p>
+<h3 id="response-for-j-m-stashid">Response for <code>&lt;J M «stashId»&gt;</code><a class="headerlink" href="#response-for-j-m-stashid" title="Permanent link">&para;</a></h3>
+<p><code>&lt;jM «stashId» «loco»&gt;</code></p>
 <ul>
-<li>
-<p><strong>parameter</strong>: explanation of the parameter</p>
-</li>
-<li>
-<p><strong>parameter</strong>: explanation of the parameter - one of:</p>
+<li><strong>StashId</strong>: Id of the stash</li>
+<li><strong>locoId</strong>: loco Id in that stash</li>
+</ul>
+<h3 id="response-for-j-m">Response for <code>&lt;J M&gt;</code><a class="headerlink" href="#response-for-j-m" title="Permanent link">&para;</a></h3>
+<p>Repeated for each defined Stash where loco is not zero:</p>
+<p><code>&lt;jM «stashId» «loco»&gt;</code></p>
 <ul>
-<li><code>option</code> = explanation of option</li>
-<li><code>option</code> = explanation of option</li>
-<li>...</li>
+<li><strong>StashId</strong>: Id of the stash</li>
+<li><strong>locoId</strong>: loco Id in that stash</li>
 </ul>
-</li>
-</ul>
-<h3 id="response-for-cmd">Response for <code>&lt;cmd&gt;</code><a class="headerlink" href="#response-for-cmd" title="Permanent link">&para;</a></h3>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>...</li>
+<li><mark>TODO</mark></li>
 </ul>
 <hr />
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<p><a href="?_xxx">Also search for 'xxx'</a> or <a href="?_xxx">search for 'xxx'</a></p>
+<!-- [Also search for 'xxx'](?_xxx) or [search for 'xxx'](?_xxx) -->
+
 <h3 id="example-commands"><em>Example Commands</em><a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h3>
 <ul>
-<li>purpose: <code>&lt;command&gt;</code></li>
-<li>purpose: <br/><code>&lt;command&gt;</code></li>
 <li><mark>TODO</mark></li>
 </ul>
 <h3 id="example-responses"><em>Example Responses:</em><a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
 <ul>
-<li>purpose: <code>&lt;command&gt;</code></li>
-<li>purpose: <br/><code>&lt;command&gt;</code></li>
 <li><mark>TODO</mark></li>
 </ul>
 <style>
