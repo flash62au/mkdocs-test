@@ -6977,21 +6977,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Response">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#response-for-cmd" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;cmd&gt;
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -7083,24 +7068,27 @@
 </li>
 </ul>
 <h2 id="response">Response<a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
-<h3 id="response-for-cmd">Response for <code>&lt;cmd&gt;</code><a class="headerlink" href="#response-for-cmd" title="Permanent link">&para;</a></h3>
+<!-- ### Response for ``<cmd>`` -->
+
 <p><mark>TODO</mark> responses</p>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>EX‑CommandStation can keep track of the direction of any turnout that is controlled by a DCC stationary accessory decoder once its Defined (Set Up).</p>
+<p><strong>EX‑CommandStation</strong> can keep track of the direction of any turnout/point that is controlled by a DCC stationary accessory decoder once its <a href="../serial-command-tt_not_in_nav/">Defined (Set Up)</a>.</p>
 </li>
 <li>
-<p>All decoders that are not in an engine are accessory decoders including turnouts.</p>
+<p>All decoders that are not in an engine are accessory decoders including turnouts/points.</p>
 </li>
 <li>
-<p>Any DCC Accessory Decoder based turnouts, as well as any other DCC accessories connected in this fashion, can always be operated using the DCC COMMAND STATION Accessory command:</p>
+<p>Any DCC Accessory Decoder based turnouts/points, as well as any other DCC accessories connected in this fashion, can always be operated using the DCC COMMAND STATION Accessory command:</p>
+<ul>
+<li>There are two interchangeable commands for controlling Accessory Decoders, the Address/Subaddress method (aka 'Dual-Coil' method) and linear addressing method. You can either specify an address and its subaddress (Addresses 0-511 with Subaddresses from 0-3) or the straight linear address (Addresses from 1-2044).</li>
+</ul>
 </li>
 <li>
-<p>There are two interchangeable commands for controlling Accessory Decoders, the Address/Subaddress method (aka “Dual-Coil” method) and linear addressing method. You can either specify an address and its subaddress (Addresses 0-511 with Subaddresses from 0-3) or the straight linear address (Addresses from 1-2044).</p>
-</li>
-<li>
-<p>In the mapping used by the <strong>EX-CommandStation</strong>, linear addresses range from linear address 1, which is address 1 subaddress 0, up to linear address 2040 which is address 510 subaddress 3. Decoder address 511 (linear addresses 2041-2044) is reserved for use as a broadcast address and should not be used for decoders. Decoder address 0 does not have a corresponding linear address. This seems strange, but it is the mapping used by many, but not all, commercial manufacturers. If your decoder does not respond on the expected linear address, try adding and subtracting 4 to see if it works. Or use the address/subaddress versions of the commands.</p>
+<p>In the mapping used by the <strong>EX-CommandStation</strong>, linear addresses range from linear address 1, which is address 1 subaddress 0, up to linear address 2040 which is address 510 subaddress 3. <br/>
+Decoder address 511 (linear addresses 2041-2044) is reserved for use as a broadcast address and should not be used for decoders.  <br/>
+Decoder address 0 does not have a corresponding linear address. This seems strange, but it is the mapping used by many, but not all, commercial manufacturers.  <br/> <br/>If your decoder does not respond on the expected linear address, try adding and subtracting 4 to see if it works. Or use the address/subaddress versions of the commands.</p>
 </li>
 </ul>
 <p>Here is a spreadsheet in .XLSX format to help you: <a href="https://dcc-ex.com/reference/downloads/documents.html#stationary-decoder-address-table-xlsx-spreadsheet">Stationary Decoder Address Table (xlsx Spreadsheet)</a>.</p>
@@ -7141,7 +7129,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 00:30:19 UTC">June 17, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 00:38:23 UTC">June 17, 2026</span>
   </span>
 
     
