@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/shell_serial-command-xyz_not_in_nav/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-aa-and-a_not_in_nav/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title><cmd «required parameter» [«optional parameter»]> Short command decription - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title><A «address» «value»> <a «address» [«subAddr»]|[«activate» [onOff]]> Instruct Accessory Decoders - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cmd-required-parameter-optional-parameter-short-command-decription" class="md-skip">
+        <a href="#a-address-value-a-address-subaddractivate-onoff-instruct-accessory-decoders" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              &lt;cmd «required parameter» [«optional parameter»]&gt; Short command decription
+              &lt;A «address» «value»&gt; &lt;a «address» [«subAddr»]|[«activate» [onOff]]&gt; Instruct Accessory Decoders
             
           </span>
         </div>
@@ -7057,63 +7057,63 @@
   
 
 
-<h1 id="cmd-required-parameter-optional-parameter-short-command-decription"><small><code>&lt;cmd «required parameter» [«optional parameter»]&gt;</code></small> <br/> Short command decription<a class="headerlink" href="#cmd-required-parameter-optional-parameter-short-command-decription" title="Permanent link">&para;</a></h1>
-<p>Serial command to ...</p>
+<h1 id="a-address-value-a-address-subaddractivate-onoff-instruct-accessory-decoders"><small><code>&lt;A «address» «value»&gt;</code></small> <br/><small><code>&lt;a «address» [«subAddr»]|[«activate» [onOff]]&gt;</code></small> <br/> Instruct Accessory Decoders<a class="headerlink" href="#a-address-value-a-address-subaddractivate-onoff-instruct-accessory-decoders" title="Permanent link">&para;</a></h1>
+<p>Serial commands to activate or dactivate accessory decoders.</p>
 <h2 id="commands">Command(s)<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>&lt;cmd «required parameter» [«optional parameter»]&gt;</code></li>
+<li><code>&lt;A «address» «value»&gt;</code> Send DCC extended accessory (Aspect) command</li>
+<li><code>&lt;a «address» «subAddr» «activate»&gt;</code> Send DCC accessory command activate: 0=deactivate, 1=activate</li>
+<li><code>&lt;a «address» «subAddr» «activate» «onoff»&gt;</code> Send DCC accessory command with onoff control activate: 0=deactivate, 1=activate onoff: 0=off, 1=on, 2=toggle</li>
+<li><code>&lt;a «address» «activate»&gt;</code> Send dcc accessory command to linear address activate: 0=deactivate, 1=activate</li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p><strong>parameter</strong>: <em>Required</em>|<em>optional</em> description</p>
-</li>
-<li>
-<p><strong>parameter</strong>: <em>Required</em>|<em>optional</em> description - one of:</p>
-<ul>
-<li><code>option</code> = explanation of option</li>
-<li><code>option</code> = explanation of option</li>
-<li>...</li>
+<li><strong>address</strong>: <em>Required</em> accessory DCC decoder adress to activate or deactivate</li>
+<li><strong>subAddr</strong>:  accessory DCC decoder sub-address to activate or deactivate</li>
+<li><strong>activate</strong>:  - one of:<ul>
+<li><code>0</code> = deactivate</li>
+<li><code>1</code> = activate</li>
 </ul>
 </li>
-<li>
-<p>...</p>
+<li><strong>onOff</strong>: <em>optional</em> description - one of:<ul>
+<li><code>0</code> = off</li>
+<li><code>1</code> = on</li>
+<li><code>2</code> = toggle</li>
+</ul>
 </li>
 </ul>
 <h2 id="response">Response<a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
-<p>The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.</p>
-<p><code>&lt;response&gt;</code></p>
-<ul>
-<li>
-<p><strong>parameter</strong>: explanation of the parameter</p>
-</li>
-<li>
-<p><strong>parameter</strong>: explanation of the parameter - one of:</p>
-<ul>
-<li><code>option</code> = explanation of option</li>
-<li><code>option</code> = explanation of option</li>
-<li>...</li>
-</ul>
-</li>
-</ul>
 <h3 id="response-for-cmd">Response for <code>&lt;cmd&gt;</code><a class="headerlink" href="#response-for-cmd" title="Permanent link">&para;</a></h3>
+<p><mark>TODO</mark> responses</p>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>...</li>
+<li>
+<p>EX‑CommandStation can keep track of the direction of any turnout that is controlled by a DCC stationary accessory decoder once its Defined (Set Up).</p>
+</li>
+<li>
+<p>All decoders that are not in an engine are accessory decoders including turnouts.</p>
+</li>
+<li>
+<p>Any DCC Accessory Decoder based turnouts, as well as any other DCC accessories connected in this fashion, can always be operated using the DCC COMMAND STATION Accessory command:</p>
+</li>
+<li>
+<p>There are two interchangeable commands for controlling Accessory Decoders, the Address/Subaddress method (aka “Dual-Coil” method) and linear addressing method. You can either specify an address and its subaddress (Addresses 0-511 with Subaddresses from 0-3) or the straight linear address (Addresses from 1-2044).</p>
+</li>
+<li>
+<p>In the mapping used by the <strong>EX-CommandStation</strong>, linear addresses range from linear address 1, which is address 1 subaddress 0, up to linear address 2040 which is address 510 subaddress 3. Decoder address 511 (linear addresses 2041-2044) is reserved for use as a broadcast address and should not be used for decoders. Decoder address 0 does not have a corresponding linear address. This seems strange, but it is the mapping used by many, but not all, commercial manufacturers. If your decoder does not respond on the expected linear address, try adding and subtracting 4 to see if it works. Or use the address/subaddress versions of the commands.</p>
+</li>
 </ul>
+<p>Here is a spreadsheet in .XLSX format to help you: <a href="https://dcc-ex.com/reference/downloads/documents.html#stationary-decoder-address-table-xlsx-spreadsheet">Stationary Decoder Address Table (xlsx Spreadsheet)</a>.</p>
 <hr />
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<p><a href="?_xxx">Also search for 'xxx'</a> or <a href="?_xxx">search for 'xxx'</a></p>
+<!-- [Also search for 'xxx'](?_xxx) or [search for 'xxx'](?_xxx) -->
+
 <h3 id="example-commands"><em>Example Commands</em><a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h3>
 <ul>
-<li>purpose: <code>&lt;command&gt;</code></li>
-<li>purpose: <br/><code>&lt;command&gt;</code></li>
 <li><mark>TODO</mark> Example Commands</li>
 </ul>
 <h3 id="example-responses"><em>Example Responses:</em><a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
 <ul>
-<li>purpose: <code>&lt;command&gt;</code></li>
-<li>purpose: <br/><code>&lt;command&gt;</code></li>
 <li><mark>TODO</mark> Example Responses</li>
 </ul>
 <style>
