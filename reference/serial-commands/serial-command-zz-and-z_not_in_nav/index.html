@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-jj-rr_not_in_nav/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-zz-and-z_not_in_nav/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title><J R [«id»]> Request Roster info - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title><Z [«id» [«pin» «iFlag»]|«active»]]> <z [«signedVpin»]|[«vpin» «analogue» [[«profile»] [«duration»]]]> Manage pin/vpin outputs - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#j-r-id-request-roster-info" class="md-skip">
+        <a href="#z-id-pin-iflagactive-z-signedvpinvpin-analogue-profile-duration-manage-pinvpin-outputs" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              &lt;J R [«id»]&gt; Request Roster info
+              &lt;Z [«id» [«pin» «iFlag»]|«active»]]&gt; &lt;z [«signedVpin»]|[«vpin» «analogue» [[«profile»] [«duration»]]]&gt; Manage pin/vpin outputs
             
           </span>
         </div>
@@ -6981,18 +6981,45 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#response-for-j-r" class="md-nav__link">
+  <a href="#response-for-z-id-z-id-pin-iflag" class="md-nav__link">
     <span class="md-ellipsis">
-      Response for &lt;j R&gt;
+      Response for &lt;Z «id»&gt;, &lt;Z «id» «pin» «iFlag»&gt;
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#response-for-j-r-id" class="md-nav__link">
+  <a href="#response-for-z" class="md-nav__link">
     <span class="md-ellipsis">
-      Response for &lt;j R «id»&gt;
+      Response for &lt;Z&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-for-z-vpin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response for &lt;Z «vpin»&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-for-z-id-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response for &lt;Z «id» «state»&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-for-z-vpin-analogue-profile-duration-z-vpin-analogue-profile-z-vpin-analogue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response for &lt;z «vpin» «analogue» «profile» duration»&gt;``, ``&lt;z «vpin» «analogue» «profile»&gt;``, ``&lt;z «vpin» «analogue»&gt;
     </span>
   </a>
   
@@ -7023,9 +7050,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#examples-commands" class="md-nav__link">
+  <a href="#example-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      Examples Commands
+      Example Commands
     </span>
   </a>
   
@@ -7034,7 +7061,7 @@
           <li class="md-nav__item">
   <a href="#example-responses" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Responses
+      Example Responses:
     </span>
   </a>
   
@@ -7066,48 +7093,98 @@
   
 
 
-<h1 id="j-r-id-request-roster-info"><small><code>&lt;J R [«id»]&gt;</code></small> <br/>Request Roster info<a class="headerlink" href="#j-r-id-request-roster-info" title="Permanent link">&para;</a></h1>
-<p>Serial command to request roster info.</p>
+<h1 id="z-id-pin-iflagactive-z-signedvpinvpin-analogue-profile-duration-manage-pinvpin-outputs"><small><code>&lt;Z [«id» [«pin» «iFlag»]|«active»]]&gt;</code></small> <br/><small><code>&lt;z [«signedVpin»]|[«vpin» «analogue» [[«profile»] [«duration»]]]&gt;</code></small> <br/>Manage pin/<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> outputs<a class="headerlink" href="#z-id-pin-iflagactive-z-signedvpinvpin-analogue-profile-duration-manage-pinvpin-outputs" title="Permanent link">&para;</a></h1>
+<p>Serial commands to &gt;Manage pin/<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> outputs.</p>
 <h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>&lt;J R&gt;</code> Request the list of all roster ids</li>
-<li><code>&lt;J R [«id»]&gt;</code> Request the detailed info on a sepecific roster id</li>
+<li><code>&lt;Z&gt;</code> List Output definitions</li>
+<li><code>&lt;Z «id» «active»&gt;</code> Set output</li>
+<li><code>&lt;Z «id» «pin» «iFlag»&gt;</code> Create Output</li>
+<li><code>&lt;Z «id»&gt;</code> Delete output</li>
+<li><code>&lt;z «signedVpin»&gt;</code> Set pin. HIGH if <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> positive, LOW if <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> negative</li>
+<li><code>&lt;z «vpin» «analogue» «profile» duration»&gt;</code> Change analogue value over duration (Fade or servo move)</li>
+<li><code>&lt;z «vpin» «analogue» «profile»&gt;</code> Write analogue device using profile number (Fade or servo movement)</li>
+<li><code>&lt;z «vpin» «analogue»&gt;</code> Write analogue device value</li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>id</strong>: <em>optional</em> <br/>unique id and/or DCC address of the Loco/s in the roster</li>
+<li><strong>id</strong>: identifier of the output</li>
+<li><strong><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr></strong>: The pin number of the output to be controlled by the output object. <br/>For Arduino output pins, this is the same as the digital pin number. For servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module, 116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.<ul>
+<li>positive <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> = ACTIVE/HIGH</li>
+<li>negative <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> = INACTIVE/LOW</li>
+</ul>
+</li>
+<li><strong>iFlag</strong>: see below:<ul>
+<li>iFlag, *bit 0():<ul>
+<li><code>0</code> = forward operation (ACTIVE=HIGH / INACTIVE=LOW)</li>
+<li><code>1</code> = inverted operation (ACTIVE=LOW / INACTIVE=HIGH)</li>
+</ul>
+</li>
+<li>iFlag, bit 1:<ul>
+<li><code>0</code> = state of pin restored on power-up to either ACTIVE or INACTIVE depending on state before power-down.</li>
+<li><code>1</code> = state of pin set on power-up, or when first created, to either ACTIVE of INACTIVE depending on IFLAG, bit 2</li>
+</ul>
+</li>
+<li>iFlag, bit 2:<ul>
+<li><code>0</code> = state of pin set to INACTIVE upon power-up or when first created</li>
+<li><code>1</code> = state of pin set to ACTIVE upon power-up or when first created</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <h2 id="responses">Responses<a class="headerlink" href="#responses" title="Permanent link">&para;</a></h2>
-<h3 id="response-for-j-r">Response for <code>&lt;j R&gt;</code><a class="headerlink" href="#response-for-j-r" title="Permanent link">&para;</a></h3>
-<p><code>&lt;jR [«id1» «id2» «id3» ...]&gt;</code></p>
+<h3 id="response-for-z-id-z-id-pin-iflag">Response for <code>&lt;Z «id»&gt;</code>, <code>&lt;Z «id» «pin» «iFlag»&gt;</code><a class="headerlink" href="#response-for-z-id-z-id-pin-iflag" title="Permanent link">&para;</a></h3>
+<p>(Successful): <code>&lt;O&gt;</code> <br/>
+(Fail): <code>&lt;X&gt;</code> (e.g. out of memory).</p>
+<h3 id="response-for-z">Response for <code>&lt;Z&gt;</code><a class="headerlink" href="#response-for-z" title="Permanent link">&para;</a></h3>
+<p>(Successful): <Y «id «vpin» «iFlag» «state»> repeated for each defined output pin <br/>
+(Fail): <X> (e.g. ID does not exist)</p>
 <ul>
-<li><code>jR</code> = the 'message identifer'</li>
-<li><strong>id1..n:</strong> unique id and/or DCC address of each Loco in the roster</li>
+<li><strong>Y</strong>: Command identifier</li>
+<li><strong>id</strong>: identifier of the output</li>
+<li><strong>state</strong>: one of<ul>
+<li><code>0</code> = INACTIVE</li>
+<li><code>1</code> = ACTIVE</li>
 </ul>
-<h3 id="response-for-j-r-id">Response for <code>&lt;j R «id»&gt;</code><a class="headerlink" href="#response-for-j-r-id" title="Permanent link">&para;</a></h3>
-<p><code>&lt;jR «id» ""|"desc" ""|"funct0/funct1/funct2/.../funct31"&gt;</code></p>
+</li>
+</ul>
+<h3 id="response-for-z-vpin">Response for <code>&lt;Z «vpin»&gt;</code><a class="headerlink" href="#response-for-z-vpin" title="Permanent link">&para;</a></h3>
+<p>N/A</p>
+<h3 id="response-for-z-id-state">Response for <code>&lt;Z «id» «state»&gt;</code><a class="headerlink" href="#response-for-z-id-state" title="Permanent link">&para;</a></h3>
+<p>(Successful): <Y «id «state»> <br/>
+(Fail): <X> if output ID does not exist</p>
 <ul>
-<li><code>jR</code> = the 'message identifer'</li>
-<li><strong>id1..n:</strong> = unique id and/or DCC address of a Loco in the roster</li>
-<li><strong>desc</strong> = in quotes, empty or the description of the loco</li>
-<li><strong>funct0..31</strong> = in quotes, empty or the Label for each function 0-31 for the loco</li>
+<li><strong>Y</strong>: Command identifier</li>
+<li><strong>state</strong>: one of<ul>
+<li><code>0</code> = INACTIVE</li>
+<li><code>1</code> = ACTIVE</li>
 </ul>
+</li>
+</ul>
+<h3 id="response-for-z-vpin-analogue-profile-duration-z-vpin-analogue-profile-z-vpin-analogue">Response for <code>&lt;z «vpin» «analogue» «profile» duration»&gt;``, ``&lt;z «vpin» «analogue» «profile»&gt;``, ``&lt;z «vpin» «analogue»&gt;</code><a class="headerlink" href="#response-for-z-vpin-analogue-profile-duration-z-vpin-analogue-profile-z-vpin-analogue" title="Permanent link">&para;</a></h3>
+<p><mark>TODO</mark> Response</p>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Function labels starting with an asterix (*) should be treated as montentary. Those without should be treated as latching.</li>
+<li><strong>EX‑CommandStation</strong> supports optional OUTPUT control of any unused Arduino Pins for custom purposes. Pins can be activated or de-activated. The default is to set ACTIVE pins HIGH and INACTIVE pins LOW. However, this default behaviour can be inverted for any pin in which case ACTIVE=LOW and INACTIVE=HIGH.</li>
+<li>Definitions and state (ACTIVE/INACTIVE) for pins are retained in <abbr title="Electrically Erasable Programmable Read-Only Memory. Available on the Arduino Mega ONLY">EEPROM</abbr> and restored on power-up. The default is to set each defined pin to active or inactive according to its restored state. However, the default behaviour can be modified so that any pin can be forced to be either active or inactive upon power-up regardless of its previous state before power-down.</li>
+<li>To have EX‑CommandStation utilise one or more Arduino pins as custom outputs, first define/edit/delete output definitions using the following variation of the <code>&lt;Z&gt;</code> command, or the lowercase <code>&lt;z&gt;</code> command can be used with no pre-definition required.</li>
+<li><code>&lt;Z «id» «state»&gt;</code><ul>
+<li>When controlled as such, the Arduino updates and stores the direction of each output in <abbr title="Electrically Erasable Programmable Read-Only Memory. Available on the Arduino Mega ONLY">EEPROM</abbr> so that it is retained even without power. A list of the current states of each output in the form <code>&lt;Y «id» «state»&gt;</code> is generated by <strong>EX‑CommandStation</strong> whenever the <code>&lt;s&gt;</code> status command is invoked. This provides an efficient way of initializing the state of any outputs being monitored or controlled by a separate interface or GUI program.</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<p><a href="?_J_R">Also search for 'J R'</a></p>
-<h3 id="examples-commands"><em>Examples Commands</em><a class="headerlink" href="#examples-commands" title="Permanent link">&para;</a></h3>
+<!-- [Also search for 'xxx'](?_xxx) or [search for 'xxx'](?_xxx) -->
+
+<h3 id="example-commands"><em>Example Commands</em><a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h3>
 <ul>
-<li>request list of locos in the roster: <code>&lt;J R&gt;</code></li>
-<li>request the details of loco with an id of 100: <code>&lt;J R 100&gt;</code> </li>
+<li><mark>TODO</mark> Example Commands</li>
 </ul>
-<h3 id="example-responses">Example Responses<a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
+<h3 id="example-responses"><em>Example Responses:</em><a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
 <ul>
-<li>a list of locos in the roster: <br/><code>&lt;jR 100 201 203 1005&gt;</code> </li>
-<li>details of loco <code>100</code> from the roster: <br/><code>&lt;jR 100, "Class 37 Loram Livery", "Lights/WarmEngineStart/Brake/*Single-Horn/*Double-Horn/Light Engine Mode/Coasting/Speed Lock/Sound Fade OutIn/Flange Squeal//*Buffer Up/*Coupling/STATIONARY-Guard's Whistle MOVING-Detonators/Wagon Snatching &amp; Buffering/High Intensity Light-On/Red Tail Lights On Both Ends Non di/Marker Lights On Both Ends Non di/Cab Light On-No.1 End Fan/Cab Light On-No.2 End non fan/No.1 End Dir Lights Off/No.2 End Dir Lights Off/Compressor/Windscreen Wipers/Engine Room"&gt;</code></li>
+<li><mark>TODO</mark> Example Responses</li>
 </ul>
 <!-- These are case sensitive -->
 
