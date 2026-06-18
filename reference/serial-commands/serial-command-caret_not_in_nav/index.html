@@ -7066,18 +7066,19 @@
 
 
 <h1 id="locoleadloco-follower-follower27-manage-ex-commandstation-consistsmus"><small><code>&lt;^ «loco»|[«leadLoco» «follower» [ «follower2..7»]]&gt;</code></small> <br/> Manage EX-CommandStation Consists/MUs<a class="headerlink" href="#locoleadloco-follower-follower27-manage-ex-commandstation-consistsmus" title="Permanent link">&para;</a></h1>
-<p>Serial command to manage in-command-station Consists/Multiple Unit Trains (MUs).  These are created and held temporarily in the <strong>EX-CommandStation</strong> and are lost when the command station restarts.</p>
+<p>Serial commands to manage in-command-station Consists/<abbr title="Refers to multiple locos driving one train. North American term is &quot;Consist&quot;">Multiple Unit</abbr> Trains (MUs).  These are created and held temporarily in the <strong>EX-CommandStation</strong> and are lost when the command station restarts.</p>
+<p>See <a href="../../../products/ex-commandstation/exrail/cookbooks/driving-trains/consists/">Consists page</a> for information on other types of <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr>.</p>
 <h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>&lt;^&gt;</code> List consists</li>
-<li><code>&lt;^ loco&gt;</code> uncouples any consist containing this loco</li>
-<li><code>&lt;^ leadLoco follower [ follower2..7]&gt;</code> creates a consist from up to 8 loco ids (negative for loco in reverse)</li>
+<li><code>&lt;^ loco&gt;</code> Uncouples any <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> containing this loco</li>
+<li><code>&lt;^ leadLoco follower [ follower2..7]&gt;</code> Creates a <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> from up to 8 loco ids (negative for loco in reverse)</li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>loco</strong>: DCC Address of the loco to add or remove from the consist.</li>
-<li><strong>leadLoco</strong>: Notional address of the loco to become the lead loco. (1-10293``) <br/>This does not need to be a real loco.  This will be the address that you select with the throttle or <strong>EXRAIL</strong> sequence to control all the locos in the consist/Multiple Unit train at the same time.</li>
-<li><strong>follower1..7</strong>: loco to add to the consist/Multiple Unit train.<br/> negative for a reversed loco.</li>
+<li><strong>loco</strong>: DCC Address of the loco to add or remove from the <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr>.</li>
+<li><strong>leadLoco</strong>: Notional address of the loco to become the lead loco. (1-10293``) <br/>This does not need to be a real loco. Nor does tit need to be one of teh actual locos in the consts/<abbr title="Multiple Unit (MU) train. Refers to multiple locos driving one train. North American term is &quot;Consist&quot;">MU</abbr>. <br/>This will be the address that you select with a throttle or <strong>EXRAIL</strong> sequence to control all the locos in the <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr>/<abbr title="Refers to multiple locos driving one train. North American term is &quot;Consist&quot;">Multiple Unit</abbr> train at the same time.</li>
+<li><strong>follower1..7</strong>: loco to add to the <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr>/<abbr title="Refers to multiple locos driving one train. North American term is &quot;Consist&quot;">Multiple Unit</abbr> train.<br/> negative for a reversed loco.</li>
 </ul>
 <h2 id="response">Response<a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
 <p><mark>TODO</mark> response</p>
@@ -7087,7 +7088,7 @@
 </ul>
 <hr />
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<p><a href="?_^">Also search for '&lt;^&gt;'</a> or <a href="?consist">search for 'consist'</a></p>
+<p><a href="?_^">Also search for '&lt;^&gt;'</a> or <a href="?consist">search for '<abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr>'</a></p>
 <h3 id="example-commands"><em>Example Commands</em><a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h3>
 <ul>
 <li><mark>TODO</mark> LOW - Example Commands</li>
@@ -7123,7 +7124,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2026 05:04:29 UTC">June 18, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2026 05:36:08 UTC">June 18, 2026</span>
   </span>
 
     
