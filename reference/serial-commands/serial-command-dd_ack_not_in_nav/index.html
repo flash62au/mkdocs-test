@@ -468,18 +468,17 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../toc/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../../toc/" class="md-tabs__link">
+        
   
+  
+    
   
   ToC
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -6670,6 +6669,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../contributing/todo-report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    To-Do/Task List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../contributing/code/contributing-code/" class="md-nav__link">
         
   
@@ -6704,10 +6726,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_6" >
         
           
-          <label class="md-nav__link" for="__nav_12_5" id="__nav_12_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_6" id="__nav_12_6_label" tabindex="0">
             
   
   
@@ -6720,8 +6742,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_6">
             <span class="md-nav__icon md-icon"></span>
             Contributing Documentation
           </label>
@@ -6909,23 +6931,9 @@
   
   
   
-    
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
+    <li class="md-nav__item">
+      <a href="../../../toc/" class="md-nav__link">
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
-        
-          
-          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
-            
   
   
   <span class="md-ellipsis">
@@ -6934,65 +6942,7 @@
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13">
-            <span class="md-nav__icon md-icon"></span>
-            ToC
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../toc/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Table of Contents
-    
-  </span>
-  
-
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../todo-report/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    To-Do/Task List
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -7167,7 +7117,7 @@
 <p>The Ack current limit is set according to the DCC standard(s) of 60mA. Most decoders send a quick back and forth current pulse to the motor to generate this ACK. However, some modern motors (N and Z scales) may not be able to draw that amount of current. You can adjust down this limit. Or, if for some reasons your acks seem to be too “trigger happy” you can make it less sensitive by raising this limit.</p>
 </li>
 <li>
-<p>The <abbr title="National Model Railroad Association">NMRA</abbr> specifies that the ACK pulse duration should be 6 milliseconds, which is 6000 microseconds (µS), give or take 1000 µS. That means the minimum pulse duration is 5000 µS and the maximum is 7000 µS. There are many poorly designed decoders in existence so <strong>DCC-EX</strong> extends this range from 4000 to 8500 µS. If you have any decoders that still do not function within this range, you can adjust the ACK MIN and ACK MAX parameters.</p>
+<p>The <abbr title="National Model Railroad Association (USA)">NMRA</abbr> specifies that the ACK pulse duration should be 6 milliseconds, which is 6000 microseconds (µS), give or take 1000 µS. That means the minimum pulse duration is 5000 µS and the maximum is 7000 µS. There are many poorly designed decoders in existence so <strong>DCC-EX</strong> extends this range from 4000 to 8500 µS. If you have any decoders that still do not function within this range, you can adjust the ACK MIN and ACK MAX parameters.</p>
 </li>
 <li>
 <p>When reading/writing CVs, the program will try again upon failure. The default is <code>&lt;D ACK RETRY 2&gt;</code>, which means 3 attempts before a failure is reported. Each of the unsuccessful attempts is reported in the Serial Monitor or <abbr title="Java Model Railroad Interface">JMRI</abbr> monitor log. The last unsuccessful attempt remains on the display if in use. To reset the running total, send the command manually: <code>&lt;D ACK RETRY 2&gt;</code>.</p>
@@ -7175,7 +7125,7 @@
 </li>
 <li>
 <p>By default, the programming track has a current limit enabled of 250mA, so any programming activities requiring more than this value will cause power to the programming track to be cut for 100ms. Run the <code>C PROGBOOST&gt;</code> command to override this if programming decoders trigger current limiting on the programming track.</p>
-<p>When the programming track is switched on with <code>&lt;1&gt;</code> or <code>&lt;1 PROG&gt;</code> it will normally be restricted to 250mA according to <abbr title="National Model Railroad Association">NMRA</abbr> standards. Some loco decoders require more than this, especially sound versions. <code>&lt;C PROGBOOST&gt;</code> temporarily removes this limit to allow the decoder to use more power. The normal limit will be re-imposed when the programming track is switched off with <code>&lt;0&gt;</code> or <code>&lt;0 PROG&gt;</code> or the <strong>EX-CommandStation</strong> is reset.</p>
+<p>When the programming track is switched on with <code>&lt;1&gt;</code> or <code>&lt;1 PROG&gt;</code> it will normally be restricted to 250mA according to <abbr title="National Model Railroad Association (USA)">NMRA</abbr> standards. Some loco decoders require more than this, especially sound versions. <code>&lt;C PROGBOOST&gt;</code> temporarily removes this limit to allow the decoder to use more power. The normal limit will be re-imposed when the programming track is switched off with <code>&lt;0&gt;</code> or <code>&lt;0 PROG&gt;</code> or the <strong>EX-CommandStation</strong> is reset.</p>
 </li>
 </ul>
 <hr />
