@@ -1971,6 +1971,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../editing-tricks/general-tips/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    General EXRAIL Tips
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../editing-tricks/multi-files/" class="md-nav__link">
         
   
@@ -7325,13 +7348,13 @@
 <h3 id="3-throttle-consistmu-not-possible-for-exrail">3. Throttle <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">Consist</abbr>/<abbr title="Multiple Unit (MU) train. Refers to multiple locos driving one train. North American term is &quot;Consist&quot;">MU</abbr> (NOT POSSIBLE for <strong>EXRAIL</strong>)<a class="headerlink" href="#3-throttle-consistmu-not-possible-for-exrail" title="Permanent link">&para;</a></h3>
 <p>The locos are unchanged and the throttle sends individual speed command to each loco.
 Disadvantages are that only the throttle knows about the relationship between the locos and that information can't easily be shared with other throttles, so another throttle may command one of the locos differently and cause mayhem. <strong>EXRAIL</strong> drives on one loco id so cannot drive this kind of <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr>. Which loco gets which functions may be configured at the throttle but are unknown to the <strong>EX-CommandStation</strong>.</p>
-<h3 id="4-ex-commandstation-consistsmus">4. EX-CommandStation <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consists</abbr>/MUs<a class="headerlink" href="#4-ex-commandstation-consistsmus" title="Permanent link">&para;</a></h3>
+<h3 id="4-ex-commandstation-consistsmus">4. EX-CommandStation consists/MUs<a class="headerlink" href="#4-ex-commandstation-consistsmus" title="Permanent link">&para;</a></h3>
 <p>The <strong>EX-CommandStation</strong> knows the locos that are in the <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr>. Any speed commands to the lead loco are transmitted to all following locos. No <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr> are modified and any throttle, including <strong>EXRAIL</strong>  can drive the lead loco or send function commands to the followers, but functions sent to the lead loco are not shared with the other locos, as there is no guarantee that "horn" on one loco isnt "halt and catch fire" on another.  </p>
 <p>Throttle commands sent to the following locos are ignored but the <strong>EX-CommandStation</strong> broadcasts lead loco throttle changes for each loco.</p>
-<p>These <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consists</abbr> can be built with
+<p>These consists can be built with
  <a href="../../../../../../reference/serial-commands/serial-command-caret_not_in_nav/">commands</a> or <strong>EXRAIL</strong>.</p>
-<h2 id="ex-commandstation-consistsmus-with-exrail">EX-CommandStation <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consists</abbr>/MUs with <strong>EXRAIL</strong><a class="headerlink" href="#ex-commandstation-consistsmus-with-exrail" title="Permanent link">&para;</a></h2>
-<p><strong>EX-CommandStation</strong> <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consists</abbr> can be built up with <strong>EXRAIL</strong> commands:</p>
+<h2 id="ex-commandstation-consistsmus-with-exrail">EX-CommandStation consists/MUs with <strong>EXRAIL</strong><a class="headerlink" href="#ex-commandstation-consistsmus-with-exrail" title="Permanent link">&para;</a></h2>
+<p><strong>EX-CommandStation</strong> consists can be built up with <strong>EXRAIL</strong> commands:</p>
 <p><code>BUILD_CONSIST(newLoco)</code>  adds the new loco to follow the existing task loco. Specifying newloco as negative means the loco is facing the opposite way to the rest of the <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr>.</p>
 <p>For example:</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">SETLOCO</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w">        </span><span class="c1">// sets current loco</span>

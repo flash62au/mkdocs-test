@@ -2281,6 +2281,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../cookbooks/editing-tricks/general-tips/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    General EXRAIL Tips
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../cookbooks/editing-tricks/multi-files/" class="md-nav__link">
         
   
@@ -7740,7 +7763,7 @@
 <li><a href="#adding-sensors">Sensors</a></li>
 <li><a href="#adding-signals">Signals (Lights)</a></li>
 </ul>
-<p>The process for creating these objects <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consists</abbr> of:</p>
+<p>The process for creating these objects consists of:</p>
 <ul>
 <li>Adding the hardware (not strictly applicable to the roster)</li>
 <li>Configuring <strong>EX-CommandStation</strong> by modifying <code>`myAutomation.h</code> so that it knows about the object</li>
@@ -7821,7 +7844,7 @@
 <p>If you have installed turnouts/points using DCC accessory decoders, you can config the <strong>EX-CommandStation</strong> so that it knows about it and you can control in in your sequences.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="n">TURNOUT</span><span class="p">(</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">addr</span><span class="p">,</span><span class="w"> </span><span class="n">sub_addr</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </code></pre></div>
-<p>The <code>TURNOUT</code> command defines DCC accessory decoder <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point in <strong>EXRAIL</strong>, which will appear in |<abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> Protocol| apps, |Engine Driver|, and <abbr title="Java Model Railroad Interface">JMRI</abbr> in addition to being defined as a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point within the CommandStation.</p>
+<p>The <code>TURNOUT</code> command defines DCC accessory decoder <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point in <strong>EXRAIL</strong>, which will appear in <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> Protocol apps, Engine Driver, and <abbr title="Java Model Railroad Interface">JMRI</abbr> in addition to being defined as a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point within the CommandStation.</p>
 <h4 id="configure-myautomationh-dcc-turnoutspoints">Configure myAutomation.h - DCC Turnouts/Points<a class="headerlink" href="#configure-myautomationh-dcc-turnoutspoints" title="Permanent link">&para;</a></h4>
 <h3 id="pin-turnoutspoints">Pin Turnouts/Points<a class="headerlink" href="#pin-turnoutspoints" title="Permanent link">&para;</a></h3>
 <h4 id="adding-the-hardware-pin-turnoutspoints">Adding the Hardware -  Pin Turnouts/Points<a class="headerlink" href="#adding-the-hardware-pin-turnoutspoints" title="Permanent link">&para;</a></h4>
@@ -7920,7 +7943,7 @@
 <li>active_angle = The angle to which the servo will move when the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point is thrown (refer below for further detailed information).</li>
 <li>inactive_angle = The angle to which the servo will move when the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point is closed (refer below for further detailed information).</li>
 <li>profile = There are five profiles to choose from that determine the speed at which a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point will move: Instant, Fast, Medium, Slow, and Bounce (note we don't recommend Bounce for a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point definition).</li>
-<li>description = A human-friendly description of the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point that will appear in <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> apps and |Engine Driver|. Note that this must be enclosed in quotes "".</li>
+<li>description = A human-friendly description of the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point that will appear in <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> apps and Engine Driver. Note that this must be enclosed in quotes "".</li>
 </ul>
 <hr />
 <h2 id="servos-for-signals-and-animations">Servos for Signals and Animations<a class="headerlink" href="#servos-for-signals-and-animations" title="Permanent link">&para;</a></h2>
@@ -8008,8 +8031,8 @@
 <p>Sensor numbers are direct references to VPINs (virtual pin numbers) in the Hardware Abstraction Layer. For a Mega onboard GPIO pin, this is the same as the digital pin number. Other pin ranges refer to I/O expanders etc. </p>
 <div class="admonition note">
 <p class="admonition-title">Hall effect sensors</p>
-</div>
 <p>Hall effect sensors work for some layouts, but beware of how you detect the back end of a train approaching the buffers in a siding, or knowing when the last car has cleared a crossing.</p>
+</div>
 <p><strong>EX-CommandStation</strong> allows for sensors that are <strong>Active Low or Active High</strong>. This is particularly important for IR sensors that have been converted to detect by broken beam, rather than reflection. By making the sensor number negative, the sensor state is inverted. e.g. <code>AT(-22)</code>.</p>
 <p>Sensors with ID's 0 to 255 may be LATCHED/UNLATCHED in your script. If a sensor is latched on by the script, it can only be set off by the script… so <code>AT(22) LATCH(22)</code> for example effectively latches the sensor 22 on when detected once.</p>
 <p>Sensor polling by <abbr title="Java Model Railroad Interface">JMRI</abbr> is independent of this, and may continue if <code>&lt;S&gt;</code> commands are used.  However there is now a way of defining <abbr title="Java Model Railroad Interface">JMRI</abbr> sensors from within <strong>EXRAIL</strong> - see EXRAIL Command Reference - JMRI_SENSOR.</p>
@@ -8035,24 +8058,16 @@
 <p>The myAutomation.h file needs to be altered so that the <strong>EX-CommandStation</strong> knows about each Signal.</p>
 <p>Signals setup on vpins 101, 102 ... 115</p>
 <p>For each signal add a line in myAutomation.h in the form:</p>
-<p>SIGNAL(red_pin, amber_pin, green_pin) </p>
+<p><code>SIGNAL(red_pin, amber_pin, green_pin)</code></p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="c1">// always use the first red_pin as the signal_id for All signal color changes)</span>
 <span class="w">    </span><span class="n">SIGNAL</span><span class="p">(</span><span class="mi">106</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">107</span><span class="p">)</span><span class="w"> </span><span class="c1">// Red, Amber, Green For turnout/point 1</span>
 </code></pre></div>
-<p>Combine the two commands Servo_Turnout and Signal (New 4.1:)</p>
-<p>New 4.1 SERVO_SIGNAL(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, redpos, amberpos, greenpos)</p>
+<p>Combine the two commands Servo_Turnout and Signal</p>
+<p><code>SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)</code></p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="c1">// Use the first Red vpin# as the signal_id for All Signal color changes</span>
 <span class="w">    </span><span class="c1">// Use this to Combine the two commands Servo_Turnout and Signal above into One Function </span>
 <span class="w">    </span><span class="n">SERVO_SIGNAL</span><span class="p">(</span><span class="mi">106</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">205</span><span class="p">)</span><span class="w"> </span><span class="c1">//  Red vpin 106 for turnout/point 1, Thrown=Red, Close = Green</span>
 </code></pre></div>
-<!--
-----
-
-## Next Steps - Creating Sequences
-
-See the :doc:`getting-started` page or click the 'Next' button to learn how to create automation sequences.
--->
-
 <!-- These are case sensitive -->
 
 
@@ -8074,7 +8089,7 @@ See the :doc:`getting-started` page or click the 'Next' button to learn how to c
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 22, 2026 22:33:56 UTC">June 22, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 22, 2026 22:48:56 UTC">June 22, 2026</span>
   </span>
 
     
