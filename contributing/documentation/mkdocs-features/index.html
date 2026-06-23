@@ -7133,6 +7133,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#making-tables-smaller" class="md-nav__link">
+    <span class="md-ellipsis">
+      Making tables smaller
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7408,6 +7417,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#making-tables-smaller" class="md-nav__link">
+    <span class="md-ellipsis">
+      Making tables smaller
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7560,6 +7578,48 @@
 <p>The first page in a directory will have no previous button, and the last no next button.</p>
 <p><strong>NOTE:</strong> This is calculated based on the sorting order of the page file names within the directory, and therefore custom ordering of pages using .nav.yml will cause unexpected results.</p>
 <p>To enable this customised navigation, a custom "footer.html" template has been included and can be found in "overrides/partials/footer.html". This is required in order to show/hide the previous and next arrows as determined by the plugin.</p>
+<h3 id="making-tables-smaller">Making tables smaller<a class="headerlink" href="#making-tables-smaller" title="Permanent link">&para;</a></h3>
+<p>The following, or a modified version, can be added to a page or span to make the tables smaller.</p>
+<div class="language-html highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">.</span><span class="nc">md-typeset</span><span class="w"> </span><span class="nt">table</span><span class="w"> </span><span class="nt">td</span><span class="o">,</span><span class="w">  </span>
+<span class="p">.</span><span class="nc">md-typeset</span><span class="w"> </span><span class="nt">table</span><span class="w"> </span><span class="nt">th</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="kc">smaller</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">padding-top</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">padding-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">padding-left</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">padding-right</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">line-height</span><span class="p">:</span><span class="w"> </span><span class="mi">110</span><span class="kt">%</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;Roboto Condensed&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w"> </span><span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Note that unless the <code>&lt;style&gt;...&lt;/style&gt;</code> and the table are inside a <code>&lt;span&gt;...&lt;/span&gt;</code> all the tables on the page will be smaller.</p>
+<p>To freeze the first column you can also add:</p>
+<div class="language-html highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">.</span><span class="nc">md-typeset</span><span class="w"> </span><span class="p">.</span><span class="nc">md-typeset__scrollwrap</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">overflow-x</span><span class="p">:</span><span class="w"> </span><span class="kc">auto</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">overflow-y</span><span class="p">:</span><span class="w"> </span><span class="kc">visible</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">md-typeset__scrollwrap</span><span class="w"> </span><span class="nt">table</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">table</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">border-collapse</span><span class="p">:</span><span class="w"> </span><span class="kc">separate</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">    </span><span class="k">border-spacing</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">md-typeset__scrollwrap</span><span class="w"> </span><span class="nt">th</span><span class="p">:</span><span class="nd">first-child</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">md-typeset__scrollwrap</span><span class="w"> </span><span class="nt">td</span><span class="p">:</span><span class="nd">first-child</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">md-typeset</span><span class="w"> </span><span class="nt">table</span><span class="w"> </span><span class="nt">tr</span><span class="w"> </span><span class="nt">th</span><span class="p">:</span><span class="nd">first-child</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">md-typeset</span><span class="w"> </span><span class="nt">table</span><span class="w"> </span><span class="nt">tr</span><span class="w"> </span><span class="nt">td</span><span class="p">:</span><span class="nd">first-child</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">sticky</span><span class="p">;</span>
+<span class="w">    </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">z-index</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c">/* Keeps the column on top of the scrolling content */</span>
+<span class="w">    </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--md-default-bg-color--light</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Examples can be see in on the throttles page and the dc-mode-frequency page. The dc-mode-frequency also has additional styling to alter the widths of the columns.</p>
 
 
 
@@ -7580,7 +7640,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 11:04:31 UTC">June 17, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 23, 2026 00:13:39 UTC">June 23, 2026</span>
   </span>
 
     
