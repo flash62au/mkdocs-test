@@ -16,7 +16,7 @@
         <link rel="prev" href="../ex-toolbox/">
       
       
-        <link rel="next" href="../user-guide/">
+        <link rel="next" href="../connecting/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../feed_rss_created.xml">
@@ -341,7 +341,7 @@
           
   
   
-  Throttles
+  Use (Throttles)
 
         </a>
       </li>
@@ -3948,43 +3948,33 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#connecting-to-your-ex-commandstation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Connecting to your EX-CommandStation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Connecting to your EX-CommandStation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#direct-usb-usb-otg" class="md-nav__link">
-    <span class="md-ellipsis">
-      Direct USB / USB OTG
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#starting-ex-toolbox" class="md-nav__link">
-    <span class="md-ellipsis">
-      Starting EX-Toolbox
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connecting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Connecting
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -5265,7 +5255,7 @@
   
   
   <span class="md-ellipsis">
-    Throttles
+    Use (Throttles)
     
   </span>
   
@@ -5276,7 +5266,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            Throttles
+            Use (Throttles)
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -7541,39 +7531,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#connecting-to-your-ex-commandstation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Connecting to your EX-CommandStation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Connecting to your EX-CommandStation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#direct-usb-usb-otg" class="md-nav__link">
-    <span class="md-ellipsis">
-      Direct USB / USB OTG
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#starting-ex-toolbox" class="md-nav__link">
-    <span class="md-ellipsis">
-      Starting EX-Toolbox
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -7629,60 +7586,8 @@
 <li>Has advertisements</li>
 </ul>
 <p>Follow the instructions on their <a href="https://www.bluestacks.com/">site</a>  to install BlueStacks, then get the appropriate .apk to install the throttle app you want. e.g. The Engine Driver .apk is available from the <a href="https://github.com/DCC-EX/EX-Toolbox/tree/master/EX_Toolbox/apks">EX-Toolbox Github page</a>.</p>
-<h2 id="connecting-to-your-ex-commandstation">Connecting to your EX-CommandStation<a class="headerlink" href="#connecting-to-your-ex-commandstation" title="Permanent link">&para;</a></h2>
-<p>Please remember that to connect to a WiFi <strong>EX-CommandStation</strong> on the correct WiFi network.</p>
-<ul>
-<li>
-<p>If you are running your <strong>EX-CommandStation</strong> in Access Point (<abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr>) mode, you must switch your phone or tablet WiFi to the access point / WiFi network/<abbr title="Service Set Identifier. Technical term for the WiFi network's name">SSID</abbr> that the EX-CommandStation has created.</p>
-</li>
-<li>
-<p>If you are running your <strong>EX-CommandStation</strong> in Station (<abbr title="Station Mode. Joins an existing WiFi network">STA</abbr>) mode, you must switch your phone or tablet WiFi to your home access point / WiFi network/<abbr title="Service Set Identifier. Technical term for the WiFi network's name">SSID</abbr>. that same one that the EX-CommandStation is connected to.</p>
-</li>
-</ul>
-<h3 id="direct-usb-usb-otg">Direct USB / USB OTG<a class="headerlink" href="#direct-usb-usb-otg" title="Permanent link">&para;</a></h3>
-<p>As of Version 0.1.35 of <strong>EX-Toolbox</strong>, the discovered server list will also include an entry <code>DCC-EX-USB-OTG</code> if you have a <strong>EX-CommandStation</strong> connected directly to your phone or tablet using a USB on-the-go (OTG) cable.</p>
-<p>Notes</p>
-<ul>
-<li>The direct USB connection is only supported on Android devices that support USB on-the-go (OTG).</li>
-<li>In general USB-C to the USB-C cables are automatically OTG, but if you are using a USB-C to USB-A cable, you will need to check that the cable supports OTG.  If it doesn't, the 'DCC-EX-USB-OTG' entry won't appear in the discovered server list.</li>
-</ul>
-<p><img align="right" alt="USB OTG" src="../../../_static/images/ex-toolbox/usb_utg_prompt.png" width="30%" /></p>
-<ul>
-<li>Anytime you connect any USB device to your phone or tablet, you will likely get a pop up asking if you want to allow <strong>EX-Toolbox</strong> to access the USB.  IF you connect devices other that an <strong>EX-CommandStation</strong> to your phone or tablet, just cancel the pop up, but if you only connect an <strong>EX-CommandStation</strong> you can check the box to always open <strong>EX-Toolbox</strong>.</li>
-</ul>
-<h2 id="starting-ex-toolbox">Starting EX-Toolbox<a class="headerlink" href="#starting-ex-toolbox" title="Permanent link">&para;</a></h2>
-<p>Other than the very first time you start <strong>EX‑Toolbox</strong>, when the app opens you will be shown the 'Connection' screen.</p>
-<p><img alt="connecting" src="../../../_static/images/ex-toolbox/connect.png" width="200px" /></p>
-<p>There are three ways you can select an <strong>EX‑CommandStation</strong> to connect to:</p>
-<ul>
-<li>
-<p><code>IP Address and Port</code> <br/>
-  To find your EX-CommandStation's IP address and Port refer you original setup or, if you have a OLED screen on your <strong>EX-CommandStation</strong> the details will be displayed on it.
-  The port will normally be 2560.</p>
-</li>
-<li>
-<p><code>Discovered Servers</code> <br/>
-  If the server you want to connect to is in the list, simply click on it and you will be taken to the '<abbr title="Configuration Variable (DCC Decoders)">CV</abbr>-Programming' screen. This includes via a direct USB connection.</p>
-</li>
-<li>
-<p><code>Recent servers</code> <br/>
-  If the server does not appear in the recent list try one of the other two methods. Your server not appearing in the recent list is not necessarily a problem and there can be a number of reasons why.</p>
-</li>
-</ul>
-<p><strong><em>Notes</em></strong></p>
-<ul>
-<li>
-<p><em>Important!</em> <strong>EX‑Toolbox</strong> can only connect directly to an EX‑CommandStation or <abbr title="Java Model Railroad Interface">JMRI</abbr>'s 'DCC++ over TCP Server', however <abbr title="Java Model Railroad Interface">JMRI</abbr>, the EX‑CommandStation and other devices and apps can, or do, advertise as "<abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr>" mDNS services. <strong>EX-Toolbox</strong> cannot determine which are actually direct connections to an EX‑CommandStation or <abbr title="Java Model Railroad Interface">JMRI</abbr>'s 'DCC++ over TCP Server'.</p>
-</li>
-<li>
-<p>If you only ever connect to one EX‑CommandStation you can effectively bypass this screen by setting the 'Auto-Connect to <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> Server?' preference.</p>
-</li>
-<li>
-<p><em>Direct USB connection</em><br/><br/>As of Version 0.1.35, the discovered server list will also include an entry <code>DCC-EX-USB-OTG</code> if you have a <strong>EX-CommandStation</strong> connected directly to your phone or tablet using a USB on-the-go (OTG) cable.<br/><br/>The direct USB connection is only supported on Android devices that support USB on-the-go (OTG).<br/><br/>In general USB-C to the USB-C cables are automatically OTG, but if you are using a USB-C to USB-A cable, you will need to check that the cable supports OTG.  If it doesn't, the <code>DCC-EX-USB-OTG</code> entry won't appear in the discovered server list.</p>
-</li>
-</ul>
 <hr />
-<p>Follow the <a href="../user-guide/">User Guide</a></p>
+<p>Follow the <a href="../connecting/">Connecting Guide</a></p>
 <!-- These are case sensitive -->
 
 
@@ -7704,7 +7609,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 23, 2026 23:10:21 UTC">June 23, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 23, 2026 23:28:13 UTC">June 23, 2026</span>
   </span>
 
     
@@ -7760,13 +7665,13 @@
         
         
           
-          <a href="../user-guide/" class="md-footer__link md-footer__link--next" aria-label="Next: User Manual">
+          <a href="../connecting/" class="md-footer__link md-footer__link--next" aria-label="Next: Connecting">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                User Manual
+                Connecting
               </div>
             </div>
             <div class="md-footer__button md-icon">
