@@ -8958,7 +8958,7 @@
 <br/>Connections for an A4988 stepper driver with NEMA17 stepper motor</p>
 <p><img alt="DRV8825 NEMA Option" src="../../../_static/images/ex-turntable/drv8825-nema17-nano.png" width="400px" />
 <br/>Connections for a DRV8825 stepper driver with NEMA17 stepper motor</p>
-<p>Credit to Dejan at HowToMechatronics.com for outlining the connections for a TMC2208 stepper driver with a NEMA17 stepper motor along with the microsteps table included below. Also note that with the TMC2208 driver, it typically rotates the stepper in the reverse direction to the A4988 and DRV8825, and likely requires inverting the DIR pin in order for it to rotate in the same direction. This is possible via a configuration option introduced in <strong>EX-Turntable</strong> version 0.7.0, see :ref:<code>ex-turntable/configure:invert_direction</code>.</p>
+<p>Credit to Dejan at HowToMechatronics.com for outlining the connections for a TMC2208 stepper driver with a NEMA17 stepper motor along with the microsteps table included below. Also note that with the TMC2208 driver, it typically rotates the stepper in the reverse direction to the A4988 and DRV8825, and likely requires inverting the DIR pin in order for it to rotate in the same direction. This is possible via a configuration option introduced in <strong>EX-Turntable</strong> version 0.7.0, see <a href="../configure/#invert_direction">invert_direction</a>.</p>
 <p><img alt="TMC2208" src="../../../_static/images/ex-turntable/tmc2208.jpg" width="400px" />
 <br/>Connections for a TMC2208 stepper driver with NEMA17 stepper motor</p>
 <h3 id="1-before-you-start">1. BEFORE you start<a class="headerlink" href="#1-before-you-start" title="Permanent link">&para;</a></h3>
@@ -9155,7 +9155,7 @@
 <p>If you have loaded the code too soon, and the automatic calibration has succeeded and recorded an inaccurate step count, then have no fear as there is a command you can run on the CommandStation to reinitiate the calibration sequence which is outlined in the <a href="../test-and-tune/#testing-ex-turntable">testing</a> section.</p>
 </div>
 <p>As of v0.5.0-Beta and up to version 0.6.0, you can also execute the command <code>&lt;0 3&gt;</code> in the serial console to initiate the calibration sequence. In version 0.7.0 you can execute <code>&lt;C&gt;</code> instead to initiate the sequence.</p>
-<p>Also, if you have enabled the <code>FULL_STEP_COUNT</code> option in "config.h", that will prevent automatic calibration occurring, refer to :ref:<code>ex-turntable/configure:full_step_count</code>.</p>
+<p>Also, if you have enabled the <code>FULL_STEP_COUNT</code> option in "config.h", that will prevent automatic calibration occurring, refer to <a href="../configure/#full_step_count">full step count</a>.</p>
 <p>When <strong>EX-Turntable</strong> is first loaded onto your Arduino, and it has successfully performed the homing process outlined above, it will commence an automatic calibration sequence. This involves several rotations of the turntable to ensure it is homed accurately, and is then able to count the steps required to complete a full rotation of the turntable.</p>
 <p>Once the calibration sequence has completed, it will display the step count for an entire rotation, which you should take note of for calculating the various positions in <a href="../test-and-tune/#tuning-your-turntable-positions">tuning your turntable positions</a>.</p>
 <p>On the first start, the output in the serial console should look similar to the below:</p>
@@ -9260,7 +9260,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 26, 2026 13:05:03 UTC">June 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 26, 2026 13:13:08 UTC">June 26, 2026</span>
   </span>
 
     
