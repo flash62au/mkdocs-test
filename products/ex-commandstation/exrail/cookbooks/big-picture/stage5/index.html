@@ -4689,35 +4689,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../ex-turntable/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    EX-Turntable
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../../../ex-turntable/overview/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Overview
+    EX-Turntable Overview
     
   </span>
   
@@ -7688,7 +7665,7 @@
   
   
   <span class="md-ellipsis">
-    Motorboards
+    Hal
     
   </span>
   
@@ -7698,6 +7675,101 @@
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_11_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_10_11_4">
+            <span class="md-nav__icon md-icon"></span>
+            Hal
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../reference/hardware/hal/hal-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    I/O Device Drivers and HAL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../reference/hardware/hal/writing-hal-driver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Writing a HAL Driver
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_11_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_11_5" id="__nav_10_11_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Motorboards
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_11_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_11_5">
             <span class="md-nav__icon md-icon"></span>
             Motorboards
           </label>
@@ -7775,10 +7847,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_11_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_11_6" >
         
           
-          <label class="md-nav__link" for="__nav_10_11_5" id="__nav_10_11_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10_11_6" id="__nav_10_11_6_label" tabindex="0">
             
   
   
@@ -7791,8 +7863,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_11_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10_11_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_11_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_11_6">
             <span class="md-nav__icon md-icon"></span>
             Wifi boards
           </label>
@@ -8818,11 +8890,13 @@
 <p>In addition, turntables can be a real space saver compared to reversing loops, and traversers can also be significant space savers for staging tracks, allowing multiple trains to be staged ready for action without taking up spurs or sidings on the main layout when not in use.</p>
 <p>When it comes to RMFT, we are adding a turntable that has seven defined positions, six of which are for entering roundhouse stalls, and the seventh is the track connecting to the rest of the layout via the switching/shunting yard.</p>
 <p>In addition, we are also adding a horizontal staging traverser that will allow for six complete trains to be staged off the layout ready for action.</p>
-<p>!! note "Tip"</p>
+<div class="admonition note">
+<p class="admonition-title">Tip</p>
 <p>In preparation for adding an <strong>EX-Turntable</strong> to your layout, you'll need to understand the concepts outlined on the <a href="../../../../../ex-turntable/overview/">EX-Turntable Overview</a> page, paying particular attention to the section on polarity or phase switching (<a href="../../../../../ex-turntable/overview/#important-phase-or-polarity-switching"></a>), as we will be using automatic phase switching for the turntable.</p>
 <p>Further to this, you'll also need to understand the differences required for traverser mode as outlined on the <a href="../../../../../ex-turntable/traverser/">Traverser</a> page. We will not require phase switching for the traverser, as any locos on the traverser will not be rotating 180 degrees.</p>
 <p>If you won't be using a traverser on your layout or want to tackle this separately, you can skip the traverser info on this page as it is essentially an extension of the turntable info.</p>
 <p>Having both a turntable and traverser will require two separate instances of <strong>EX-Turntable</strong>, meaning two Arduinos, two stepper drivers/motors, and so forth.</p>
+</div>
 <h2 id="what-to-expect-to-learn-from-stage-5">What to expect to learn from stage 5<a class="headerlink" href="#what-to-expect-to-learn-from-stage-5" title="Permanent link">&para;</a></h2>
 <p>At the end of this stage, we expect you will have learnt the following:</p>
 <ul>
@@ -9395,7 +9469,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 26, 2026 13:05:03 UTC">June 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 26, 2026 23:25:29 UTC">June 26, 2026</span>
   </span>
 
     

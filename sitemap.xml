@@ -705,10 +705,6 @@
          <lastmod>2026-06-26</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-turntable/</loc>
-         <lastmod>2026-06-26</lastmod>
-    </url>
-    <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-turntable/assembly/</loc>
          <lastmod>2026-06-26</lastmod>
     </url>
@@ -846,6 +842,14 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/hardware/ethernet-boards/</loc>
+         <lastmod>2026-06-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/hardware/hal/hal-config/</loc>
+         <lastmod>2026-06-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/hardware/hal/writing-hal-driver/</loc>
          <lastmod>2026-06-26</lastmod>
     </url>
     <url>

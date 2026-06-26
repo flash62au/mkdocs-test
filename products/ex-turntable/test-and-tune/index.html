@@ -4446,35 +4446,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    EX-Turntable
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../overview/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Overview
+    EX-Turntable Overview
     
   </span>
   
@@ -7661,7 +7638,7 @@
   
   
   <span class="md-ellipsis">
-    Motorboards
+    Hal
     
   </span>
   
@@ -7671,6 +7648,101 @@
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_11_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_10_11_4">
+            <span class="md-nav__icon md-icon"></span>
+            Hal
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/hardware/hal/hal-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    I/O Device Drivers and HAL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/hardware/hal/writing-hal-driver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Writing a HAL Driver
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_11_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_11_5" id="__nav_10_11_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Motorboards
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_11_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_11_5">
             <span class="md-nav__icon md-icon"></span>
             Motorboards
           </label>
@@ -7748,10 +7820,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_11_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_11_6" >
         
           
-          <label class="md-nav__link" for="__nav_10_11_5" id="__nav_10_11_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10_11_6" id="__nav_10_11_6_label" tabindex="0">
             
   
   
@@ -7764,8 +7836,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_11_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10_11_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_11_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_11_6">
             <span class="md-nav__icon md-icon"></span>
             Wifi boards
           </label>
@@ -8772,7 +8844,7 @@
 <p>It is recommended to perform testing via the <strong>EX-Turntable</strong> serial console first using the commands in the next section, and then test using the <strong>EX-CommandStation</strong> diagnostic command. Using the diagnostic command is also the recommended method to perform tuning, as it replicates what the turntable object (and/or <strong>EXRAIL</strong>) will use to operate the turntable.</p>
 <div class="admonition note">
 <p class="admonition-title">Important</p>
-<p>For all references to "steps", this is the number of steps from the home position, not the number of steps the turntable has to travel.</p>
+<p>For all references to 'steps', this is the number of steps from the home position, not the number of steps the turntable has to travel.</p>
 </div>
 <h3 id="ex-turntable-interactive-serial-console-commands">EX-Turntable interactive serial console commands<a class="headerlink" href="#ex-turntable-interactive-serial-console-commands" title="Permanent link">&para;</a></h3>
 <p>While the ability to test <strong>EX-Turntable</strong> directly via the serial console was introduced in 0.5.0, this section covers the commands as of version 0.7.0. We highly recommend updating the <strong>EX-Turntable</strong> software if you are not running the latest. <strong>Note</strong> that this command is available when connected to the <strong>EX-Turntable</strong> serial console, <strong>not</strong> the <strong>EX-CommandStation</strong> serial console.</p>
@@ -8801,7 +8873,7 @@
 <p>Once you have verified <strong>EX-Turntable</strong> is functioning as expected, move on to testing with the <strong>EX-CommandStation</strong> diagnostic command <code>&lt;D TT vpin steps activity&gt;</code>.</p>
 <p>Ensure <strong>EX-Turntable</strong> was powered on before <strong>EX-CommandStation</strong>. By powering these on in that order, you will ensure that <strong>EX-Turntable</strong> is available prior to the CommandStation trying to load the device driver, otherwise it will consider the device as "OFFLINE", and commands will fail.</p>
 <p><strong>Note</strong> that these commands are available when connected to the <strong>EX-CommandStation</strong> serial console, <strong>not</strong> the <strong>EX-Turntable</strong> serial console.</p>
-<p>Referring to <mark>TODO</mark> :ref:<code>reference/developers/hal-config:adding a new device</code>, skip ahead to <mark>TODO</mark> :ref:<code>reference/developers/hal-config:checking the driver</code>, and the output you're looking for to validate the <strong>EX-Turntable</strong> device driver is loaded and connected successfully is below:</p>
+<p>Referring to <a href="../../../reference/hardware/hal/hal-config/#adding-a-new-device">adding a new device</a>, skip ahead to <mark>TODO</mark> <a href="../../../reference/hardware/hal/hal-config/#checking-the-driver">checking the driver</a>, and the output you're looking for to validate the <strong>EX-Turntable</strong> device driver is loaded and connected successfully is below:</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">HAL</span><span class="w"> </span><span class="n">SHOW</span><span class="o">&gt;&lt;*</span><span class="w"> </span><span class="n">Arduino</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">2-69</span><span class="w"> </span><span class="o">*&gt;</span>
 <span class="w">  </span><span class="o">&lt;*</span><span class="w"> </span><span class="n">PCA9685</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="n">x40</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">100-115</span><span class="w">  </span><span class="o">*&gt;</span>
 <span class="w">  </span><span class="o">&lt;*</span><span class="w"> </span><span class="n">PCA9685</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="n">x41</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">116-131</span><span class="w"> </span><span class="n">OFFLINE</span><span class="w"> </span><span class="o">*&gt;</span>
@@ -8809,7 +8881,7 @@
 <span class="w">  </span><span class="o">&lt;*</span><span class="w"> </span><span class="n">MCP23017</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="n">x21</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">180-195</span><span class="w"> </span><span class="n">OFFLINE</span><span class="w"> </span><span class="o">*&gt;</span>
 <span class="w">  </span><span class="o">&lt;*</span><span class="w"> </span><span class="n">EX</span><span class="o">-</span><span class="n">Turntable</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="n">x60</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">600-600</span><span class="w">  </span><span class="o">*&gt;</span><span class="w">          </span><span class="o">&lt;&lt;==</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">important</span><span class="w"> </span><span class="n">line</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="n">EX</span><span class="o">-</span><span class="n">Turntable</span><span class="o">**</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">connected</span><span class="o">!</span>
 </code></pre></div>
-<p>If there is an "OFFLINE" at the end of the <strong>EX-Turntable</strong> line, it indicates something is not quite right. Refer to <a href="../ex-tt-troubleshooting/#ex-turntable-showing-as-offline-with">showing as offline with \&lt;d hal show&gt;</a>.</p>
+<p>If there is an "OFFLINE" at the end of the <strong>EX-Turntable</strong> line, it indicates something is not quite right. Refer to <a href="../ex-tt-troubleshooting/#ex-turntable-showing-as-offline-with">showing as offline with <code>&lt;d hal show&gt;</code></a>.</p>
 <p>At power on, note that the turntable should have moved itself to the home position, so all commands below assume this is the case.</p>
 <div class="admonition note">
 <p class="admonition-title">default option for automatic phase switching</p>
@@ -9150,7 +9222,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 26, 2026 13:13:08 UTC">June 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 26, 2026 23:25:29 UTC">June 26, 2026</span>
   </span>
 
     
