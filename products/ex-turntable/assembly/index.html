@@ -8892,7 +8892,7 @@
 <p>We will also assume a prototyping shield is available that provides regulated 5V power sufficient for driving the ULN2003/28BYJ-48 stepper combo, and that there is a power supply with a suitable DC power plug to suit the prototyping shield.</p>
 <p>Throughout the assembly process, you can refer to this Fritzing diagram to help validate your connections are correct (open this image in a new tab or window and zoom in to see the detail):</p>
 <p><img alt="Fritzing Diagram" src="../../../_static/images/ex-turntable/assembly.png" width="400px" /></p>
-<p>Note: For the Tinkerers and Engineers, a much neater solution is to use a prototyping or strip board with much shorter (and soldered) connections to ensure reliability of the connections.</p>
+<p>Note: A much neater solution is to use a prototyping or strip board with much shorter (and soldered) connections to ensure reliability of the connections.</p>
 <h3 id="connection-summary">Connection summary<a class="headerlink" href="#connection-summary" title="Permanent link">&para;</a></h3>
 <p>Summary table of all connections required during assembly:</p>
 <table>
@@ -8986,7 +8986,7 @@
 </tr>
 </tbody>
 </table>
-<p>Of course for the Tinkerers and Engineers, if you're not using a Nano or a prototyping shield, adapt the details as suits your configuration.</p>
+<p>If you're not using a Nano or a prototyping shield, adapt the details as suits your configuration.</p>
 <h4 id="using-a-two-wire-stepper-driver-eg-a4988drv8825tmc2208">Using a two wire stepper driver (e.g. A4988/DRV8825/TMC2208)<a class="headerlink" href="#using-a-two-wire-stepper-driver-eg-a4988drv8825tmc2208" title="Permanent link">&para;</a></h4>
 <p>For those using a NEMA17 or similar stepper motor with a two wire type driver (e.g. A4988 or DRV8825), then the four Arduino pins A0 - A3 map like this, with the rest remaining the same as the table above:</p>
 <table>
@@ -9172,12 +9172,12 @@
 <p><img alt="EX-Installer - EX-Turntable advanced config" src="../../../_static/images/ex-installer/ex_turntable_advanced.png" width="400px" />
 <br/>EX-Installer - EX-Turntable Advanced Config</p>
 <p>Continue through the rest of the <strong>EX-Installer</strong> process to load the software on to your device, then skip to <a href="./#first-start-and-automatic-calibration">first start and automatic calibration</a> to continue.</p>
-<h4 id="installing-with-the-arduino-ide">Installing with the Arduino IDE<a class="headerlink" href="#installing-with-the-arduino-ide" title="Permanent link">&para;</a></h4>
+<h4 id="installing-with-the-arduino-ide">Installing with the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr><a class="headerlink" href="#installing-with-the-arduino-ide" title="Permanent link">&para;</a></h4>
 <p>Further to this, note that you will need to end up with two separate folders; one containing the <strong>EX-CommandStation</strong> software as per  <mark>TODO</mark> :doc:<code>/ex-commandstation/advanced-setup/installation-options/arduino-ide</code>, and an additional folder containing the <strong>EX-Turntable</strong> software. The <strong>EX-Turntable</strong> software is not a component of <strong>EX-CommandStation</strong> or vice versa, and as such they should not exist in the same folder.</p>
-<p>We recommend using <strong>EX-Installer</strong> to install <strong>EX-Turntable</strong> as outlined above, however you can use the Arduino IDE to load the software onto the Arduino manually.</p>
+<p>We recommend using <strong>EX-Installer</strong> to install <strong>EX-Turntable</strong> as outlined above, however you can use the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr> to load the software onto the Arduino manually.</p>
 <p>As noted in the tip above, you should have a <strong>EX-Turntable</strong> folder alongside the <strong>EX-CommandStation</strong> folder, and neither should reside in the other (the <strong>EX-Turntable</strong> software is required in the next step):</p>
 <p><img alt="Two folders" src="../../../_static/images/ex-turntable/two-folders.png" width="400px" /></p>
-<p>The process here is the same as installing CommandStation-EX via the Arduino IDE which you can find on the <mark>TODO</mark> :doc:<code>/ex-commandstation/advanced-setup/installation-options/arduino-ide</code> page.</p>
+<p>The process here is the same as installing CommandStation-EX via the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr> which you can find on the <mark>TODO</mark> :doc:<code>/ex-commandstation/advanced-setup/installation-options/arduino-ide</code> page.</p>
 <p>When you get to the point of opening the sketch, ensure you open the EX-Turntable sketch:</p>
 <p><img alt="Open EX-Turntable sketch" src="../../../_static/images/ex-turntable/open-turntable-ex-sketch.png" width="400px" /></p>
 <p>Use Windows Explorer to either copy or rename "config.example.h" to "config.h".</p>
@@ -9249,7 +9249,7 @@
 <span class="w">  </span><span class="n">Phase</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="k">switch</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="mi">495</span><span class="w"> </span><span class="n">steps</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">home</span><span class="p">,</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">revert</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="mi">2475</span><span class="w"> </span><span class="n">steps</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">home</span>
 <span class="w">  </span><span class="n">Turntable</span><span class="w"> </span><span class="n">homed</span><span class="w"> </span><span class="n">successfully</span>
 </code></pre></div>
-<p>At this point, the full turn step count is written to the Arduino's EEPROM so that it can be retrieved each time <strong>EX-Turntable</strong> starts up, preventing the need to repeat the calibration sequence at each subsequent start.</p>
+<p>At this point, the full turn step count is written to the Arduino's <abbr title="Electrically Erasable Programmable Read-Only Memory. Available on the Arduino Mega ONLY">EEPROM</abbr> so that it can be retrieved each time <strong>EX-Turntable</strong> starts up, preventing the need to repeat the calibration sequence at each subsequent start.</p>
 <p>You can now safely power off <strong>EX-Turntable</strong> and remove the USB cable from your PC as it is no longer required for normal operation, and all further commands will be issued by the CommandStation.</p>
 <h3 id="8-add-the-ex-turntable-device-driver-to-ex-commandstation">8. Add the EX-Turntable device driver to EX-CommandStation<a class="headerlink" href="#8-add-the-ex-turntable-device-driver-to-ex-commandstation" title="Permanent link">&para;</a></h3>
 <h4 id="add-with-ex-installer">Add with EX-Installer<a class="headerlink" href="#add-with-ex-installer" title="Permanent link">&para;</a></h4>
@@ -9269,7 +9269,7 @@
 </code></pre></div>
 <p>In the device setup above, there are three parameters provided, but only two may need to change in your environment if you have other devices that may conflict with these two settings:</p>
 <ul>
-<li>VPIN=600 - This is the default virtual pin (Vpin) ID that is used to send <strong>EX-Turntable</strong> commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer <mark>TODO</mark> :ref:<code>reference/developers/hal:overview</code>).</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr>=600 - This is the default virtual pin (Vpin) ID that is used to send <strong>EX-Turntable</strong> commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer <mark>TODO</mark> :ref:<code>reference/developers/hal:overview</code>).</li>
 <li>I2C (I<sup>2</sup>C) address=0x60 - This is the default address on the I2C (I<sup>2</sup>C) bus that the <strong>EX-Turntable</strong> is configured to use. This address also needs to be unique, so change this also if it is in use elsewhere, both in "myAutomation.h" and in "config.h" in the <strong>EX-Turntable</strong> software.</li>
 </ul>
 <p>If you already have an existing "myAutomation.h" file, then you simply need to add this entry in the appropriate section of your existing file.</p>
@@ -9312,6 +9312,7 @@
 <p>At this point, you should have a fully assembled <strong>EX-Turntable</strong> with the software loaded, a default configuration, and the device driver installed and configured in your CommandStation.</p>
 <p>In addition, <strong>EX-Turntable</strong> should be connected to your CommandStation ready to test, tune your turntable positions, and configure EXRAIL ready for use on your layout.</p>
 <p>Click the 'Next' button to get cracking!</p>
+<!-- These are case sensitive -->
 
 
 
@@ -9332,7 +9333,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 26, 2026 23:25:29 UTC">June 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 26, 2026 23:46:41 UTC">June 26, 2026</span>
   </span>
 
     
