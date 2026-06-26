@@ -2494,6 +2494,167 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ex-commandstation/exrail/cookbooks/big-picture/big-picture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How it All Works Together
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ex-commandstation/exrail/cookbooks/big-picture/stage1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stage 1 - Running a Train
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ex-commandstation/exrail/cookbooks/big-picture/stage2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stage 2 - Adding a Roster
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ex-commandstation/exrail/cookbooks/big-picture/stage3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stage 3 - Turnouts/Points, Accessories, Sensors &amp; Blocks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ex-commandstation/exrail/cookbooks/big-picture/stage4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stage 4 - Automation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ex-commandstation/exrail/cookbooks/big-picture/stage5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stage 5 - Turntables &amp; Traversers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ex-commandstation/exrail/cookbooks/big-picture/stage6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stage 6 - Putting it all Together
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -9812,7 +9973,8 @@ If the sensor remains unoccupied, it updates the reference, compensating for slo
 :<strong>oo47?T</strong> indicates <strong>suspected occupied</strong> but no confirmation from Twin (see <strong>5.15</strong>).</p>
 <p>Using the '<strong>@##</strong>' command, the "#" "tripped" indicator (35) can be changed to any ASCII character (01-127). For recent versions of Arduino IDE monitor, '<strong>@</strong>' or '<strong>@12</strong>' command gives a particularly wide BOLD "spade" occupied character that is easier to spot (don't use <strong>@</strong> or <strong>@12</strong> if it doesn't produce the "spade" as it will misalign columns. Try @11 instead.).</p>
 <h3 id="515-second-opinions-twin">5.15 Second opinions (Twin)<a class="headerlink" href="#515-second-opinions-twin" title="Permanent link">&para;</a></h3>
-<p>If necessary, another option can be tried to address "noise" trips if all else fails. It is possible to "get a second opinion" on a sensor by assigning a "Twin" sensor (using <strong>i%%,$$</strong>). For example if sensor S15 is prone to noise trips, set a Twin using sensor S05(say). Set up the Twin position to touch or slightly overlap the primary sensor(S15) with the commands ‘<strong>a05,rrr,xxx</strong>’. The primary sensor will not register “Occupied” (tripped) unless the Twin agrees. Note: The Twin should have a bsNo less than the primary sensor to avoid introducing an extra 100mSec delay to the trip time as the lowest bsNo is evaluated first. We suggest using bank 0 for twins, or a lower number in the same bank.</p>
+<p>If necessary, another option can be tried to address "noise" trips if all else fails. It is possible to "get a second opinion" on a sensor by assigning a "Twin" sensor (using <strong>i%%,$$</strong>). For example if sensor S15 is prone to noise trips, set a Twin using sensor S05(say). Set up the Twin position to touch or slightly overlap the primary sensor(S15) with the commands ‘<strong>a05,rrr,xxx</strong>’. The primary sensor will not register “Occupied” (tripped) unless the Twin agrees. </p>
+<p>Note: The Twin should have a bsNo less than the primary sensor to avoid introducing an extra 100mSec delay to the trip time as the lowest bsNo is evaluated first. We suggest using bank 0 for twins, or a lower number in the same bank.</p>
 <h3 id="516-other-diagnostic-commands">5.16 Other diagnostic commands<a class="headerlink" href="#516-other-diagnostic-commands" title="Permanent link">&para;</a></h3>
 <p>There are other commands that can be used to optimise the CAM performance by trial-and-error. These include Frame(<strong>f</strong>), GetCAMsettings(<strong>g</strong>), adJustCAMsettings(<strong>j</strong>) and Statistics(<strong>&amp;</strong>), also Calibrate(<strong>c</strong>)(not recommended). If the scene contrast is inadequate, a lighter reflector between the tracks is a cure particularly in fiddle yards (e.g. light green grass).</p>
 <p>Explore and familiarize: Operational output commands will give the sensor states and include Individual(<strong>i</strong>), Bank(<strong>b</strong>), Diff(<strong>d</strong>), Position(<strong>p</strong>), &amp; Query enabled(<strong>q</strong>). Other input sensor commands include Zero(<strong>o</strong>), One(<strong>l</strong>), Enable(<strong>a</strong>), Undefine(<strong>u</strong>) &amp; the define coordinate(<strong>k</strong>) command. Zero '<strong>o</strong>'(oscar) and One '<strong>l</strong>'(lima) preset and disable sensors.</p>
@@ -10693,7 +10855,7 @@ Note: WROVER-CAM does not have a fitted external antenna socket like the ESP32-C
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 21, 2026 05:38:22 UTC">June 21, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 26, 2026 05:30:18 UTC">June 26, 2026</span>
   </span>
 
     
