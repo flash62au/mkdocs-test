@@ -8765,7 +8765,7 @@ Response (id not defined): <code>&lt;jO «id» X&gt;</code></p>
 <li>When EX-Turntable commences rotating/moving, the device driver flags this using the moving variable above in the response (1 indicates moving, 0 indicates stationary), and when a rotation or move is complete, it will generate an additional response broadcast to indicate that the rotation or move has completed. Further to this, a new rotate/move command will error when a rotation or move is currently in progress.</li>
 <li>Note that a turntable/traverser object must be created using the appropriate <code>&lt;I ...&gt;</code> command, and then each desired position must be added using the <code>&lt;I id ADD ...&gt;</code> command.</li>
 <li>Turntables/traversers may be located at positions from 0 (also known as home) through 48. A common angle of separation for tracks radiating out from the turntable is 7.5 degrees, hence the need for allowing up to 48 positions to be defined.</li>
-<li>It is anticipated that throttle developers will be able to “draw” turntables with a visual representation of the location of the home and various defined positions, hence the reason for including an angle or home variable when defining turntables and positions below. Valid angles are from 0 to 3600, where 3600 = the full 360 degrees, allowing for a single decimal place to be used if partial angles are required. Throttle developers simply need to divide by 10 to obtain the appropriate angle.</li>
+<li>It is anticipated that throttle developers will be able to "draw" turntables with a visual representation of the location of the home and various defined positions, hence the reason for including an angle or home variable when defining turntables and positions below. Valid angles are from 0 to 3600, where 3600 = the full 360 degrees, allowing for a single decimal place to be used if partial angles are required. Throttle developers simply need to divide by 10 to obtain the appropriate angle.</li>
 <li>General notes:<ul>
 <li>If there is no desire for throttles to know or understand a position's angle from home, simple set any instance of the angle or home variable to 0 (zero).</li>
 </ul>
@@ -8829,7 +8829,7 @@ Response (id not defined): <code>&lt;jO «id» X&gt;</code></p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 26, 2026 23:25:29 UTC">June 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 27, 2026 01:26:58 UTC">June 27, 2026</span>
   </span>
 
     

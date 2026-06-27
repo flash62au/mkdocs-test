@@ -8576,7 +8576,7 @@
 
 <h1 id="writing-a-hal-driver">Writing a HAL Driver<a class="headerlink" href="#writing-a-hal-driver" title="Permanent link">&para;</a></h1>
 <p>Suppose you have a particular device you want to use with <strong>EX-CommandStation</strong>, but there isn't a driver for it.  Well, you could ask for one, and we may well write one for you.  Or you could write it yourself.</p>
-<p>The HAL framework is designed to be extendable by the creation of device drivers, without needing to modify the base <strong>EX-CommandStation</strong> software or the HAL itself.  </p>
+<p>The HAL framework is designed to be extendable by the creation of device drivers, without needing to modify the base <strong>EX-CommandStation</strong> software or the HAL itself.</p>
 <p>A HAL driver is normally created as an include (.h) file, although for more complex ones it may include source (.cpp) files as well.</p>
 <p>The driver follows a simple design pattern.  It doesn't need to implement all of the pattern, if you don't implement a particular bit then a default will be used instead.</p>
 <ul>
@@ -8592,7 +8592,7 @@
 <span class="w">  </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span>
 <span class="w">  </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;DIAG.h&quot;</span><span class="c1">  // for DIAG calls</span>
 
-<span class="w">  </span><span class="k">class</span><span class="w"> </span><span class="nc">MyDevice</span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">IODevice</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">  </span><span class="k">class</span><span class="w"> </span><span class="nc">MyDevice</span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">IODevice</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">public</span><span class="o">:</span>
 <span class="w">    </span><span class="c1">// Constructor</span>
 <span class="w">    </span><span class="n">MyDevice</span><span class="p">(</span><span class="n">VPIN</span><span class="w"> </span><span class="n">firstVpin</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nPins</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -8616,7 +8616,7 @@
 <span class="w">      </span><span class="n">delayUntil</span><span class="p">(</span><span class="n">currentMicros</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">10</span><span class="o">*</span><span class="mi">1000UL</span><span class="p">);</span><span class="w">  </span><span class="c1">// 10ms till next entry</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">_readAnalogue</span><span class="p">(</span><span class="n">VPIN</span><span class="w"> </span><span class="n">vpin</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="c1">// Return acquired data value, e.g. </span>
+<span class="w">      </span><span class="c1">// Return acquired data value, e.g.</span>
 <span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">pin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vpin</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">_firstVpin</span><span class="p">;</span>
 <span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">_value</span><span class="p">[</span><span class="n">pin</span><span class="p">];</span>
 <span class="w">    </span><span class="p">}</span>
@@ -8674,7 +8674,7 @@ While this doesn't seem a long time, if you have multiple parts of <strong>EX-Co
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 26, 2026 23:25:29 UTC">June 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 27, 2026 01:26:58 UTC">June 27, 2026</span>
   </span>
 
     

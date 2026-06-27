@@ -8661,7 +8661,7 @@
 <p>Also see <a href="../config-wifi-esp32/">WiFi configuration (<abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr> or ESP32 ONLY. V5.7.0+ ONLY)</a> for more technical information.</p>
 <h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
 <p>Prior to version 5.7.0, WiFi configuration for <strong>EX-CommandStation</strong> was done through options in the <code>config.h</code> file. This method required users to modify the firmware (by editing <code>config.h</code>) and recompile it for their specific WiFi settings.</p>
-<p>From version 5.7.0, WiFi configuration options in <code>config.h</code> are <em>ignored</em> by the <strong><abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr></strong> or ESP32 EX-CommandStations.  </p>
+<p>From version 5.7.0, WiFi configuration options in <code>config.h</code> are <em>ignored</em> by the <strong><abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr></strong> or ESP32 EX-CommandStations.</p>
 <p>It is now necessary to use a new WiFi configuration method, which involves connecting to the <strong>EX-CommandStation</strong> <em>after you have flashed the firmware.</em>  You do so by connecting to the <strong>EX-CommandStation</strong> via USB or by connecting to the WiFi Access Point network of the <strong>EX-CommandStation</strong> and issuing a set of new commands. (Note that the WiFi Access Point network approach has limitations. See below.)</p>
 <p>The advantage of this is that it is independent of the flashing process, and will remember your WiFi settings across firmware updates and changes.</p>
 <p>From version 5.7.0, you must configure the WiFi settings through one of the following methods:</p>
@@ -8703,7 +8703,7 @@ This may be useful if visiting a location with a different WiFi network which yo
 <h2 id="configuring-with-usb-vs-wifi-limitations-of-wifi">Configuring with USB vs WiFi - Limitations of WiFi<a class="headerlink" href="#configuring-with-usb-vs-wifi-limitations-of-wifi" title="Permanent link">&para;</a></h2>
 <p>There are significant limitations to be aware of when configuring WiFi settings over WiFi compared to using a USB connection:</p>
 <p>Only <strong>Station (<abbr title="Station Mode. Joins an existing WiFi network">STA</abbr>) mode</strong> and the <strong>HOSTNAME</strong> can be changed over WiFi.</p>
-<p><strong>Access Point (<abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr>)</strong> mode changes require a serial/USB connection. 
+<p><strong>Access Point (<abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr>)</strong> mode changes require a serial/USB connection.
 This is a security feature.  If you could change <abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr> mode settings over WiFi, then anyone who could connect to the <strong>EX-CommandStation</strong>'s WiFi network could change the <abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr> settings and potentially lock you out of your <strong>EX-CommandStation</strong>. By requiring a USB connection for <abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr> mode changes, we ensure that only someone with physical access to the <strong>EX-CommandStation</strong> can modify these critical settings.</p>
 <hr />
 <h2 id="changing-the-settings">Changing the settings<a class="headerlink" href="#changing-the-settings" title="Permanent link">&para;</a></h2>
@@ -8739,7 +8739,7 @@ This is useful if you have more than one <strong>EX-CommandStation</strong> on y
 </ul>
 <hr />
 <h3 id="using-ex-toolbox">Using EX-Toolbox<a class="headerlink" href="#using-ex-toolbox" title="Permanent link">&para;</a></h3>
-<p><strong>EX-Toolbox</strong> provides a similar interface to the <strong>EX-WebThrottle</strong> for configuring WiFi settings, but it can be accessed either via USB or over WiFi. The process for changing WiFi settings in the <strong>EX-Toolbox</strong> is essentially the same as in the <strong>EX-WebThrottle</strong>, with the same options for <abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr> mode, <abbr title="Station Mode. Joins an existing WiFi network">STA</abbr> mode, Temporary <abbr title="Station Mode. Joins an existing WiFi network">STA</abbr> mode and Hostname. </p>
+<p><strong>EX-Toolbox</strong> provides a similar interface to the <strong>EX-WebThrottle</strong> for configuring WiFi settings, but it can be accessed either via USB or over WiFi. The process for changing WiFi settings in the <strong>EX-Toolbox</strong> is essentially the same as in the <strong>EX-WebThrottle</strong>, with the same options for <abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr> mode, <abbr title="Station Mode. Joins an existing WiFi network">STA</abbr> mode, Temporary <abbr title="Station Mode. Joins an existing WiFi network">STA</abbr> mode and Hostname.</p>
 <ol>
 <li>
 <p>Connect your PC to the <strong>EX-Toolbox</strong> via USB or Wifi.  See <a href="../../ex-toolbox/ex-toolbox/">EX-Toolbox</a> for more details.</p>
@@ -8816,7 +8816,7 @@ This is useful if you have more than one <strong>EX-CommandStation</strong> on y
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 23, 2026 23:10:21 UTC">June 23, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 27, 2026 01:26:58 UTC">June 27, 2026</span>
   </span>
 
     
