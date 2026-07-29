@@ -221,6 +221,8 @@
     <div class="md-container" data-md-component="container">
       
       
+  <!-- Retain the original theme tabs layout -->
+  
         
           
             
@@ -485,6 +487,49 @@
           
         
       
+
+  <!-- Safely inject breadcrumbs directly under the top header navigation grid -->
+  
+    <!-- <div class="md-container"> -->
+      <div class="md-grid">
+        <nav class="md-breadcrumbs" aria-label="Breadcrumbs" style="margin-top: 15px; margin-bottom: 5px; display: block !important; visibility: visible !important;">
+  <ol class="md-breadcrumbs__list" style="display: flex; flex-wrap: wrap; list-style: none; padding: 0; margin: 0; gap: 8px; align-items: center;">
+    
+    <!-- Home Root Link -->
+    <li class="md-breadcrumbs__item">
+      <a href="#" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
+        Home
+      </a>
+    </li>
+
+    <!-- Map nested sections dynamically -->
+    
+      
+        <li class="md-breadcrumbs__item" style="display: flex; align-items: center; gap: 8px;">
+          <span style="opacity: 0.35; color: var(--md-typeset-color);">|</span>
+          <a href="../.." class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
+            Reference
+          </a>
+        </li>
+      
+    
+
+    <!-- Current Document View Node -->
+    
+      <li class="md-breadcrumbs__item" style="display: flex; align-items: center; gap: 8px;">
+        <span style="opacity: 0.35; color: var(--md-typeset-color);">|</span>
+        <span class="md-breadcrumbs__link" style="color: var(--md-typeset-color); font-weight: 700;">
+          Table of Contents
+        </span>
+      </li>
+    
+
+  </ol>
+</nav>
+      </div>
+    <!-- </div> -->
+  
+
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
@@ -9055,8 +9100,8 @@ li:not(.md-nav__item, .md-tabs__item) a {
 <li><a href="../serial-commands/serial-command-%21_not_in_nav/"><code>&lt;! [P|Q|R]&gt;</code> <br/>Emergency Stop (ESTOP) or Pause</a></li>
 <li><a href="../serial-commands/serial-command-1-0_not_in_nav/"><code>&lt;1|0 [«track»]&gt;</code> <br/>Turn track power on or off</a></li>
 <li><a href="../../throttles/android-apps-on-windows-and-ios_not_in_nav/">Android apps on Windows &amp; macOS</a></li>
-<li><a href="../../throttles/connect_wifi_throttle_via_usb_not_in_nav/">Connecting WiFi Throttles via USB</a></li>
 <li><a href="../../products/ex-toolbox/connect_wifi_throttle_via_usb_not_in_nav/">Connecting WiFi Throttles via USB</a></li>
+<li><a href="../../throttles/connect_wifi_throttle_via_usb_not_in_nav/">Connecting WiFi Throttles via USB</a></li>
 <li><a href="../../throttles/engine-driver-physical-knobs_not_in_nav/">Engine Driver - Adding a Physical Dial/Knob</a></li>
 <li><a href="../../throttles/engine-driver-native-protocol_not_in_nav/">Engine Driver - Features when using the Native Protocol</a></li>
 <li><a href="../../products/ex-commandstation/exrail/cookbooks/big-picture/stage6-examples/example5_not_in_nav/">Example - Full automation with pin based turnouts and signals on Mega2560 direct I/O pins</a></li>
