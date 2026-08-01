@@ -9031,8 +9031,10 @@
 <p>For others that are not 5V tolerant, such as the ESP32, connecting accessories with 5V outputs to the ESP32's input <strong>will</strong> cause damage to the microcontroller. Therefore, for ESP32 and similar 3v3-only microcontrollers digital input level shifters is <strong>mandatory</strong>. For digital outputs from 3v3 microcontrollers you may find most accessories with 5V inputs will accept 3v3 as a correct "logic 1".</p>
 <h3 id="analog-io">Analog IO<a class="headerlink" href="#analog-io" title="Permanent link">&para;</a></h3>
 <p>However, <strong>ALL</strong> 3v3 microcontrollers require analog inputs to be restricted to no more than 3.3V. This means only some Motor Driver boards are compatible unmodified with 3v3 microcontrollers to read output current. For the moment we recommend the genuine Ardiuno Motor Driver R3, and only the R3 version of it. Motor Drivers such as the Deek Robot can be modified readily enough. We will document this, but in the meantime ask on the Discord server.</p>
-<p>.. note::  </p>
+<div class="admonition note">
+<p class="admonition-title">Some devices are already 3v3v</p>
 <p>Some devices such as the ESP01 WiFi board and HC05/06 Bluetooth boards are already 3v3 devices, so if you have set these up with level shifters, the level shifters will no longer be required when using 3v3 microcontrollers.</p>
+</div>
 <h2 id="boards-for-whom-support-has-been-discontinued">Boards for whom support has been discontinued<a class="headerlink" href="#boards-for-whom-support-has-been-discontinued" title="Permanent link">&para;</a></h2>
 <p>These boards were previously supported, but current versions of the <strong>EX-CommandStation</strong> software no longer do.</p>
 <p>You can still flash these boards with older versions of the <strong>EX-CommandStation</strong> software if you so wish.</p>
@@ -9092,7 +9094,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 1, 2026 02:08:52 UTC">August 1, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 1, 2026 02:18:20 UTC">August 1, 2026</span>
   </span>
 
     
