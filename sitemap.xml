@@ -189,6 +189,10 @@
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/config-h/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
@@ -213,15 +217,11 @@
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/overview/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/testing/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/accessories/accessories/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/accessories/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
@@ -289,6 +289,10 @@
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/command-list/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
@@ -298,10 +302,6 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/exrail-sequences-introduction/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/exrail/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
@@ -605,6 +605,10 @@
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/loco-programming/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/loco-programming/decoderpro/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
@@ -614,10 +618,6 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/loco-programming/programming-tips/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/loco-programming/programming/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
@@ -633,15 +633,19 @@
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/trackmanager/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/trackmanager/booster/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/trackmanager/trackmanager/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-dccinspector/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-dccinspector/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
@@ -662,10 +666,6 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/operation/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/overview/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
@@ -701,6 +701,10 @@
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-toolbox/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-toolbox/connect_wifi_throttle_via_usb_not_in_nav/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
@@ -709,15 +713,15 @@
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-toolbox/ex-toolbox/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-toolbox/installation-guide/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-toolbox/user-guide/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-turntable/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
@@ -734,10 +738,6 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-turntable/layout-wiring/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-turntable/overview/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
