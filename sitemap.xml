@@ -777,10 +777,6 @@
          <lastmod>2026-08-05</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/purchasing/following-steps/</loc>
-         <lastmod>2026-08-05</lastmod>
-    </url>
-    <url>
          <loc>https://dcc-ex.com/mkdocs-test/purchasing/merchandise/</loc>
          <lastmod>2026-08-05</lastmod>
     </url>
@@ -793,7 +789,15 @@
          <lastmod>2026-08-05</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/purchasing/physical-installation/</loc>
+         <lastmod>2026-08-05</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/purchasing/third-party-sellers/</loc>
+         <lastmod>2026-08-05</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/purchasing/throttles/</loc>
          <lastmod>2026-08-05</lastmod>
     </url>
     <url>
