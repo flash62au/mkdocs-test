@@ -9756,14 +9756,14 @@
 <h2 id="examples-of-compatible-displays">Examples of compatible displays<a class="headerlink" href="#examples-of-compatible-displays" title="Permanent link">&para;</a></h2>
 <p>Here is an example of a 20 x 4 LCD screen. They come in different colours like blue and green. The controller board (backpack) is shown before soldering it to the back of the display. Soldering is very simple since you just match the two boards together and quickly solder the pins. Though there are 16 of them.</p>
 <h3 id="20-x-4-lcd-with-backpack">20 x 4 LCD with backpack<a class="headerlink" href="#20-x-4-lcd-with-backpack" title="Permanent link">&para;</a></h3>
-<p><img alt="20 x 4 LCD" src="../../../../_static/images/display/lcd_20x4_backpack.jpg" width="400px" /></p>
-<p><img alt="16 x 2 LCD" src="../../../../_static/images/display/lcd_16x2_backpack.jpg" width="400px" /></p>
+<p><img alt="20 x 4 LCD" src="../../../../_static/images/display/lcd_20x4_backpack.png" width="400px" /></p>
+<p><img alt="16 x 2 LCD" src="../../../../_static/images/display/lcd_16x2_backpack.png" width="400px" /></p>
 <p>On the left is 20x4 LCD with backpack, and on the right is a 16x2 LCD.</p>
 <p>Remember to either order an LCD display with the backpack already soldered or two order both pieces from your vendor and solder it yourself (see below.)</p>
 <p>Some examples of supported OLED displays:</p>
-<p><img alt="Adafruit .96&quot; OLED" src="../../../../_static/images/display/adafruit_96in_oled_sm.jpg" width="400px" /></p>
-<p><img alt="Makerfocus OLED Display" src="../../../../_static/images/display/makerfocus_oled_sm.jpg" width="400px" /></p>
-<p>Adafruit 0.96" 128x64 OLED, and Makerfocus 128x32 .91" OLED.</p>
+<p><img alt="Adafruit .96&quot; OLED" src="../../../../_static/images/display/adafruit_96in_oled_sm.jpg" width="400px" /><br />
+<img alt="Makerfocus OLED Display" src="../../../../_static/images/display/makerfocus_oled_sm.png" width="400px" />
+<br/> Adafruit 0.96" 128x64 OLED, and Makerfocus 128x32 .91" OLED.</p>
 <h2 id="connecting-an-lcd-display">Connecting an LCD Display<a class="headerlink" href="#connecting-an-lcd-display" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Check the pins!</p>
@@ -9772,7 +9772,7 @@
 <h3 id="soldering-on-the-backpack-if-you-purchased-separate-pieces">Soldering on the Backpack (if you purchased separate pieces)<a class="headerlink" href="#soldering-on-the-backpack-if-you-purchased-separate-pieces" title="Permanent link">&para;</a></h3>
 <p>And here is a picture of the board after soldering or if you purchase a board already soldered (or "welded" as some of the Chinese sites call it)</p>
 <p>LCD with backpack soldered to the back</p>
-<p><img alt="Backpack Soldered to LCD" src="../../../../_static/images/display/lcd_soldered.jpg" width="400px" /></p>
+<p><img alt="Backpack Soldered to LCD" src="../../../../_static/images/display/lcd_soldered.png" width="400px" /></p>
 <h3 id="connecting-the-jumper-wires">Connecting the Jumper Wires<a class="headerlink" href="#connecting-the-jumper-wires" title="Permanent link">&para;</a></h3>
 <p>To connect the Display to the Command Station, you will need 4 male to female jumper wires:</p>
 <ol>
@@ -9789,7 +9789,7 @@
 <p>OLED displays come in more varieties than LCD displays. The library to run them also takes more memory. Therefore, OLED displays won't work with an UNO and you will require a Mega. Here are some examples of OLED displays:</p>
 <p><img alt="Adafruit .96&quot; OLED" src="../../../../_static/images/display/adafruit_96in_oled_sm.jpg" width="400px" />
 <br/>Adafruit .96" OLED</p>
-<p><img alt="Makerfocus OLED Display" src="../../../../_static/images/display/makerfocus_oled_sm.jpg" width="400px" />
+<p><img alt="Makerfocus OLED Display" src="../../../../_static/images/display/makerfocus_oled_sm.png" width="400px" />
 <br/>Makerfocus OLED Display</p>
 <h3 id="soldering-wires-to-the-display">Soldering Wires to the Display<a class="headerlink" href="#soldering-wires-to-the-display" title="Permanent link">&para;</a></h3>
 <p>For any of these boards you can buy male header pins (either straight or 90 angle) and solder them to the display to then use jumper wires, or you can solder your wires directly to the holes on the board.</p>
@@ -9799,6 +9799,8 @@
 <br/>Mega2560 with I2C OLED</p>
 <p>You can also connect the display to the motor shield's I2C headers.</p>
 <p><img alt="Mega2560 with I2C OLED" src="../../../../_static/images/display/mega-with-i2c-oled-twi.png" width="600px" /></p>
+<p><mark>TODO</mark> MEDIUM - diagram for connecting the EX-CSB1 to an oLED via the headers</p>
+<p><mark>TODO</mark> MEDIUM - diagram for connecting the EX-CSB1 to an oLED via the QWIIC connector</p>
 <h3 id="reconfigure-your-command-station-to-use-a-single-display">Reconfigure your Command Station to use a single display<a class="headerlink" href="#reconfigure-your-command-station-to-use-a-single-display" title="Permanent link">&para;</a></h3>
 <p>If installing with <strong>EX-Installer</strong>, refer to <a href="../../../../installer/install-cs/#optional-lcd-or-oled-display">installing an optional display</a> to configure a single display with your <strong>EX-CommandStation</strong>.</p>
 <p>If you are using the Arduino IDE or VSCode with PlatformIO, you will need to edit "config.h" to enable your display option. Look for this section in "config.example.h" to define the display:</p>
@@ -9882,7 +9884,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 9, 2026 01:43:37 UTC">August 9, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 9, 2026 02:33:51 UTC">August 9, 2026</span>
   </span>
 
     
