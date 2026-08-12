@@ -10,31 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/throttles/withrottle-vs-native-protocol/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/command-station-architecture/io-device-drivers/">
       
       
-        <link rel="prev" href="../throttlecard/">
+        <link rel="prev" href="../writing-hal-drivers/">
       
       
-        <link rel="next" href="../connecting-wifi/">
+        <link rel="next" href="../../external-references/">
       
       
-        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../feed_rss_updated.xml">
       
-      <link rel="icon" href="../../_static/images/logos/favicon.ico">
+      <link rel="icon" href="../../../_static/images/logos/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>WiThrottle VS Native Protocol - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title>I/O Device Drivers and HAL - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -53,11 +53,11 @@
       
     
     
-      <link rel="stylesheet" href="../../_static/css/dccex_theme.css">
+      <link rel="stylesheet" href="../../../_static/css/dccex_theme.css">
     
-      <link rel="stylesheet" href="../../css/open_in_new_tab.css">
+      <link rel="stylesheet" href="../../../css/open_in_new_tab.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#withrottle-protocol-vs-dcc-ex-nativeserial-commands" class="md-skip">
+        <a href="#io-device-drivers-and-hal" class="md-skip">
           Skip to content
         </a>
       
@@ -97,9 +97,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="DCC-EX Model Train Control, Animation, and Automation" class="md-header__button md-logo" aria-label="DCC-EX Model Train Control, Animation, and Automation" data-md-component="logo">
+    <a href="../../.." title="DCC-EX Model Train Control, Animation, and Automation" class="md-header__button md-logo" aria-label="DCC-EX Model Train Control, Animation, and Automation" data-md-component="logo">
       
-  <img src="../../_static/images/logos/logo_with_border.png" alt="logo">
+  <img src="../../../_static/images/logos/logo_with_border.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              WiThrottle VS Native Protocol
+              I/O Device Drivers and HAL
             
           </span>
         </div>
@@ -236,7 +236,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -257,7 +257,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../products/products/" class="md-tabs__link">
+        <a href="../../../products/products/" class="md-tabs__link">
           
   
   
@@ -279,7 +279,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../purchasing/official-sellers/" class="md-tabs__link">
+        <a href="../../../purchasing/official-sellers/" class="md-tabs__link">
           
   
   
@@ -301,7 +301,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../diy/diy/" class="md-tabs__link">
+        <a href="../../../diy/diy/" class="md-tabs__link">
           
   
   
@@ -323,7 +323,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../installer/installer/" class="md-tabs__link">
+        <a href="../../../installer/installer/" class="md-tabs__link">
           
   
   
@@ -341,8 +341,6 @@
   
   
   
-    
-  
   
     
     
@@ -350,13 +348,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../throttles/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../throttles/throttles/" class="md-tabs__link">
           
   
   
@@ -381,7 +377,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../enhance/" class="md-tabs__link">
+        <a href="../../../enhance/" class="md-tabs__link">
           
   
   
@@ -403,7 +399,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../support/faq/" class="md-tabs__link">
+        <a href="../../../support/faq/" class="md-tabs__link">
           
   
   
@@ -421,11 +417,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../reference/toc/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../toc/" class="md-tabs__link">
           
   
   
@@ -447,7 +445,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../about/about/" class="md-tabs__link">
+        <a href="../../../about/about/" class="md-tabs__link">
           
   
   
@@ -469,7 +467,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../news/" class="md-tabs__link">
+        <a href="../../../news/" class="md-tabs__link">
           
   
   
@@ -491,7 +489,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../contributing/contributing/" class="md-tabs__link">
+        <a href="../../../contributing/contributing/" class="md-tabs__link">
           
   
   
@@ -536,11 +534,13 @@
             
             
             
+              
+            
 
             
-              <span class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.5;">
-                Use<small><small>&nbsp;Throttles, etc.</small></small>
-              </span>
+              <a href="../../toc/" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
+                Reference
+              </a>
             
           </li>
         
@@ -556,8 +556,8 @@
             
 
             
-              <a href="../throttles/" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
-                Throttles
+              <a href="../" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
+                Command Station Internal Architecture
               </a>
             
           </li>
@@ -570,7 +570,7 @@
       <li class="md-breadcrumbs__item" style="display: flex; align-items: center; gap: 8px;">
         <span style="opacity: 0.35; color: var(--md-typeset-color);">|</span>
         <span class="md-breadcrumbs__link" style="color: var(--md-typeset-color); font-weight: 700;">
-          WiThrottle VS Native Protocol
+          I/O Device Drivers and HAL
         </span>
       </li>
     
@@ -586,6 +586,8 @@
           
             
               
+                
+              
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -597,9 +599,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="DCC-EX Model Train Control, Animation, and Automation" class="md-nav__button md-logo" aria-label="DCC-EX Model Train Control, Animation, and Automation" data-md-component="logo">
+    <a href="../../.." title="DCC-EX Model Train Control, Animation, and Automation" class="md-nav__button md-logo" aria-label="DCC-EX Model Train Control, Animation, and Automation" data-md-component="logo">
       
-  <img src="../../_static/images/logos/logo_with_border.png" alt="logo">
+  <img src="../../../_static/images/logos/logo_with_border.png" alt="logo">
 
     </a>
     DCC-EX Model Train Control, Animation, and Automation
@@ -626,7 +628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -689,7 +691,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../products/ex-dccinspector/" class="md-nav__link ">
+            <a href="../../../products/ex-dccinspector/" class="md-nav__link ">
               
   
   
@@ -722,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/products/" class="md-nav__link">
+      <a href="../../../products/products/" class="md-nav__link">
         
   
   
@@ -786,7 +788,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../products/ex-commandstation/" class="md-nav__link ">
+            <a href="../../../products/ex-commandstation/" class="md-nav__link ">
               
   
   
@@ -821,7 +823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/ex-csb1/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/ex-csb1/" class="md-nav__link">
         
   
   
@@ -844,7 +846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/config-h/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/config-h/" class="md-nav__link">
         
   
   
@@ -867,7 +869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/config-wifi-shield/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/config-wifi-shield/" class="md-nav__link">
         
   
   
@@ -890,7 +892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/config-wifi-esp32/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/config-wifi-esp32/" class="md-nav__link">
         
   
   
@@ -913,7 +915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/testing/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/testing/" class="md-nav__link">
         
   
   
@@ -959,7 +961,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../products/ex-commandstation/trackmanager/" class="md-nav__link ">
+            <a href="../../../products/ex-commandstation/trackmanager/" class="md-nav__link ">
               
   
   
@@ -994,7 +996,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/trackmanager/booster/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/trackmanager/booster/" class="md-nav__link">
         
   
   
@@ -1058,7 +1060,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../products/ex-commandstation/loco-programming/" class="md-nav__link ">
+            <a href="../../../products/ex-commandstation/loco-programming/" class="md-nav__link ">
               
   
   
@@ -1093,7 +1095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/loco-programming/serial-programming/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/loco-programming/serial-programming/" class="md-nav__link">
         
   
   
@@ -1116,7 +1118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/loco-programming/webthrottle-programming/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/loco-programming/webthrottle-programming/" class="md-nav__link">
         
   
   
@@ -1139,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/loco-programming/engine-driver-programming/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/loco-programming/engine-driver-programming/" class="md-nav__link">
         
   
   
@@ -1162,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/loco-programming/toolbox-programming/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/loco-programming/toolbox-programming/" class="md-nav__link">
         
   
   
@@ -1185,7 +1187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/loco-programming/decoderpro/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/loco-programming/decoderpro/" class="md-nav__link">
         
   
   
@@ -1208,7 +1210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/loco-programming/programming-tips/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/loco-programming/programming-tips/" class="md-nav__link">
         
   
   
@@ -1239,7 +1241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/dc-running/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/dc-running/" class="md-nav__link">
         
   
   
@@ -1293,7 +1295,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../products/ex-commandstation/accessories/" class="md-nav__link ">
+            <a href="../../../products/ex-commandstation/accessories/" class="md-nav__link ">
               
   
   
@@ -1328,7 +1330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/accessories/actuators/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/accessories/actuators/" class="md-nav__link">
         
   
   
@@ -1351,7 +1353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/accessories/sensors/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/accessories/sensors/" class="md-nav__link">
         
   
   
@@ -1374,7 +1376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/accessories/connecting-servo-turnout/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/accessories/connecting-servo-turnout/" class="md-nav__link">
         
   
   
@@ -1397,7 +1399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/accessories/hardware-list/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/accessories/hardware-list/" class="md-nav__link">
         
   
   
@@ -1477,7 +1479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/accessories/i2c-intro/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/accessories/i2c-intro/" class="md-nav__link">
         
   
   
@@ -1500,7 +1502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/accessories/buying-i2c-devices/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/accessories/buying-i2c-devices/" class="md-nav__link">
         
   
   
@@ -1523,7 +1525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/accessories/i2c-displays/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/accessories/i2c-displays/" class="md-nav__link">
         
   
   
@@ -1546,7 +1548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/accessories/i2c-gpio-expanders/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/accessories/i2c-gpio-expanders/" class="md-nav__link">
         
   
   
@@ -1569,7 +1571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/accessories/i2c-servo-led-modules/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/accessories/i2c-servo-led-modules/" class="md-nav__link">
         
   
   
@@ -1592,7 +1594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/accessories/i2c-multiplexers/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/accessories/i2c-multiplexers/" class="md-nav__link">
         
   
   
@@ -1691,7 +1693,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../products/ex-commandstation/accessories/various-devices/sounds/" class="md-nav__link ">
+            <a href="../../../products/ex-commandstation/accessories/various-devices/sounds/" class="md-nav__link ">
               
   
   
@@ -1726,7 +1728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/accessories/various-devices/sounds/dfplayer/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/accessories/various-devices/sounds/dfplayer/" class="md-nav__link">
         
   
   
@@ -1749,7 +1751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/accessories/various-devices/sounds/serial-dfplayer/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/accessories/various-devices/sounds/serial-dfplayer/" class="md-nav__link">
         
   
   
@@ -1772,7 +1774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/accessories/various-devices/sounds/i2c-dfplayer/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/accessories/various-devices/sounds/i2c-dfplayer/" class="md-nav__link">
         
   
   
@@ -1795,7 +1797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/accessories/various-devices/sounds/udpaudio/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/accessories/various-devices/sounds/udpaudio/" class="md-nav__link">
         
   
   
@@ -1826,7 +1828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/accessories/various-devices/ds1307/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/accessories/various-devices/ds1307/" class="md-nav__link">
         
   
   
@@ -1904,7 +1906,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../products/ex-commandstation/exrail/" class="md-nav__link ">
+            <a href="../../../products/ex-commandstation/exrail/" class="md-nav__link ">
               
   
   
@@ -1939,7 +1941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/exrail-objects-introduction/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/exrail-objects-introduction/" class="md-nav__link">
         
   
   
@@ -1962,7 +1964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/exrail-sequences-introduction/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/exrail-sequences-introduction/" class="md-nav__link">
         
   
   
@@ -1985,7 +1987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/vpins/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/vpins/" class="md-nav__link">
         
   
   
@@ -2008,7 +2010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/command-list/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/command-list/" class="md-nav__link">
         
   
   
@@ -2086,7 +2088,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../products/ex-commandstation/exrail/cookbooks/" class="md-nav__link ">
+            <a href="../../../products/ex-commandstation/exrail/cookbooks/" class="md-nav__link ">
               
   
   
@@ -2176,7 +2178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/editing-tricks/general-tips/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/editing-tricks/general-tips/" class="md-nav__link">
         
   
   
@@ -2199,7 +2201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/editing-tricks/multi-files/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/editing-tricks/multi-files/" class="md-nav__link">
         
   
   
@@ -2222,7 +2224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/editing-tricks/multiple-command-stations/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/editing-tricks/multiple-command-stations/" class="md-nav__link">
         
   
   
@@ -2245,7 +2247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/editing-tricks/naming-a-sequence/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/editing-tricks/naming-a-sequence/" class="md-nav__link">
         
   
   
@@ -2268,7 +2270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/editing-tricks/using-call-return/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/editing-tricks/using-call-return/" class="md-nav__link">
         
   
   
@@ -2291,7 +2293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/editing-tricks/using-macros/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/editing-tricks/using-macros/" class="md-nav__link">
         
   
   
@@ -2322,7 +2324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/animation-sensors/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/animation-sensors/" class="md-nav__link">
         
   
   
@@ -2345,7 +2347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/dc-tracks/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/dc-tracks/" class="md-nav__link">
         
   
   
@@ -2368,7 +2370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/estop-button/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/estop-button/" class="md-nav__link">
         
   
   
@@ -2391,7 +2393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/roster-similar-locos/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/roster-similar-locos/" class="md-nav__link">
         
   
   
@@ -2414,7 +2416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/route-button-control/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/route-button-control/" class="md-nav__link">
         
   
   
@@ -2437,7 +2439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/timecontrol/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/timecontrol/" class="md-nav__link">
         
   
   
@@ -2515,7 +2517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/advanced/display-locos-on-oled/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/advanced/display-locos-on-oled/" class="md-nav__link">
         
   
   
@@ -2538,7 +2540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/advanced/display-track-status/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/advanced/display-track-status/" class="md-nav__link">
         
   
   
@@ -2561,7 +2563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/advanced/analog-sensors/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/advanced/analog-sensors/" class="md-nav__link">
         
   
   
@@ -2584,7 +2586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/advanced/command-filter/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/advanced/command-filter/" class="md-nav__link">
         
   
   
@@ -2607,7 +2609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/advanced/passing-locos-between-sequences/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/advanced/passing-locos-between-sequences/" class="md-nav__link">
         
   
   
@@ -2630,7 +2632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/advanced/speed-test/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/advanced/speed-test/" class="md-nav__link">
         
   
   
@@ -2696,7 +2698,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../products/ex-commandstation/exrail/cookbooks/big-picture/" class="md-nav__link ">
+            <a href="../../../products/ex-commandstation/exrail/cookbooks/big-picture/" class="md-nav__link ">
               
   
   
@@ -2731,7 +2733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/big-picture/big-picture/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/big-picture/big-picture/" class="md-nav__link">
         
   
   
@@ -2754,7 +2756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/big-picture/stage1/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/big-picture/stage1/" class="md-nav__link">
         
   
   
@@ -2777,7 +2779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/big-picture/stage2/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/big-picture/stage2/" class="md-nav__link">
         
   
   
@@ -2800,7 +2802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/big-picture/stage3/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/big-picture/stage3/" class="md-nav__link">
         
   
   
@@ -2823,7 +2825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/big-picture/stage4/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/big-picture/stage4/" class="md-nav__link">
         
   
   
@@ -2846,7 +2848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/big-picture/stage5/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/big-picture/stage5/" class="md-nav__link">
         
   
   
@@ -2869,7 +2871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/big-picture/stage6/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/big-picture/stage6/" class="md-nav__link">
         
   
   
@@ -2963,7 +2965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/driving-trains/basic/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/driving-trains/basic/" class="md-nav__link">
         
   
   
@@ -2986,7 +2988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/driving-trains/functions/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/driving-trains/functions/" class="md-nav__link">
         
   
   
@@ -3009,7 +3011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/driving-trains/automations/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/driving-trains/automations/" class="md-nav__link">
         
   
   
@@ -3032,7 +3034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/driving-trains/simple-shuttle/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/driving-trains/simple-shuttle/" class="md-nav__link">
         
   
   
@@ -3055,7 +3057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/driving-trains/improved-shuttle/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/driving-trains/improved-shuttle/" class="md-nav__link">
         
   
   
@@ -3078,7 +3080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/driving-trains/passing-loop/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/driving-trains/passing-loop/" class="md-nav__link">
         
   
   
@@ -3101,7 +3103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/driving-trains/save-restore/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/driving-trains/save-restore/" class="md-nav__link">
         
   
   
@@ -3124,7 +3126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/driving-trains/random-selection/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/driving-trains/random-selection/" class="md-nav__link">
         
   
   
@@ -3147,7 +3149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/driving-trains/consists/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/driving-trains/consists/" class="md-nav__link">
         
   
   
@@ -3170,7 +3172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/driving-trains/advanced/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/driving-trains/advanced/" class="md-nav__link">
         
   
   
@@ -3250,7 +3252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/flags-and-latches/flags/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/flags-and-latches/flags/" class="md-nav__link">
         
   
   
@@ -3273,7 +3275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/flags-and-latches/latches/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/flags-and-latches/latches/" class="md-nav__link">
         
   
   
@@ -3296,7 +3298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/flags-and-latches/stash/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/flags-and-latches/stash/" class="md-nav__link">
         
   
   
@@ -3350,7 +3352,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../products/ex-commandstation/exrail/cookbooks/neopixels/" class="md-nav__link ">
+            <a href="../../../products/ex-commandstation/exrail/cookbooks/neopixels/" class="md-nav__link ">
               
   
   
@@ -3385,7 +3387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/neopixels/neopixels/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/neopixels/neopixels/" class="md-nav__link">
         
   
   
@@ -3447,7 +3449,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../products/ex-commandstation/exrail/cookbooks/signals/" class="md-nav__link ">
+            <a href="../../../products/ex-commandstation/exrail/cookbooks/signals/" class="md-nav__link ">
               
   
   
@@ -3482,7 +3484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/signals/led-signals/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/signals/led-signals/" class="md-nav__link">
         
   
   
@@ -3505,7 +3507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/signals/neopixel-signals/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/signals/neopixel-signals/" class="md-nav__link">
         
   
   
@@ -3528,7 +3530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/signals/flashing-signals/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/signals/flashing-signals/" class="md-nav__link">
         
   
   
@@ -3551,7 +3553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/signals/semaphore-signals/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/signals/semaphore-signals/" class="md-nav__link">
         
   
   
@@ -3574,7 +3576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/signals/dcc-signals/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/signals/dcc-signals/" class="md-nav__link">
         
   
   
@@ -3650,7 +3652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/sounds/sounds/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/sounds/sounds/" class="md-nav__link">
         
   
   
@@ -3730,7 +3732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/startup/autostart/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/startup/autostart/" class="md-nav__link">
         
   
   
@@ -3753,7 +3755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/startup/startup-poweron/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/startup/startup-poweron/" class="md-nav__link">
         
   
   
@@ -3776,7 +3778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/startup/startup-set-track/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/startup/startup-set-track/" class="md-nav__link">
         
   
   
@@ -3862,7 +3864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/turnouts/defining-dcc-turnouts/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/turnouts/defining-dcc-turnouts/" class="md-nav__link">
         
   
   
@@ -3885,7 +3887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/turnouts/defining-pin-turnouts/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/turnouts/defining-pin-turnouts/" class="md-nav__link">
         
   
   
@@ -3908,7 +3910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/turnouts/defining-servo-turnouts/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/turnouts/defining-servo-turnouts/" class="md-nav__link">
         
   
   
@@ -3931,7 +3933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/turnouts/facing-turnouts/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/turnouts/facing-turnouts/" class="md-nav__link">
         
   
   
@@ -3954,7 +3956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/turnouts/animated-turnouts/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/turnouts/animated-turnouts/" class="md-nav__link">
         
   
   
@@ -3977,7 +3979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/turnouts/toggle-with-button/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/turnouts/toggle-with-button/" class="md-nav__link">
         
   
   
@@ -4065,7 +4067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/various-devices/duinoNodes/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/various-devices/duinoNodes/" class="md-nav__link">
         
   
   
@@ -4088,7 +4090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/various-devices/multiplexors/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/various-devices/multiplexors/" class="md-nav__link">
         
   
   
@@ -4111,7 +4113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/various-devices/pca955x/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/various-devices/pca955x/" class="md-nav__link">
         
   
   
@@ -4134,7 +4136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/various-devices/tca8418-keyboard/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/various-devices/tca8418-keyboard/" class="md-nav__link">
         
   
   
@@ -4157,7 +4159,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/various-devices/tm-1638/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/various-devices/tm-1638/" class="md-nav__link">
         
   
   
@@ -4180,7 +4182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/various-devices/trainbrains/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/various-devices/trainbrains/" class="md-nav__link">
         
   
   
@@ -4203,7 +4205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/exrail/cookbooks/various-devices/xl9535/" class="md-nav__link">
+      <a href="../../../products/ex-commandstation/exrail/cookbooks/various-devices/xl9535/" class="md-nav__link">
         
   
   
@@ -4258,7 +4260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-motorshield8874/ex-motorshield8874/" class="md-nav__link">
+      <a href="../../../products/ex-motorshield8874/ex-motorshield8874/" class="md-nav__link">
         
   
   
@@ -4281,7 +4283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-wifishield8266/ex-wifishield8266/" class="md-nav__link">
+      <a href="../../../products/ex-wifishield8266/ex-wifishield8266/" class="md-nav__link">
         
   
   
@@ -4304,7 +4306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-webthrottle/ex-webthrottle/" class="md-nav__link">
+      <a href="../../../products/ex-webthrottle/ex-webthrottle/" class="md-nav__link">
         
   
   
@@ -4354,7 +4356,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../products/ex-toolbox/" class="md-nav__link ">
+            <a href="../../../products/ex-toolbox/" class="md-nav__link ">
               
   
   
@@ -4389,7 +4391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-toolbox/installation-guide/" class="md-nav__link">
+      <a href="../../../products/ex-toolbox/installation-guide/" class="md-nav__link">
         
   
   
@@ -4412,7 +4414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-toolbox/connecting/" class="md-nav__link">
+      <a href="../../../products/ex-toolbox/connecting/" class="md-nav__link">
         
   
   
@@ -4435,7 +4437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-toolbox/user-guide/" class="md-nav__link">
+      <a href="../../../products/ex-toolbox/user-guide/" class="md-nav__link">
         
   
   
@@ -4499,7 +4501,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../products/ex-fastclock/" class="md-nav__link ">
+            <a href="../../../products/ex-fastclock/" class="md-nav__link ">
               
   
   
@@ -4534,7 +4536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-fastclock/hardware/" class="md-nav__link">
+      <a href="../../../products/ex-fastclock/hardware/" class="md-nav__link">
         
   
   
@@ -4557,7 +4559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-fastclock/calibration/" class="md-nav__link">
+      <a href="../../../products/ex-fastclock/calibration/" class="md-nav__link">
         
   
   
@@ -4580,7 +4582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-fastclock/installation/" class="md-nav__link">
+      <a href="../../../products/ex-fastclock/installation/" class="md-nav__link">
         
   
   
@@ -4603,7 +4605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-fastclock/configuration/" class="md-nav__link">
+      <a href="../../../products/ex-fastclock/configuration/" class="md-nav__link">
         
   
   
@@ -4626,7 +4628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-fastclock/operation/" class="md-nav__link">
+      <a href="../../../products/ex-fastclock/operation/" class="md-nav__link">
         
   
   
@@ -4649,7 +4651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-fastclock/timecontrol/" class="md-nav__link">
+      <a href="../../../products/ex-fastclock/timecontrol/" class="md-nav__link">
         
   
   
@@ -4680,7 +4682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-ioexpander/ex-ioexpander/" class="md-nav__link">
+      <a href="../../../products/ex-ioexpander/ex-ioexpander/" class="md-nav__link">
         
   
   
@@ -4738,7 +4740,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../products/ex-turntable/" class="md-nav__link ">
+            <a href="../../../products/ex-turntable/" class="md-nav__link ">
               
   
   
@@ -4773,7 +4775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-turntable/purchasing/" class="md-nav__link">
+      <a href="../../../products/ex-turntable/purchasing/" class="md-nav__link">
         
   
   
@@ -4796,7 +4798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-turntable/assembly/" class="md-nav__link">
+      <a href="../../../products/ex-turntable/assembly/" class="md-nav__link">
         
   
   
@@ -4819,7 +4821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-turntable/test-and-tune/" class="md-nav__link">
+      <a href="../../../products/ex-turntable/test-and-tune/" class="md-nav__link">
         
   
   
@@ -4842,7 +4844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-turntable/layout-wiring/" class="md-nav__link">
+      <a href="../../../products/ex-turntable/layout-wiring/" class="md-nav__link">
         
   
   
@@ -4865,7 +4867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-turntable/configure/" class="md-nav__link">
+      <a href="../../../products/ex-turntable/configure/" class="md-nav__link">
         
   
   
@@ -4888,7 +4890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-turntable/ex-tt-troubleshooting/" class="md-nav__link">
+      <a href="../../../products/ex-turntable/ex-tt-troubleshooting/" class="md-nav__link">
         
   
   
@@ -4911,7 +4913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-turntable/traverser/" class="md-nav__link">
+      <a href="../../../products/ex-turntable/traverser/" class="md-nav__link">
         
   
   
@@ -4995,7 +4997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-sensorcam/ex-sensorcam/" class="md-nav__link">
+      <a href="../../../products/ex-sensorcam/ex-sensorcam/" class="md-nav__link">
         
   
   
@@ -5018,7 +5020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-sensorcam/installation-guide/" class="md-nav__link">
+      <a href="../../../products/ex-sensorcam/installation-guide/" class="md-nav__link">
         
   
   
@@ -5041,7 +5043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-sensorcam/ex-sensor-manual/" class="md-nav__link">
+      <a href="../../../products/ex-sensorcam/ex-sensor-manual/" class="md-nav__link">
         
   
   
@@ -5064,7 +5066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-sensorcam/ex-sensorcam-command-reference/" class="md-nav__link">
+      <a href="../../../products/ex-sensorcam/ex-sensorcam-command-reference/" class="md-nav__link">
         
   
   
@@ -5087,7 +5089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-sensorcam/ex-sensor-manual-abridged/" class="md-nav__link">
+      <a href="../../../products/ex-sensorcam/ex-sensor-manual-abridged/" class="md-nav__link">
         
   
   
@@ -5182,7 +5184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../purchasing/official-sellers/" class="md-nav__link">
+      <a href="../../../purchasing/official-sellers/" class="md-nav__link">
         
   
   
@@ -5205,7 +5207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../purchasing/third-party-sellers/" class="md-nav__link">
+      <a href="../../../purchasing/third-party-sellers/" class="md-nav__link">
         
   
   
@@ -5228,7 +5230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../purchasing/merchandise/" class="md-nav__link">
+      <a href="../../../purchasing/merchandise/" class="md-nav__link">
         
   
   
@@ -5251,7 +5253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../purchasing/next-steps/" class="md-nav__link">
+      <a href="../../../purchasing/next-steps/" class="md-nav__link">
         
   
   
@@ -5274,7 +5276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../purchasing/physical-installation/" class="md-nav__link">
+      <a href="../../../purchasing/physical-installation/" class="md-nav__link">
         
   
   
@@ -5297,7 +5299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../purchasing/throttles/" class="md-nav__link">
+      <a href="../../../purchasing/throttles/" class="md-nav__link">
         
   
   
@@ -5390,7 +5392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diy/diy/" class="md-nav__link">
+      <a href="../../../diy/diy/" class="md-nav__link">
         
   
   
@@ -5413,7 +5415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diy/mega-easy/" class="md-nav__link">
+      <a href="../../../diy/mega-easy/" class="md-nav__link">
         
   
   
@@ -5436,7 +5438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diy/mega-harder/" class="md-nav__link">
+      <a href="../../../diy/mega-harder/" class="md-nav__link">
         
   
   
@@ -5459,7 +5461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diy/nucleo/" class="md-nav__link">
+      <a href="../../../diy/nucleo/" class="md-nav__link">
         
   
   
@@ -5482,7 +5484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diy/esp32/" class="md-nav__link">
+      <a href="../../../diy/esp32/" class="md-nav__link">
         
   
   
@@ -5505,7 +5507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diy/power/" class="md-nav__link">
+      <a href="../../../diy/power/" class="md-nav__link">
         
   
   
@@ -5528,7 +5530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diy/wifi/" class="md-nav__link">
+      <a href="../../../diy/wifi/" class="md-nav__link">
         
   
   
@@ -5551,7 +5553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diy/ethernet/" class="md-nav__link">
+      <a href="../../../diy/ethernet/" class="md-nav__link">
         
   
   
@@ -5574,7 +5576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diy/installer/" class="md-nav__link">
+      <a href="../../../diy/installer/" class="md-nav__link">
         
   
   
@@ -5597,7 +5599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diy/others/" class="md-nav__link">
+      <a href="../../../diy/others/" class="md-nav__link">
         
   
   
@@ -5696,7 +5698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installer/installer/" class="md-nav__link">
+      <a href="../../../installer/installer/" class="md-nav__link">
         
   
   
@@ -5719,7 +5721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installer/first-run/" class="md-nav__link">
+      <a href="../../../installer/first-run/" class="md-nav__link">
         
   
   
@@ -5742,7 +5744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installer/select-product/" class="md-nav__link">
+      <a href="../../../installer/select-product/" class="md-nav__link">
         
   
   
@@ -5765,7 +5767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installer/install-cs/" class="md-nav__link">
+      <a href="../../../installer/install-cs/" class="md-nav__link">
         
   
   
@@ -5788,7 +5790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installer/install-ex-ioexpander/" class="md-nav__link">
+      <a href="../../../installer/install-ex-ioexpander/" class="md-nav__link">
         
   
   
@@ -5811,7 +5813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installer/install-ex-turntable/" class="md-nav__link">
+      <a href="../../../installer/install-ex-turntable/" class="md-nav__link">
         
   
   
@@ -5861,7 +5863,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../installer/download/" class="md-nav__link ">
+            <a href="../../../installer/download/" class="md-nav__link ">
               
   
   
@@ -5896,7 +5898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installer/download/download-linux/" class="md-nav__link">
+      <a href="../../../installer/download/download-linux/" class="md-nav__link">
         
   
   
@@ -5919,7 +5921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installer/download/download-mac/" class="md-nav__link">
+      <a href="../../../installer/download/download-mac/" class="md-nav__link">
         
   
   
@@ -5942,7 +5944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installer/download/download-win/" class="md-nav__link">
+      <a href="../../../installer/download/download-win/" class="md-nav__link">
         
   
   
@@ -5973,7 +5975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installer/config-wifi-esp32/" class="md-nav__link">
+      <a href="../../../installer/config-wifi-esp32/" class="md-nav__link">
         
   
   
@@ -5996,7 +5998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installer/testing/" class="md-nav__link">
+      <a href="../../../installer/testing/" class="md-nav__link">
         
   
   
@@ -6019,7 +6021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installer/manage-config-files/" class="md-nav__link">
+      <a href="../../../installer/manage-config-files/" class="md-nav__link">
         
   
   
@@ -6042,7 +6044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installer/physical-installation/" class="md-nav__link">
+      <a href="../../../installer/physical-installation/" class="md-nav__link">
         
   
   
@@ -6065,7 +6067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installer/next-steps/" class="md-nav__link">
+      <a href="../../../installer/next-steps/" class="md-nav__link">
         
   
   
@@ -6088,7 +6090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installer/platformio/" class="md-nav__link">
+      <a href="../../../installer/platformio/" class="md-nav__link">
         
   
   
@@ -6115,10 +6117,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -6138,20 +6138,17 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -6164,7 +6161,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Use<small><small>&nbsp;Throttles, etc.</small></small>
@@ -6175,10 +6172,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -6195,11 +6190,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
         
           
           <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
@@ -6215,7 +6210,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_1">
             <span class="md-nav__icon md-icon"></span>
             Throttles
@@ -6229,7 +6224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../throttles/" class="md-nav__link">
+      <a href="../../../throttles/throttles/" class="md-nav__link">
         
   
   
@@ -6301,7 +6296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ex-webthrottle/" class="md-nav__link">
+      <a href="../../../throttles/ex-webthrottle/" class="md-nav__link">
         
   
   
@@ -6324,7 +6319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../engine-driver/" class="md-nav__link">
+      <a href="../../../throttles/engine-driver/" class="md-nav__link">
         
   
   
@@ -6347,7 +6342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../throttlecard/" class="md-nav__link">
+      <a href="../../../throttles/throttlecard/" class="md-nav__link">
         
   
   
@@ -6375,32 +6370,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    WiThrottle VS Native Protocol
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../throttles/withrottle-vs-native-protocol/" class="md-nav__link">
         
   
   
@@ -6411,68 +6384,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#withrottle" class="md-nav__link">
-    <span class="md-ellipsis">
-      WiThrottle
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="WiThrottle">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#withrottle-servers" class="md-nav__link">
-    <span class="md-ellipsis">
-      WiThrottle Servers
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dcc-ex-native-protocol-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      DCC-EX Native protocol / commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#which-should-you-use" class="md-nav__link">
-    <span class="md-ellipsis">
-      Which Should You Use?
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -6493,7 +6404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../connecting-wifi/" class="md-nav__link">
+      <a href="../../../throttles/connecting-wifi/" class="md-nav__link">
         
   
   
@@ -6516,7 +6427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../connecting-usb/" class="md-nav__link">
+      <a href="../../../throttles/connecting-usb/" class="md-nav__link">
         
   
   
@@ -6539,7 +6450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cv-programming/" class="md-nav__link">
+      <a href="../../../throttles/cv-programming/" class="md-nav__link">
         
   
   
@@ -6562,7 +6473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dcc-accessories/" class="md-nav__link">
+      <a href="../../../throttles/dcc-accessories/" class="md-nav__link">
         
   
   
@@ -6585,7 +6496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dc/" class="md-nav__link">
+      <a href="../../../throttles/dc/" class="md-nav__link">
         
   
   
@@ -6644,7 +6555,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../enhance/" class="md-nav__link ">
+            <a href="../../../enhance/" class="md-nav__link ">
               
   
   
@@ -6679,7 +6590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../enhance/rosters/" class="md-nav__link">
+      <a href="../../../enhance/rosters/" class="md-nav__link">
         
   
   
@@ -6702,7 +6613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../enhance/turnouts/" class="md-nav__link">
+      <a href="../../../enhance/turnouts/" class="md-nav__link">
         
   
   
@@ -6725,7 +6636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../enhance/routes/" class="md-nav__link">
+      <a href="../../../enhance/routes/" class="md-nav__link">
         
   
   
@@ -6748,7 +6659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../enhance/trackmanager/" class="md-nav__link">
+      <a href="../../../enhance/trackmanager/" class="md-nav__link">
         
   
   
@@ -6829,7 +6740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../support/faq/" class="md-nav__link">
+      <a href="../../../support/faq/" class="md-nav__link">
         
   
   
@@ -6852,7 +6763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../support/support/" class="md-nav__link">
+      <a href="../../../support/support/" class="md-nav__link">
         
   
   
@@ -6875,7 +6786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../support/discord/" class="md-nav__link">
+      <a href="../../../support/discord/" class="md-nav__link">
         
   
   
@@ -6898,7 +6809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../support/github/" class="md-nav__link">
+      <a href="../../../support/github/" class="md-nav__link">
         
   
   
@@ -6925,8 +6836,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -6958,17 +6871,20 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
             
   
   
@@ -6981,7 +6897,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Reference
@@ -6995,7 +6911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/toc/" class="md-nav__link">
+      <a href="../../toc/" class="md-nav__link">
         
   
   
@@ -7018,7 +6934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/glossary/" class="md-nav__link">
+      <a href="../../glossary/" class="md-nav__link">
         
   
   
@@ -7041,7 +6957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/advanced-config-h/" class="md-nav__link">
+      <a href="../../advanced-config-h/" class="md-nav__link">
         
   
   
@@ -7064,7 +6980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/exrail-command-reference/" class="md-nav__link">
+      <a href="../../exrail-command-reference/" class="md-nav__link">
         
   
   
@@ -7114,7 +7030,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../reference/trackmanager/" class="md-nav__link ">
+            <a href="../../trackmanager/" class="md-nav__link ">
               
   
   
@@ -7149,7 +7065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/trackmanager/dc-mode-frequency/" class="md-nav__link">
+      <a href="../../trackmanager/dc-mode-frequency/" class="md-nav__link">
         
   
   
@@ -7172,7 +7088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/trackmanager/dc-mode-logic/" class="md-nav__link">
+      <a href="../../trackmanager/dc-mode-logic/" class="md-nav__link">
         
   
   
@@ -7195,7 +7111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/trackmanager/dc-track-sync/" class="md-nav__link">
+      <a href="../../trackmanager/dc-track-sync/" class="md-nav__link">
         
   
   
@@ -7255,7 +7171,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../reference/microcontrollers/" class="md-nav__link ">
+            <a href="../../microcontrollers/" class="md-nav__link ">
               
   
   
@@ -7337,7 +7253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/microcontrollers/ex-csb1/csb1-errors-faq/" class="md-nav__link">
+      <a href="../../microcontrollers/ex-csb1/csb1-errors-faq/" class="md-nav__link">
         
   
   
@@ -7360,7 +7276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/microcontrollers/ex-csb1/csb1-technical/" class="md-nav__link">
+      <a href="../../microcontrollers/ex-csb1/csb1-technical/" class="md-nav__link">
         
   
   
@@ -7391,7 +7307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/microcontrollers/arduino-mega/" class="md-nav__link">
+      <a href="../../microcontrollers/arduino-mega/" class="md-nav__link">
         
   
   
@@ -7465,7 +7381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/microcontrollers/esp32/esp32-ex8874/" class="md-nav__link">
+      <a href="../../microcontrollers/esp32/esp32-ex8874/" class="md-nav__link">
         
   
   
@@ -7488,7 +7404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/microcontrollers/esp32/esp32-acebott/" class="md-nav__link">
+      <a href="../../microcontrollers/esp32/esp32-acebott/" class="md-nav__link">
         
   
   
@@ -7511,7 +7427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/microcontrollers/esp32/esp32-keyestudio/" class="md-nav__link">
+      <a href="../../microcontrollers/esp32/esp32-keyestudio/" class="md-nav__link">
         
   
   
@@ -7534,7 +7450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/microcontrollers/esp32/esp32-l298-shield/" class="md-nav__link">
+      <a href="../../microcontrollers/esp32/esp32-l298-shield/" class="md-nav__link">
         
   
   
@@ -7626,7 +7542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/microcontrollers/nucleo/nucleo-drivers/" class="md-nav__link">
+      <a href="../../microcontrollers/nucleo/nucleo-drivers/" class="md-nav__link">
         
   
   
@@ -7649,7 +7565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/microcontrollers/nucleo/nucleo-firmware/" class="md-nav__link">
+      <a href="../../microcontrollers/nucleo/nucleo-firmware/" class="md-nav__link">
         
   
   
@@ -7672,7 +7588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/microcontrollers/nucleo/nucleo-debug/" class="md-nav__link">
+      <a href="../../microcontrollers/nucleo/nucleo-debug/" class="md-nav__link">
         
   
   
@@ -7695,7 +7611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/microcontrollers/nucleo/nucleo-power/" class="md-nav__link">
+      <a href="../../microcontrollers/nucleo/nucleo-power/" class="md-nav__link">
         
   
   
@@ -7718,7 +7634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/microcontrollers/nucleo/nucleo-64-ex8874/" class="md-nav__link">
+      <a href="../../microcontrollers/nucleo/nucleo-64-ex8874/" class="md-nav__link">
         
   
   
@@ -7741,7 +7657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/microcontrollers/nucleo/nucleo-64-wifi/" class="md-nav__link">
+      <a href="../../microcontrollers/nucleo/nucleo-64-wifi/" class="md-nav__link">
         
   
   
@@ -7764,7 +7680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/microcontrollers/nucleo/nucleo-144-ex8874/" class="md-nav__link">
+      <a href="../../microcontrollers/nucleo/nucleo-144-ex8874/" class="md-nav__link">
         
   
   
@@ -7787,7 +7703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/microcontrollers/nucleo/nucleo-144-wifi/" class="md-nav__link">
+      <a href="../../microcontrollers/nucleo/nucleo-144-wifi/" class="md-nav__link">
         
   
   
@@ -7810,7 +7726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/microcontrollers/nucleo/nucleo-144-pin-reference/" class="md-nav__link">
+      <a href="../../microcontrollers/nucleo/nucleo-144-pin-reference/" class="md-nav__link">
         
   
   
@@ -7904,7 +7820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/hardware/i2c-devices/" class="md-nav__link">
+      <a href="../../hardware/i2c-devices/" class="md-nav__link">
         
   
   
@@ -7948,7 +7864,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../reference/hardware/bluetooth-devices/" class="md-nav__link ">
+            <a href="../../hardware/bluetooth-devices/" class="md-nav__link ">
               
   
   
@@ -8007,7 +7923,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../reference/hardware/ethernet-boards/" class="md-nav__link ">
+            <a href="../../hardware/ethernet-boards/" class="md-nav__link ">
               
   
   
@@ -8094,7 +8010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/hardware/hal/hal-config/" class="md-nav__link">
+      <a href="../../hardware/hal/hal-config/" class="md-nav__link">
         
   
   
@@ -8117,7 +8033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/hardware/hal/hal-device-templates/" class="md-nav__link">
+      <a href="../../hardware/hal/hal-device-templates/" class="md-nav__link">
         
   
   
@@ -8140,7 +8056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/hardware/hal/writing-hal-driver/" class="md-nav__link">
+      <a href="../../hardware/hal/writing-hal-driver/" class="md-nav__link">
         
   
   
@@ -8218,7 +8134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/hardware/motorboards/l298-shields/" class="md-nav__link">
+      <a href="../../hardware/motorboards/l298-shields/" class="md-nav__link">
         
   
   
@@ -8241,7 +8157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/hardware/motorboards/schematics/" class="md-nav__link">
+      <a href="../../hardware/motorboards/schematics/" class="md-nav__link">
         
   
   
@@ -8293,7 +8209,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../reference/hardware/wifi-boards/" class="md-nav__link ">
+            <a href="../../hardware/wifi-boards/" class="md-nav__link ">
               
   
   
@@ -8431,7 +8347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/wiring/i2C/i2c-wiring/" class="md-nav__link">
+      <a href="../../wiring/i2C/i2c-wiring/" class="md-nav__link">
         
   
   
@@ -8454,7 +8370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/wiring/i2C/tuning-info/" class="md-nav__link">
+      <a href="../../wiring/i2C/tuning-info/" class="md-nav__link">
         
   
   
@@ -8516,7 +8432,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../reference/throttle-writers/" class="md-nav__link ">
+            <a href="../../throttle-writers/" class="md-nav__link ">
               
   
   
@@ -8551,7 +8467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/throttle-writers/throttle-writers-guide/" class="md-nav__link">
+      <a href="../../throttle-writers/throttle-writers-guide/" class="md-nav__link">
         
   
   
@@ -8609,7 +8525,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../reference/serial-commands/" class="md-nav__link ">
+            <a href="../../serial-commands/" class="md-nav__link ">
               
   
   
@@ -8644,7 +8560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/serial-commands/serial-command-list/" class="md-nav__link">
+      <a href="../../serial-commands/serial-command-list/" class="md-nav__link">
         
   
   
@@ -8667,7 +8583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/serial-commands/serial-commands/" class="md-nav__link">
+      <a href="../../serial-commands/serial-commands/" class="md-nav__link">
         
   
   
@@ -8690,7 +8606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/serial-commands/legacy-command-reference/" class="md-nav__link">
+      <a href="../../serial-commands/legacy-command-reference/" class="md-nav__link">
         
   
   
@@ -8718,6 +8634,8 @@
                 
   
   
+    
+  
   
   
     
@@ -8740,15 +8658,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_11" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../reference/command-station-architecture/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -8767,7 +8685,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_11">
             <span class="md-nav__icon md-icon"></span>
             Command Station Internal Architecture
@@ -8783,7 +8701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/command-station-architecture/hal-architecture/" class="md-nav__link">
+      <a href="../hal-architecture/" class="md-nav__link">
         
   
   
@@ -8806,7 +8724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/command-station-architecture/writing-hal-drivers/" class="md-nav__link">
+      <a href="../writing-hal-drivers/" class="md-nav__link">
         
   
   
@@ -8826,10 +8744,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../reference/command-station-architecture/io-device-drivers/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    I/O Device Drivers and HAL
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -8840,6 +8780,179 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#catching-the-i2c-bus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Catching the I2C Bus
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Catching the I2C Bus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pull-ups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pull-Ups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identifying-what-devices-are-connected" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identifying What Devices Are Connected
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcp23017-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      MCP23017 Modules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pca9685-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      PCA9685 Modules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-drivers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Drivers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Drivers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes-on-the-pca9555tca9555-i2c-gpio-extenders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes on the PCA9555/TCA9555 I2C GPIO Extenders
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-new-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a New Device
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-new-device-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding A New Device Configuration File
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding A New Device Configuration File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a new tab
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-myhalcpp-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating the myHal.cpp file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-in-the-configuration-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding in the configuration commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upload-the-new-version-of-the-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upload the new version of the software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-the-driver" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking the Driver
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Device
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -8881,7 +8994,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../reference/external-references/" class="md-nav__link ">
+            <a href="../../external-references/" class="md-nav__link ">
               
   
   
@@ -8975,7 +9088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/about/" class="md-nav__link">
+      <a href="../../../about/about/" class="md-nav__link">
         
   
   
@@ -8998,7 +9111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/history/" class="md-nav__link">
+      <a href="../../../about/history/" class="md-nav__link">
         
   
   
@@ -9021,7 +9134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/licence/" class="md-nav__link">
+      <a href="../../../about/licence/" class="md-nav__link">
         
   
   
@@ -9074,7 +9187,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../news/" class="md-nav__link ">
+            <a href="../../../news/" class="md-nav__link ">
               
   
   
@@ -9156,7 +9269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../news/category/general-dcc-ex-news/" class="md-nav__link">
+      <a href="../../../news/category/general-dcc-ex-news/" class="md-nav__link">
         
   
   
@@ -9251,7 +9364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/contributing/" class="md-nav__link">
+      <a href="../../../contributing/contributing/" class="md-nav__link">
         
   
   
@@ -9274,7 +9387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/donations/" class="md-nav__link">
+      <a href="../../../contributing/donations/" class="md-nav__link">
         
   
   
@@ -9297,7 +9410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/code/contributing-code/" class="md-nav__link">
+      <a href="../../../contributing/code/contributing-code/" class="md-nav__link">
         
   
   
@@ -9353,7 +9466,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../contributing/documentation/" class="md-nav__link ">
+            <a href="../../../contributing/documentation/" class="md-nav__link ">
               
   
   
@@ -9388,7 +9501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/documentation/standards/" class="md-nav__link">
+      <a href="../../../contributing/documentation/standards/" class="md-nav__link">
         
   
   
@@ -9411,7 +9524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/documentation/formatting-guide/" class="md-nav__link">
+      <a href="../../../contributing/documentation/formatting-guide/" class="md-nav__link">
         
   
   
@@ -9434,7 +9547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/documentation/understanding-links/" class="md-nav__link">
+      <a href="../../../contributing/documentation/understanding-links/" class="md-nav__link">
         
   
   
@@ -9457,7 +9570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/documentation/logos/" class="md-nav__link">
+      <a href="../../../contributing/documentation/logos/" class="md-nav__link">
         
   
   
@@ -9480,7 +9593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/documentation/mkdocs-features/" class="md-nav__link">
+      <a href="../../../contributing/documentation/mkdocs-features/" class="md-nav__link">
         
   
   
@@ -9503,7 +9616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/documentation/mermaid-diagrams/" class="md-nav__link">
+      <a href="../../../contributing/documentation/mermaid-diagrams/" class="md-nav__link">
         
   
   
@@ -9534,7 +9647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/release-checklist/" class="md-nav__link">
+      <a href="../../../contributing/release-checklist/" class="md-nav__link">
         
   
   
@@ -9557,7 +9670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/user-journeys/" class="md-nav__link">
+      <a href="../../../contributing/user-journeys/" class="md-nav__link">
         
   
   
@@ -9580,7 +9693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/todo-report/" class="md-nav__link">
+      <a href="../../../contributing/todo-report/" class="md-nav__link">
         
   
   
@@ -9611,6 +9724,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -9630,19 +9745,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#withrottle" class="md-nav__link">
+  <a href="#catching-the-i2c-bus" class="md-nav__link">
     <span class="md-ellipsis">
-      WiThrottle
+      Catching the I2C Bus
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="WiThrottle">
+    <nav class="md-nav" aria-label="Catching the I2C Bus">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#withrottle-servers" class="md-nav__link">
+  <a href="#pull-ups" class="md-nav__link">
     <span class="md-ellipsis">
-      WiThrottle Servers
+      Pull-Ups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identifying-what-devices-are-connected" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identifying What Devices Are Connected
     </span>
   </a>
   
@@ -9654,20 +9778,122 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dcc-ex-native-protocol-commands" class="md-nav__link">
+  <a href="#mcp23017-modules" class="md-nav__link">
     <span class="md-ellipsis">
-      DCC-EX Native protocol / commands
+      MCP23017 Modules
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#which-should-you-use" class="md-nav__link">
+  <a href="#pca9685-modules" class="md-nav__link">
     <span class="md-ellipsis">
-      Which Should You Use?
+      PCA9685 Modules
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-drivers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Drivers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Drivers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes-on-the-pca9555tca9555-i2c-gpio-extenders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes on the PCA9555/TCA9555 I2C GPIO Extenders
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-new-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a New Device
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-new-device-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding A New Device Configuration File
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding A New Device Configuration File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a new tab
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-myhalcpp-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating the myHal.cpp file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-in-the-configuration-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding in the configuration commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upload-the-new-version-of-the-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upload the new version of the software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-the-driver" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking the Driver
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Device
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -9684,33 +9910,208 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+
 
 
   
   
 
 
-<h1 id="withrottle-protocol-vs-dcc-ex-nativeserial-commands">WiThrottle Protocol VS DCC-EX Native/Serial Commands<a class="headerlink" href="#withrottle-protocol-vs-dcc-ex-nativeserial-commands" title="Permanent link">&para;</a></h1>
-<p><strong>EX-CommandStation</strong> supports both the <strong>WiThrottle protocol</strong> and the <strong>DCC-EX Native Serial protocol/commands</strong>.</p>
-<p>This page describes the difference between the <strong>WiThrottle Protocol</strong> and the <strong>DCC-EX Native Serial protocol/commands</strong>.</p>
-<h2 id="withrottle">WiThrottle<a class="headerlink" href="#withrottle" title="Permanent link">&para;</a></h2>
-<p>'WiThrottle' is a trademark owned by Brett Hoffman.</p>
-<p>'WiThrottle' is also an <a href="https://www.withrottle.com/html/home.html">iOS app</a> developed by Brett Hoffman which has similar capabilities to <strong>Engine Driver</strong> on Android.</p>
-<p>The 'WiThrottle protocol' is a communications protocol developed by Brett Hoffman.  It is used by <strong>JMRI</strong>, <strong>Engine Driver</strong>, the <strong>WiThrottle</strong> app and a number of other apps and commercial DCC Command Stations.</p>
-<h3 id="withrottle-servers">WiThrottle Servers<a class="headerlink" href="#withrottle-servers" title="Permanent link">&para;</a></h3>
-<p>WiThrottle stands for 'WiFi Throttle', and a 'WiThrottle Server' is just software running on your <strong>JMRI</strong> computer, <strong>DCC-EX EX-CommandStation</strong>, or dedicated device. It's called a 'Server' because it allows you to connect to it and it 'serves', or services, requests from another application. That application is called a 'Client'.</p>
-<p>The 'WiThrottle Protocol' itself is a standard for how WiFi throttles can communicate with the WiThrottle Server, much like the DCC standard is a standard for how data packets communicate with decoders. What this means for you, is that <strong>Engine Driver</strong> and other apps can talk to any WiThrottle compatible server, which in turn can talks to your DCC encoders in your locos.</p>
-<h2 id="dcc-ex-native-protocol-commands">DCC-EX Native protocol / commands<a class="headerlink" href="#dcc-ex-native-protocol-commands" title="Permanent link">&para;</a></h2>
-<p>When the <strong>DCC-EX</strong> team designed the <strong>DCC-EX EX-CommandStation</strong> they found the 'WiThrottle Protocol' too limiting and came up with a new protocol referred to originally as <strong>DCC++</strong> but later as <a href="../../reference/serial-commands/serial-command-list/">DCC-EX Native Serial Protocol or DCC-EX Native Serial Commands</a>.</p>
-<p><strong>Engine Driver</strong>, <strong>EX-WebThrottle</strong>, <strong>EX-Toolbox</strong>, <strong>JMRI</strong> and a few other apps can use the more powerful <strong>DCC-EX Native Serial Protocol</strong> when connecting to a <strong>DCC-EX</strong> <strong>EX-CommandStation</strong>.</p>
-<p><strong>Engine Driver</strong> can also use the <strong>DCC-EX Native Protocol</strong> to connect to a <strong>DCC-EX</strong> <strong>EX-CommandStation</strong> via <strong>JMRI</strong> but you need to enable the <strong>'DCC++ over TCP Server'</strong> in the <strong>'DCC++'</strong>' menu in <strong>Decoder-Pro</strong>.</p>
-<hr />
-<h2 id="which-should-you-use">Which Should You Use?<a class="headerlink" href="#which-should-you-use" title="Permanent link">&para;</a></h2>
-<p>The <strong>WiThrottle Protocol</strong> is adequate for running trains, throwing turnouts/points and selecting Routes.</p>
-<p>What the <strong>WiThrottle Protocol</strong> can't do is <em>CV programming</em>, <em>Track Manager changes</em>, and <em>system configuration</em>.</p>
-<p>The <strong>DCC-EX Native Commands</strong> can do these and a lot more.</p>
-<p>So if you have the option to use a throttle/controller that uses the <strong>DCC-EX Native Commands</strong> it is worthwhile doing so.  However if you can't then the <strong>WiThrottle protocol</strong> is just fine for <em>running</em> the average layout.</p>
-<p>You can refer the <a href="../throttles/">throttle/controller list</a> to see which controllers support <strong>DCC-EX Native Serial Commands</strong>.</p>
+<h1 id="io-device-drivers-and-hal">I/O Device Drivers and <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr><a class="headerlink" href="#io-device-drivers-and-hal" title="Permanent link">&para;</a></h1>
+<p>The DCC-EX controller has always had built-in support for <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> control, output control and input sensors attached to the Arduino pins.  However, you may outgrow the built-in capabilities and want to access more output pins than the Arduino has available. Or you may wish to attach servos to the controller for <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> control or for animating a layout component, such as the doors to an engine shed.  </p>
+<p><strong>EX-CommandStation</strong>, as of version 3.2.0, provides support for a wider set of input and output devices than previous versions.  This is thanks to a piece of software called the <strong><abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr></strong> or <strong>H</strong>\ardware <strong>A</strong>\bstraction <strong>L</strong>\ayer. The <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> provides support for a range of different input and output modules through drivers that are supplied with <em>DCC-EX</em><em>.
+In addition, its simple interface allows engineers and tinkerers to add new plug-in device support to *</em>EX-CommandStation** without having to change a line of the core application code.  </p>
+<p>The <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> exposes a standard set of functions which the rest of <strong>EX-CommandStation</strong> code is able to call upon, and the <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> directs the calls to the appropriate device driver. The specific device end-points are given by a kind of pin number, called a <strong>V</strong>\irtual <strong>pin</strong> or <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr>. Any module has one or more VPINs associated with it.</p>
+<p>When <strong>EX-CommandStation</strong> code needs to write to an Arduino digital output pin, the output is uniquely identified by a pin number. The Arduino Mega has digital I/O pin numbers ranging up to 69.  For example, you may set up an Output in <strong>EX-CommandStation</strong> using the <code>&lt;Z 1 40 0&gt;</code> command (id=1, pin=40).  Then the command <code>&lt;Z 1 1&gt;</code> will set pin 40 HIGH and <code>&lt;Z 1 0&gt;</code> will set pin 40 LOW.</p>
+<p>The <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> extends this model to other devices.  If you want to write to a digital output pin on an external GPIO Extender Module, then you do exactly the same thing, but the pin number identifies a virtual pin number associated with an extender module.  The call is passed to the driver software for that module, and a command is sent to the module to modify its pin state.
+<strong>EX-CommandStation</strong> does not need to know what type of device it is, or what low-level commands are necessary to operate it. It just sends an instruction for the pin to be set on or off. If you want to reposition a servo, the same function is called, but with a <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> number that identifies a pin on a servo controller module; consequently, a command is sent to the servo control module to move the servo to the appropriate position.</p>
+<p>The same principle applies to Sensors (inputs).  You can configure a sensor object on <strong>EX-CommandStation</strong> by using the command <code>&lt;S 2 40 1&gt;</code> command (id=2, pin=40, pull-up=enabled). When pin 40 is connected to 0V (ground), a message <code>&lt;Q 2&gt;</code> is generated, and when it is disconnected, <code>&lt;q 2&gt;</code> is generated.  But if you have an MCP23017 GPIO Extender module connected up, and you replace the pin number 40 with 164 (the number of the first pin on the MCP23017), then you will get the messages when the MCP23017 pin is connected to 0V or disconnected.</p>
+<p>So how are these 'VPINs' configured?  </p>
+<p>The standard <strong>EX-CommandStation</strong> build for an Arduino Mega already contains support for four external modules, two GPIO Extender modules and two servo modules.  The GPIO Extender modules are MCP23017 modules which each have 16 pins that can be configured as inputs or outputs.  The Servo modules are PCA9685 modules which each have 16 pins that each provide a pulse-width-modulated signal that may be used to control a servo.  That's sixteen independently controlled servos on each module.</p>
+<p>If you need more modules, then they can be added from a user-specific configuration file, as described further on.</p>
+<p><strong>IMPORTANT NOTE</strong>  The Arduino Nano and Arduino Uno both have very limited FLASH program space and RAM memory, compared to the Arduino Mega.
+The rest of the <strong>EX-CommandStation</strong> code takes up most of the FLASH program space, and so there is very little spare for any <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> code.  Consequently, when <strong>EX-CommandStation</strong> is compiled for a Nano or Uno, a <em>reduced <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr></em> is included in place of the full <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr>.  This provides limited functionality and supports only for the Arduino digital input and output functions and analogue input functions.  No advanced drivers (Servos, external GPIO etc.) can be installed.
+It is theoretically possible to create an 'on-line only' version of <strong>EX-CommandStation</strong> which excludes the loco programming functions and therefore frees up FLASH on the Uno and Nano to allow the full <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> to operate, but this is not currently supported.</p>
+<h2 id="catching-the-i2c-bus">Catching the I2C Bus<a class="headerlink" href="#catching-the-i2c-bus" title="Permanent link">&para;</a></h2>
+<p>Many of the external modules are connected to the Arduino via the I2C (Inter Integrated Circuit) interface. This has four connections, usually labelled SDA (data), SCL (clock), VSS (+5V power usually) and GND (ground, or zero volts). Your motor driver may have convenient connectors for I2C devices; for example, the DeekRobot shield has two sets of four I2C pins on the top.  If not, then check the Arduino's data sheet to find the applicable I2C and power connections. For an Arduino Mega, SCL and SDA are the two connectors nearest the reset button, in the connector block running along the edge of the Arduino.</p>
+<p><strong>WARNING</strong>  <em>There is no standard pin order for the I2C bus connectors, so be careful that you identify which pin is which, and always connect SDA to SDA, SCL to SCL, GND to GND and VSS/+5V to VSS/+5V.</em></p>
+<p>All I2C devices are connected in parallel to this bus, and when the Arduino sends commands, all attached devices receive them. However, only a device with a matching address will respond.  Each device attached to the bus should have a unique address.</p>
+<p><img alt="I2C Bus Topology" src="../../../_static/images/i2c-devices/i2cbus.png" /> { width="600px"}
+<br/>Example I2C Bus Topology with Arduino Mega and Three I2C modules</p>
+<h3 id="pull-ups">Pull-Ups<a class="headerlink" href="#pull-ups" title="Permanent link">&para;</a></h3>
+<p>The I2C bus requires pull-up resistors in order for it to operate.  However, most I2C modules contain 10kOhm pull-up resistors built in, and the Arduino also has built-in pull-up resistors which are sufficient for installations with short bus cables, so you don't have to be concerned about this unless you're really <em>pushing the envelope</em>!</p>
+<p>For example, if you have 6 or more I2C modules connected to the same bus, you may need to remove the built-in pull-up resistors from one or more of them since the minimum permitted pull-up is generally 1.7kOhm (at 5V supply), to avoid too much current flowing. Also, if your I2C bus cable is long then a pull-up value closer to the minimum is desirable.</p>
+<h3 id="identifying-what-devices-are-connected">Identifying What Devices Are Connected<a class="headerlink" href="#identifying-what-devices-are-connected" title="Permanent link">&para;</a></h3>
+<p>During the startup phase of <strong>EX-CommandStation</strong>, the I2C bus is queried to identify what (if any) devices are connected. The list of active I2C addresses is shown on the serial output during startup.  An example is shown below, with annotations. Note that the address does not necessarily tell you what the device is, since different modules may have the same default address.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span class="o">&lt;*</span><span class="w"> </span><span class="n">License</span><span class="w"> </span><span class="n">GPLv3</span><span class="w"> </span><span class="n">fsf</span><span class="p">.</span><span class="n">org</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="n">dcc</span><span class="o">-</span><span class="n">ex</span><span class="p">.</span><span class="n">com</span><span class="w"> </span><span class="o">*&gt;</span>
+<span class="o">&lt;*</span><span class="w"> </span><span class="n">I2C</span><span class="w"> </span><span class="n">Device</span><span class="w"> </span><span class="n">found</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">x20</span><span class="w"> </span><span class="o">*&gt;</span><span class="w">    </span><span class="o">--</span><span class="w"> </span><span class="n">GPIO</span><span class="w"> </span><span class="n">Extender</span><span class="w"> </span><span class="n">device</span>
+<span class="o">&lt;*</span><span class="w"> </span><span class="n">I2C</span><span class="w"> </span><span class="n">Device</span><span class="w"> </span><span class="n">found</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">x3C</span><span class="w"> </span><span class="o">*&gt;</span><span class="w">    </span><span class="o">--</span><span class="w"> </span><span class="n">OLED</span><span class="w"> </span><span class="n">display</span>
+<span class="o">&lt;*</span><span class="w"> </span><span class="n">I2C</span><span class="w"> </span><span class="n">Device</span><span class="w"> </span><span class="n">found</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">x40</span><span class="w"> </span><span class="o">*&gt;</span><span class="w">    </span><span class="o">--</span><span class="w"> </span><span class="n">PWM</span><span class="w"> </span><span class="p">(</span><span class="n">Servo</span><span class="p">)</span><span class="w"> </span><span class="n">Control</span><span class="w"> </span><span class="n">Module</span>
+<span class="o">&lt;*</span><span class="w"> </span><span class="n">I2C</span><span class="w"> </span><span class="n">Device</span><span class="w"> </span><span class="n">found</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">x48</span><span class="w"> </span><span class="o">*&gt;</span><span class="w">    </span><span class="o">--</span><span class="w"> </span><span class="mi">4</span><span class="o">-</span><span class="n">pin</span><span class="w"> </span><span class="n">Analogue</span><span class="w"> </span><span class="n">Input</span><span class="w"> </span><span class="n">Module</span>
+</code></pre></div>
+<h2 id="mcp23017-modules">MCP23017 Modules<a class="headerlink" href="#mcp23017-modules" title="Permanent link">&para;</a></h2>
+<p>The MCP23017 GPIO Extender module has 16 input/output pins.  Like the Arduino input/output pins, you can access any of these in input mode (as a sensor input) or output mode (driving a digital output and illuminating an LED or switching some external hardware).  Each module has an address associated with it, which is generally either 0x20, 0x21, 0x22 or 0x23.  By default, the module is usually 0x20.  The address will only need to be changed if you have more than one module, in which case the second one will have to be set to address 0x21, usually by moving jumpers on the module or by soldering across pads on the circuit board.  Refer to the documentation for your own board for details.</p>
+<p>When used for inputs (sensors or switches), the sensor/switch is usually connected between the nominated pin and the GND (ground) signal. When the sensor/switch activates, it usually connects the pin to GND, and the device detects a small current flow.  When the sensor/switch deactivates, the current stops flowing.  This is just the same as the Arduino digital GPIO pins.</p>
+<p>Two MCP23017 modules are pre-configured, one is address 0x20 and uses VPINs 164-179. The second is address 0x21 and uses VPINs 180-195.</p>
+<p>An input pin may be configured using the DCC-EX Sensor commands, as follows:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">S</span><span class="w"> </span><span class="mi">201</span><span class="w"> </span><span class="mi">164</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="w">  </span>
+</code></pre></div>
+<p>This command associates sensor ID 201 with <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> 164 (MCP23017 first pin) and enables pull-up.</p>
+<p>When the sensor activates and deactivates, the following messages are sent by <strong>EX-CommandStation</strong> over the serial output:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">Q</span><span class="w"> </span><span class="mi">201</span><span class="o">&gt;</span><span class="w">         </span><span class="o">--</span><span class="w"> </span><span class="n">Activation</span>
+<span class="o">&lt;</span><span class="n">q</span><span class="w"> </span><span class="mi">201</span><span class="o">&gt;</span><span class="w">         </span><span class="o">--</span><span class="w"> </span><span class="n">Deactivation</span>
+</code></pre></div>
+<h2 id="pca9685-modules">PCA9685 Modules<a class="headerlink" href="#pca9685-modules" title="Permanent link">&para;</a></h2>
+<p>The PCA9685 <abbr title="Pulse Width Modulation">PWM</abbr> (servo) controller module has 16 input/output pins.  In addition, next to each <abbr title="Pulse Width Modulation">PWM</abbr> pin is a +5V and a GND pin, so that a servo connector may be directly plugged onto the group of three pins.  Even better, the pins are usually colour-coded to match the colours of the servo cables!</p>
+<p>Like the MCP23017 module, each PCA9685 has an address.  The default address is 0x40, and may be changed, for example to 0x41, 0x42 or 0x43 for the second, third and fourth module on the bus.</p>
+<p>Servos contain motors, and so may draw more power than the Arduino can support.  Therefore, the PCA9685 module usually has a block connector allowing connection of an external 5V power supply, to power the servo motors.  If this power isn't connected and on, then the servos won't move.</p>
+<p>Two PCA9685 modules are pre-configured, one is address 0x40 and uses VPINs 100-115.  The second is address 0x41 and uses VPINs 116-131.</p>
+<p>A servo <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> may be configured using the DCC-EX <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">Turnout</abbr> commands, as follows:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="mi">301</span><span class="w"> </span><span class="n">SERVO</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="mi">410</span><span class="w"> </span><span class="mi">205</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span>
+</code></pre></div>
+<p>This command associates <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> ID 301 with <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> 100 (PCA9685 first pin).
+<br/>When the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> is 'thrown', the <abbr title="Pulse Width Modulation">PWM</abbr> position is set to 410.
+<br/>When the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> is 'closed', the <abbr title="Pulse Width Modulation">PWM</abbr> position is set to 205.
+<br/>The movement of the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> is Medium speed (2).  The movement profile may be 0 (Immediate), 1 (Fast=0.5 sec), 2 (Medium=1 sec), 3 (Slow=2 sec), or 4 (Bounce profile for semaphore signals).</p>
+<p>Many references quote a <abbr title="Pulse Width Modulation">PWM</abbr> pulse length of 1ms to 2ms, which corresponds to <abbr title="Pulse Width Modulation">PWM</abbr> values of 205 to 410. However, I've found, with SG90 servos, that 102 to 490 gives a full servo sweep of nearly 180 degrees. But use with care, as an attempt to position a servo outside of its range may cause damage to the servo gearing, or to any layout components you have connected to the servo!*</p>
+<div class="language-cpp highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="mi">301</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="w">  </span><span class="c1">// Instructs the turnout to move to the &#39;thrown&#39; position.</span>
+<span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="mi">301</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span><span class="w">  </span><span class="c1">// Instructs the turnout to move the the &#39;closed&#39; position.</span>
+</code></pre></div>
+<p>In EXRAIL, the servo can be controlled directly via the <strong>SERVO(pin,position,profile)</strong> or <strong>SERVO2(pin,position,duration)</strong> commands.</p>
+<p><strong>Good to know:</strong> The PCA9685 is not only used for servos.  It generates pulses of variable mark-to-space ratio, with a value of 0 being full off, and 4095 being full on.  So it can be used to control an LED to different brightness levels.  the EXRAIL automation has a command <strong>FADE(pin,value,ms)</strong> which operates the PCA9685 to do exactly this.</p>
+<h2 id="other-drivers">Other Drivers<a class="headerlink" href="#other-drivers" title="Permanent link">&para;</a></h2>
+<p>There are also drivers included with <strong>EX-CommandStation</strong> for the following modules:</p>
+<ul>
+<li>PCF8574 - 8-channel GPIO extender module, like the MCP23017 but fewer inputs/outputs (I2C).</li>
+<li>MCP23008 - Another 8-channel GPIO extender module.</li>
+<li>PCA/TCA9555 - Another 16-channel GPIO extender module (see notes below).</li>
+<li>DFPlayer - MP3 Media player with microSD card holder.  You can play different sounds from the player by activating or de-activating
+  output VPINs from within <strong>EX-CommandStation</strong>.</li>
+<li>ADS1115 - Four-channel analogue input module (I2C).  Also designed to work with the ADS1113 and ADS1114 single-channel modules.</li>
+<li>VL53L0X - Laser Time-Of-Flight (TOF) range sensor (I2C).  Its <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> activates when a reflecting object is within a defined distance of the sensor.</li>
+<li>HC-SR04 - Ultrasound 'sonar' range sensor.  Its <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> activates when a reflecting object is within a defined distance of the sensor.</li>
+<li>EX-Turntable - Integrated, stepper motor based turntable controller, refer to :doc:<code>/ex-turntable/index</code>.</li>
+</ul>
+<h3 id="notes-on-the-pca9555tca9555-i2c-gpio-extenders">Notes on the PCA9555/TCA9555 I2C GPIO Extenders<a class="headerlink" href="#notes-on-the-pca9555tca9555-i2c-gpio-extenders" title="Permanent link">&para;</a></h3>
+<p>The PCA9555 is made by Texas Instruments and NXP, the TCA9555 by Texas Instruments alone, and using these GPIO extenders is similar to the the MCP23017 with a few key differences.</p>
+<p>The PCA/TCA9555 has an always-on internal pull-up resistor for ports configured as an input, and the INT pin is always enabled, meaning it will always trigger on the rising and falling edge of an input port. The PCA/TCA9555 will work with either 3.3v or 5V.</p>
+<p>When used for inputs (sensors or switches), the sensor/switch is usually connected between the nominated pin and the GND (ground) signal. When the sensor/switch activates, it usually connects the pin to GND, and the device detects a small current flow. When the sensor/switch deactivates, the current stops flowing. This is just the same as the Arduino digital GPIO pins.</p>
+<p>The PCA/TCA9555 shares the same address space (0x20 to 0x27) on the I2C bus, so you need to take this into account given by default, two MCP23017s are defined in the CommandStation code at addresses 0x20 and 0x21. It is recommended you set the address of the first PCA/TCA9555 to 0x22.</p>
+<p>If you need to locate a PCA/TCA9555 at 0x20 or 0x21, you will need to comment out the relevant line(s) in IODevice.cpp in the CommandStation code:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span class="n">MCP23017</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">164</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mh">0x20</span><span class="p">);</span>
+<span class="n">MCP23017</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mh">0x21</span><span class="p">);</span>
+</code></pre></div>
+<p>To configure an input pin using the DCC-EX Sensor commands, use the <code>&lt;S&gt;</code> command:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">S</span><span class="w"> </span><span class="mi">801</span><span class="w"> </span><span class="mi">211</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="o">&lt;</span><span class="n">S</span><span class="w"> </span><span class="mi">801</span><span class="w"> </span><span class="mi">211</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+</code></pre></div>
+<p>As per the notes above, the 0 or 1 for the pull-up is redundant as this is always on, but the <code>&lt;S&gt;</code> command requires the parameter to be set.</p>
+<p>An output port may be configured using the DCC-EX Output commands, as follows:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">Z</span><span class="w"> </span><span class="mi">901</span><span class="w"> </span><span class="mi">196</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+</code></pre></div>
+<h2 id="adding-a-new-device">Adding a New Device<a class="headerlink" href="#adding-a-new-device" title="Permanent link">&para;</a></h2>
+<p>If you want to add a device that is not handled by <strong>EX-CommandStation</strong> 'out-of-the-box', then you will need to create a device configuration file, with details of the device driver and how to access the device.</p>
+<p><strong>EX-CommandStation</strong> already has a few useful device drivers for different types of sensors, and new ones are appearing regularly.  The device drivers can be installed in <strong>EX-CommandStation</strong> just by adding them to the configuration file, using the steps shown below. No change is required to the <strong>EX-CommandStation</strong> base code in order to do this, the device driver is configured in a user-specific configuration file.</p>
+<p>Many device drivers are completely contained within an "#include" file, with a ".h" file extension.  Some may also have one or more ".cpp" files too.  You need to ensure that the driver files are present in the <strong>EX-CommandStation</strong> source file folder.  If you have received them from another source, then copy them to this folder.</p>
+<p>Many of the driver ".h" files also include a description of how the driver operates, and what configuration lines are
+required in order to use it, together with examples.  If you can't find documentation elsewhere, then check at the top of the ".h" file.</p>
+<p>Now you need to create a configuration file to include the device driver in the build.  You can either copy the supplied
+file <code>myHal.cpp_example.txt</code> to <code>myHal.cpp</code> and then edit it, or you can create a new <code>myHal.cpp</code> from scratch.
+In fact, the file can have any name you like.  You could use <code>AA_setup.cpp</code> for example, then it will appear at the beginning of the
+list of files in the |<abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr>|.</p>
+<h2 id="adding-a-new-device-configuration-file">Adding A New Device Configuration File<a class="headerlink" href="#adding-a-new-device-configuration-file" title="Permanent link">&para;</a></h2>
+<p>This will need to be done in the <mark>TODO</mark> LOW -  :doc:<code>Arduino-IDE &lt;/ex-commandstation/advanced-setup/installation-options/arduino-ide&gt;</code>, so first make sure you have followed these steps to load up the |<abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr>|.</p>
+<h3 id="create-a-new-tab">Create a new tab<a class="headerlink" href="#create-a-new-tab" title="Permanent link">&para;</a></h3>
+<p>First you will need to add a new file, just like the <mark>TODO</mark> LOW - :ref:<code>config.h file &lt;ex-commandstation/advanced-setup/installation-options/arduino-ide:Copy the config.example.h file (or rename it)&gt;</code>.
+Create a new tab using the following menu option.</p>
+<p><img alt="Arduino IDE New Tab" src="../../../_static/images/arduino-ide/arduino_ide_newtab.jpg" width="400px" />
+<br/>Creating a new tab in the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr></p>
+<h3 id="creating-the-myhalcpp-file">Creating the myHal.cpp file<a class="headerlink" href="#creating-the-myhalcpp-file" title="Permanent link">&para;</a></h3>
+<p>At the bottom of the |<abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr>| window, a yellow bar will appear asking for a <code>Name for new file</code>, here make sure to enter <code>myHal.cpp</code> and click <code>OK</code> to create the new file.</p>
+<p><img alt="Arduino IDE New Tab" src="../../../_static/images/i2c-devices/arduino_ide_myHal.jpg" width="400px" />
+<br/>&gt;Choosing a file name for the new file, use <code>myHal.cpp</code></p>
+<h3 id="adding-in-the-configuration-commands">Adding in the configuration commands<a class="headerlink" href="#adding-in-the-configuration-commands" title="Permanent link">&para;</a></h3>
+<p>Within the new file that has been created, you can add in the definitions of new devices.  But first you need to add the following lines:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="c1">// Insert your commands here...</span>
+
+<span class="p">}</span>
+</code></pre></div>
+<p>Suppose you want to add a driver for the DFPlayer MP3 Player.  This module is widely available for a few dollars and allows MP3 files to be played from a Micro-SD card (up to 32GB).  The module is connected to an Arduino serial port, for example on the Mega the pins TX1(14)/RX1(15) which is Serial 3.</p>
+<p>Connect the DFPlayer's RX to the Arduino TX3 (14) via a 1kOhm resistor, and DFPlayer's TX direct to the Arduino RX3 (15).  You also need to connect +5V power to VCC, and GND on the Arduino to GND on the DFPlayer.  Connect a small speaker to the pins SPK1 and SPK2 on the DFPlayer, and that's the hardware set up.</p>
+<p><img alt="Arduino Mega with DFplayer" src="../../../_static/images/hal/dfplayer.png" width="400px" />
+<br/>Arduino Mega with DFPlayer</p>
+<p>Copy a few MP3 files to a Micro-SD card.  The order in which you copy them is important, as the first file copied is referenced as file 1, the second as file 2, etc.</p>
+<p>The names of the files are not used, but best keep them below 8 characters (excluding the .mp3 file extension).  Don't include any other files (.txt etc) on the card, including hidden files - the DFPlayer may find them and attempt to play them!  When you're done, insert the card into the DFPlayer.</p>
+<p>Now you're ready to set up the software.</p>
+<p>Add the following line to the top of the <code>myHal.cpp</code> file:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_DFPlayer.h&quot;</span>
+</code></pre></div>
+<p>This makes the driver software for the DFPlayer known to the compiler.  Now add the following line within the curly braces of the <code>halSetup() { }</code> function definition:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span class="n">DFPlayer</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">Serial3</span><span class="p">);</span>
+</code></pre></div>
+<p>This instructs the <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> to create a driver for the DFPlayer module configured to  communicate on Serial3, and allocates 5 virtual pins (VPINs) to interface with it.  Save the file.</p>
+<p>The file contents should now look like:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_DFPlayer.h&quot;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="c1">// Insert your commands here...</span>
+<span class="w">  </span><span class="n">DFPlayer</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">Serial3</span><span class="p">);</span>
+
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="upload-the-new-version-of-the-software">Upload the new version of the software<a class="headerlink" href="#upload-the-new-version-of-the-software" title="Permanent link">&para;</a></h3>
+<p>Finally, upload the code to the Arduino as you would do during the standard <mark>TODO</mark> LOW - :ref:<code>Arduino IDE Setup &lt;ex-commandstation/advanced-setup/installation-options/arduino-ide:upload the software&gt;</code>.
+Restart the Command Station and the new device will be configured at startup.  </p>
+<h3 id="checking-the-driver">Checking the Driver<a class="headerlink" href="#checking-the-driver" title="Permanent link">&para;</a></h3>
+<p>Start the IDE serial monitor, and set its speed to 115200 baud.  If you enter the following command:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">HAL</span><span class="w"> </span><span class="n">SHOW</span><span class="o">&gt;</span>
+</code></pre></div>
+<p>You will see a list of the configured devices, and among them should be the new device, as follows:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span class="o">&lt;*</span><span class="w"> </span><span class="n">Arduino</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">2-69</span><span class="w"> </span><span class="o">*&gt;</span>
+<span class="o">&lt;*</span><span class="w"> </span><span class="n">PCA9685</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="n">x40</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">100-115</span><span class="w"> </span><span class="o">*&gt;</span>
+<span class="o">&lt;*</span><span class="w"> </span><span class="n">PCA9685</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="n">x41</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">116-131</span><span class="w"> </span><span class="o">*&gt;</span>
+<span class="o">&lt;*</span><span class="w"> </span><span class="n">MCP23017</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="n">x20</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">164-179</span><span class="w"> </span><span class="o">*&gt;</span>
+<span class="o">&lt;*</span><span class="w"> </span><span class="n">MCP23017</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="n">x21</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">180-195</span><span class="w"> </span><span class="o">*&gt;</span>
+<span class="o">&lt;*</span><span class="w"> </span><span class="n">DFPlayer</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">1000-1004</span><span class="w"> </span><span class="o">*&gt;</span><span class="w">           </span><span class="o">&lt;&lt;==</span><span class="w"> </span><span class="n">New</span><span class="w"> </span><span class="n">device</span>
+</code></pre></div>
+<h3 id="using-the-device">Using the Device<a class="headerlink" href="#using-the-device" title="Permanent link">&para;</a></h3>
+<p>The five VPINs, 1000 to 1004, allow the first five MP3 files on the Micro-SD card to be played directly.  You just need to write to the pins as if they were real digital output pins on the Arduino.  For example, set up some outputs using the IDE serial monitor, by entering the following commands:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">Z</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Z</span><span class="w"> </span><span class="mi">1001</span><span class="w"> </span><span class="mi">1001</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Z</span><span class="w"> </span><span class="mi">1002</span><span class="w"> </span><span class="mi">1002</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Z</span><span class="w"> </span><span class="mi">1003</span><span class="w"> </span><span class="mi">1003</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Z</span><span class="w"> </span><span class="mi">1004</span><span class="w"> </span><span class="mi">1004</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+</code></pre></div>
+<p>Now you can trigger any of the five MP3 files by using one of the following commands:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">Z</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Z</span><span class="w"> </span><span class="mi">1001</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Z</span><span class="w"> </span><span class="mi">1002</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Z</span><span class="w"> </span><span class="mi">1003</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Z</span><span class="w"> </span><span class="mi">1004</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
+</code></pre></div>
+<p>To stop the player, use <code>&lt;Z 1000 0&gt;</code> etc.</p>
+<p>You may also control the player by writing to the first two VPINs as analogue output capable pins. Try the following commands:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">ANOUT</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="mi">5</span><span class="o">&gt;</span><span class="w">        </span><span class="c1">// play MP3 file number 5.</span>
+<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">ANOUT</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">10</span><span class="o">&gt;</span><span class="w">     </span><span class="c1">// play MP3 file number 4 at low volume (10).</span>
+<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">ANOUT</span><span class="w"> </span><span class="mi">1001</span><span class="w"> </span><span class="mi">30</span><span class="o">&gt;</span><span class="w">       </span><span class="c1">// set volume to maximum (range 0-30).</span>
+<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">ANOUT</span><span class="w"> </span><span class="mi">1001</span><span class="w"> </span><span class="mi">10</span><span class="o">&gt;</span><span class="w">       </span><span class="c1">// set volume to low.</span>
+</code></pre></div>
+<p>Note: The volume commands apply to the device, not to the specific MP3 files.</p>
+<p>You can also control the DFPlayer through EXRAIL, using commands like the following:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span class="n">SET</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span><span class="w">             </span><span class="c1">// Start playing first sound</span>
+<span class="n">AT</span><span class="p">(</span><span class="mi">-1000</span><span class="p">)</span><span class="w">             </span><span class="c1">// Wait for playing to finish</span>
+<span class="n">RESET</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span><span class="w">           </span><span class="c1">// Stop player</span>
+<span class="n">SERVO</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="n">Instant</span><span class="p">)</span><span class="w">      </span><span class="c1">// Start playing 4th sound at volume level 10</span>
+<span class="n">SERVO</span><span class="p">(</span><span class="mi">1001</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="n">Instant</span><span class="p">)</span><span class="w">        </span><span class="c1">// Set volume level to 20</span>
+</code></pre></div>
+<p>Note: As per the standard SERVO commands, the last parameter is the name of a servo profile, not a number.</p>
+<!-- These are case sensitive -->
 
 
 
@@ -9731,7 +10132,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 3, 2026 07:34:47 UTC">August 3, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 12, 2026 07:08:25 UTC">August 12, 2026</span>
   </span>
 
     
@@ -9741,6 +10142,8 @@
   </aside>
 
 
+
+  
 
 
 
@@ -9767,10 +10170,12 @@
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" hidden>
         
           
-          <a href="../throttlecard/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ThrottleCard (iOS)">
+          <a href="../writing-hal-drivers/" class="md-footer__link md-footer__link--prev" aria-label="Previous: HAL Writer&#39;s Guide">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -9780,27 +10185,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                ThrottleCard (iOS)
+                HAL Writer's Guide
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../connecting-wifi/" class="md-footer__link md-footer__link--next" aria-label="Next: &lt;br/&gt;How to Connect - WiFi">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                <br/>How to Connect - WiFi
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
@@ -9848,26 +10237,26 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.select", "content.code.copy", "content.code.annotate", "content.tooltips", "header.autohide", "navigation.footer", "navigation.path", "navigation.tabs", "navigation.top", "navigation.tracking", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.select", "content.code.copy", "content.code.annotate", "content.tooltips", "header.autohide", "navigation.footer", "navigation.path", "navigation.tabs", "navigation.top", "navigation.tracking", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
-        <script src="../../_static/scripts/search-helper.js"></script>
+        <script src="../../../_static/scripts/search-helper.js"></script>
       
-        <script src="../../_static/scripts/platform.js"></script>
+        <script src="../../../_static/scripts/platform.js"></script>
       
-        <script src="../../_static/scripts/ex-installer-run-helper.js"></script>
+        <script src="../../../_static/scripts/ex-installer-run-helper.js"></script>
       
-        <script src="../../_static/scripts/clickable-cards.js"></script>
+        <script src="../../../_static/scripts/clickable-cards.js"></script>
       
-        <script src="../../_static/scripts/legacy-docs-new-tab.js"></script>
+        <script src="../../../_static/scripts/legacy-docs-new-tab.js"></script>
       
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       
-        <script src="../../javascripts/tablesort.js"></script>
+        <script src="../../../javascripts/tablesort.js"></script>
       
-        <script src="../../js/open_in_new_tab.js"></script>
+        <script src="../../../js/open_in_new_tab.js"></script>
       
     
   </body>
