@@ -10331,16 +10331,41 @@
 </ul>
 <h4 id="manually-triggered-sequence-types">Manually Triggered Sequence Types<a class="headerlink" href="#manually-triggered-sequence-types" title="Permanent link">&para;</a></h4>
 <p>Manually triggered sequences are advertised to apps and devices that support the <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> protocol or Native Serial protocol so you can activate them on your throttles (e.g. Engine Driver or ThrottleCard). They are one of:</p>
-<ul>
-<li><code>AUTOMATION( id, "description" )</code> <br/>- Start a Automation Sequence and creates a apps and devices that support the <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> protocol or Native Serial protocol {Handoff} button to automatically send a train along.</li>
-<li><code>ROUTE( id, "description" )</code> <br/>- Start of a Route Sequence and creates a apps and devices that support the <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> protocol or Native Serial protocol {Set} button to manual drive the train along</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AUTOMATION( id, "description" )</code></td>
+<td>Start a Automation Sequence and creates a apps and devices that support the <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> protocol or Native Serial protocol {Handoff} button to automatically send a train along</td>
+</tr>
+<tr>
+<td><code>ROUTE( id, "description" )</code></td>
+<td>Start of a Route Sequence and creates a apps and devices that support the <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> protocol or Native Serial protocol {Set} button to manual drive the train along</td>
+</tr>
+</tbody>
+</table>
 <p>Note that these can also be invoked by other sequences.</p>
 <h4 id="invoked-sequence-types">Invoked Sequence Types<a class="headerlink" href="#invoked-sequence-types" title="Permanent link">&para;</a></h4>
 <p>Sequences that can only be triggered by other sequences have the following form:</p>
-<ul>
-<li><code>SEQUENCE( id )</code> <br/>- A general purpose Sequence for scenic animations, etc.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SEQUENCE( id )</code></td>
+<td>A general purpose Sequence for scenic animations, etc.</td>
+</tr>
+</tbody>
+</table>
 <h4 id="event-triggered-sequence-types">Event Triggered Sequence Types<a class="headerlink" href="#event-triggered-sequence-types" title="Permanent link">&para;</a></h4>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">   </span><span class="c1">// Example</span>
 <span class="w">   </span><span class="n">ONTHROW</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="w">     </span><span class="c1">// When turnout 8 is thrown,</span>
@@ -10351,10 +10376,24 @@
 <span class="w">    </span><span class="n">DONE</span>
 </code></pre></div>
 <p>Sequences that are triggered when 'events' occur, include:</p>
-<ul>
-<li><code>ONCLOSE( turnout_id )</code> - Event handler for <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> close</li>
-<li><code>ONTHROW( turnout_id )</code> - Event handler for <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> thrown</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ONCLOSE( turnout_id )</code></td>
+<td>Event handler for <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> close</td>
+</tr>
+<tr>
+<td><code>ONTHROW( turnout_id )</code></td>
+<td>Event handler for <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> thrown</td>
+</tr>
+</tbody>
+</table>
 <p>See the <a href="../command-list/">EXRAIL Command List</a> for additional Event Triggered Sequence types, and additional information on these types.</p>
 <h3 id="automatically-running-a-sequence-at-power-up">Automatically Running a Sequence at Power Up<a class="headerlink" href="#automatically-running-a-sequence-at-power-up" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
@@ -10392,16 +10431,47 @@
 <span class="w">    </span><span class="n">DONE</span>
 </code></pre></div>
 <p><abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">Turnout</abbr>/Point commands include:</p>
-<ul>
-<li><code>THROW( id )</code> - Throw a defined <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr></li>
-<li><code>CLOSE( id)</code> - Close a defined <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr></li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>THROW( id )</code></td>
+<td>Throw a defined <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr></td>
+</tr>
+<tr>
+<td><code>CLOSE( id)</code></td>
+<td>Close a defined <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr></td>
+</tr>
+</tbody>
+</table>
 <p>Signal related commands include:</p>
-<ul>
-<li><code>RED( signal_id )</code> - Set defined signal to Red (See SIGNAL)</li>
-<li><code>AMBER( signal_id )</code> - Set a defined signal to Amber. (See SIGNAL)</li>
-<li><code>GREEN( signal_id )</code> - Set a defined signal to GREEN (see SIGNAL)</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>RED( signal_id )</code></td>
+<td>Set defined signal to Red. (See <a href="../exrail-objects-introduction/#adding-signals">SIGNAL()</a>)</td>
+</tr>
+<tr>
+<td><code>AMBER( signal_id )</code></td>
+<td>Set a defined signal to Amber. (See <a href="../exrail-objects-introduction/#adding-signals">SIGNAL()</a>)</td>
+</tr>
+<tr>
+<td><code>GREEN( signal_id )</code></td>
+<td>Set a defined signal to Green. (See <a href="../exrail-objects-introduction/#adding-signals">SIGNAL()</a>)</td>
+</tr>
+</tbody>
+</table>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">   </span><span class="c1">// Example</span>
 <span class="w">   </span><span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s">&quot;Back and Forward&quot;</span><span class="p">)</span>
 <span class="w">      </span><span class="n">AUTOSTART</span><span class="w">   </span><span class="c1">// start this immediately the system powers up</span>
@@ -10414,16 +10484,47 @@
 <span class="w">    </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w">   </span><span class="c1">// repeat forever</span>
 </code></pre></div>
 <p>Loco related commands include:</p>
-<ul>
-<li><code>FWD( speed )</code> - Drive loco forward at DCC speed 0-127 (1=ESTOP)</li>
-<li><code>REV( speed )</code> - Drive logo in reverse at DCC speed 0-127 (1=ESTOP)</li>
-<li><code>SPEED( speed )</code> - Drive loco in current direction at DCC speed (0-127)</li>
-<li><code>STOP</code> - Set loco speed to 0 (same as SPEED(0) )</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FWD( speed )</code></td>
+<td>Drive loco forward at DCC speed 0-127 (1=ESTOP)</td>
+</tr>
+<tr>
+<td><code>REV( speed )</code></td>
+<td>Drive logo in reverse at DCC speed 0-127 (1=ESTOP)</td>
+</tr>
+<tr>
+<td><code>SPEED( speed )</code></td>
+<td>Drive loco in current direction at DCC speed (0-127)</td>
+</tr>
+<tr>
+<td><code>STOP</code></td>
+<td>Set loco speed to 0 (same as SPEED(0) )</td>
+</tr>
+</tbody>
+</table>
 <p>Turntable related commands include:</p>
-<ul>
-<li><code>MOVETT( vpin, steps, activity )</code> - Move a turntable the number of steps relative to home, and perform the activity (refer EX-Turntable documentation)</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MOVETT( vpin, steps, activity )</code></td>
+<td>Move a turntable the number of steps relative to home, and perform the activity (refer EX-Turntable documentation)</td>
+</tr>
+</tbody>
+</table>
 <p>See the <a href="../command-list/">EXRAIL Command List</a> for additional commands and additional information on these commands.</p>
 <h4 id="sequence-flow-flow-control-commands">Sequence Flow / Flow Control Commands<a class="headerlink" href="#sequence-flow-flow-control-commands" title="Permanent link">&para;</a></h4>
 <p>For a simple sequence, once triggered, the system steps though each and every instruction as quickly as possible until it hits <code>DONE</code> at the end of the sequence.</p>
@@ -10473,45 +10574,128 @@
 </code></pre></div>
 <h6 id="types-of-conditionals">Types of Conditionals<a class="headerlink" href="#types-of-conditionals" title="Permanent link">&para;</a></h6>
 <p>Sensor/<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> Related Conditional:</p>
-<ul>
-<li><code>IF( sensor_id )</code> - If sensor activated or latched, continue, otherwise skip to ELSE/ENDIF. Use negative values for active HIGH sensors</li>
-<li><code>IFNOT( sensor_id )</code> - If sensor NOT activated and NOT latched, continue, otherwise skip to ELSE/ENDIF. Use negative values for active HIGH sensors</li>
-<li><code>IFGTE( sensor_id, value )</code> - Test if analog pin reading is greater than or equal to value (&gt;=)</li>
-<li><code>IFLT( sensor_id, value )</code> - Test if analog pin reading is less than value (&lt;)</li>
-<li><code>IF_ANY( sensor_id1, sensor_id2 [,sensor_id...] )</code> - If any one of a list of sensors is activated or latched, continue, otherwise skip to ELSE/ENDIF. Use negative values for active HIGH sensors</li>
-<li><code>IF_ALL( sensor_id1, sensor_id2 [,sensor_id...] )</code> - If any one of a list of sensors is activated or latched, continue, otherwise skip to ELSE/ENDIF. Use negative values for active HIGH sensors</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>IF( sensor_id )</code></td>
+<td>If sensor activated or latched, continue, otherwise skip to ELSE/ENDIF. Use negative values for active HIGH sensors</td>
+</tr>
+<tr>
+<td><code>IFNOT( sensor_id )</code></td>
+<td>If sensor NOT activated and NOT latched, continue, otherwise skip to ELSE/ENDIF. Use negative values for active HIGH sensors</td>
+</tr>
+<tr>
+<td><code>IFGTE( sensor_id, value )</code></td>
+<td>Test if analog pin reading is greater than or equal to value (&gt;=)</td>
+</tr>
+<tr>
+<td><code>IFLT( sensor_id, value )</code></td>
+<td>Test if analog pin reading is less than value (&lt;)</td>
+</tr>
+<tr>
+<td><code>IF_ANY( sensor_id1, sensor_id2 [,sensor_id...] )</code></td>
+<td>If any one of a list of sensors is activated or latched, continue, otherwise skip to ELSE/ENDIF. Use negative values for active HIGH sensors</td>
+</tr>
+<tr>
+<td><code>IF_ALL( sensor_id1, sensor_id2 [,sensor_id...] )</code></td>
+<td>If any one of a list of sensors is activated or latched, continue, otherwise skip to ELSE/ENDIF. Use negative values for active HIGH sensors</td>
+</tr>
+</tbody>
+</table>
 <p><abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">Turnout</abbr>/Point Related Conditionals:</p>
-<ul>
-<li><code>IFTHROWN( turnout_id )</code> - Test if <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> is thrown</li>
-<li><code>IFCLOSED( turnout_id )</code> - Check if <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> is closed</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>IFTHROWN( turnout_id )</code></td>
+<td>Test if <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> is thrown</td>
+</tr>
+<tr>
+<td><code>IFCLOSED( turnout_id )</code></td>
+<td>Check if <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> is closed</td>
+</tr>
+</tbody>
+</table>
 <p>Signal Related Conditionals:</p>
-<ul>
-<li><code>IFRED( signal_id )</code> - Tests if signal is red</li>
-<li><code>IFAMBER( signal_id )</code> - Tests if signal is amber</li>
-<li><code>IFGREEN( signal_id )</code> - Tests if signal is green</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>IFRED( signal_id )</code></td>
+<td>Tests if signal is Red. (See <a href="../exrail-objects-introduction/#adding-signals">SIGNAL()</a>)</td>
+</tr>
+<tr>
+<td><code>IFAMBER( signal_id )</code></td>
+<td>Tests if signal is Amber. (See <a href="../exrail-objects-introduction/#adding-signals">SIGNAL()</a>)</td>
+</tr>
+<tr>
+<td><code>IFGREEN( signal_id )</code></td>
+<td>Tests if signal is Green. (See <a href="../exrail-objects-introduction/#adding-signals">SIGNAL()</a>)</td>
+</tr>
+</tbody>
+</table>
 <p>Other Conditionals:</p>
-<ul>
-<li><code>IFRANDOM( percent )</code> - Runs commands in IF block a random percentage of the time</li>
-<li><code>IFRESERVE( block )</code> - If block is NOT reserved, reserves it and run commands in IF block.else, skip to matching ENDIF</li>
-<li><code>IFTIMEOUT</code> - Tests if 'timed out' flag has been set by an ATTIMEOUT sensor reading attempt</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>IFRANDOM( percent )</code></td>
+<td>Runs commands in IF block a random percentage of the time</td>
+</tr>
+<tr>
+<td><code>IFRESERVE( block )</code></td>
+<td>If block is NOT reserved, reserves it and run commands in IF block.else, skip to matching ENDIF</td>
+</tr>
+<tr>
+<td><code>IFTIMEOUT</code></td>
+<td>Tests if 'timed out' flag has been set by an ATTIMEOUT sensor reading attempt</td>
+</tr>
+</tbody>
+</table>
 <p>See the <a href="../command-list/">EXRAIL Command List</a> for additional commands and additional information on these commands.</p>
 <h4 id="branching">Branching<a class="headerlink" href="#branching" title="Permanent link">&para;</a></h4>
 <p>Sequences can invoke other sequences.  There are two ways this can be done.</p>
 <h5 id="call-and-return">CALL and RETURN<a class="headerlink" href="#call-and-return" title="Permanent link">&para;</a></h5>
 <p>To invoke another sequence, and return and execute the next command in the current sequence you can use the combination of the <code>CALL( route_id )</code> command in the main sequence, and in the called sequence, use the <code>RETURN</code> command to return.</p>
-<p>.. list-table::
-    :widths: auto
-    :header-rows: 0
-    :class: command-table</p>
-<div class="language-text highlight"><pre><span></span><code>* - CALL( route_id )
-  - Branch to a separate sequence, which will need to RETURN when complete
-* - RETURN
-  - Return to the calling sequence when completed (no DONE required).
-</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CALL( route_id )</code></td>
+<td>Branch to a separate sequence, which will need to <code>RETURN</code> when complete</td>
+</tr>
+<tr>
+<td><code>RETURN</code></td>
+<td>Return to the calling sequence when completed (no <code>DONE</code> required)</td>
+</tr>
+</tbody>
+</table>
 <h5 id="follow">FOLLOW<a class="headerlink" href="#follow" title="Permanent link">&para;</a></h5>
 <p>To invoke another sequence, with no wish to return and execute any further commands in the current sequence you can use the <code>FOLLOW( route_id )</code> command in the main sequence.</p>
 <p><code>FOLLOW( route_id )</code> Branch or Follow a numbered sequence. (The 'followed' sequence does not return to the sequence that invoked it.)</p>
@@ -10528,20 +10712,58 @@
 <span class="w">      </span><span class="n">STOP</span><span class="w">        </span><span class="c1">// stop the train</span>
 <span class="w">    </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="w">   </span><span class="c1">// repeat forever</span>
 </code></pre></div>
-<ul>
-<li><code>DELAY( delay )</code> - Delay a number of milliseconds</li>
-<li><code>DELAYMINS( delay )</code> - Delay a number of minutes</li>
-<li>
-<p><code>DELAYRANDOM( min_delay, max_delay )</code> - Delay a random time between min and max milliseconds</p>
-</li>
-<li>
-<p><code>AFTER( sensor_id )</code> - Waits for sensor to trigger and then go off for 0.5 seconds, use negative values for active HIGH sensors</p>
-</li>
-<li><code>WAITFOR( pin )</code> - Wait for servo to complete movement</li>
-<li><code>AT( sensor_id )</code> - Wait until sensor is active/triggered, use negative values for active HIGH sensors</li>
-<li><code>ATTIMEOUT( sensor_id, timeout_ms )</code> - Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable "timed out" flag, use negative values for active HIGH sensors</li>
-<li><code>AFTER( sensor_id )</code> - Waits for sensor to trigger and then go off for 0.5 seconds, use negative values for active HIGH sensors</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DELAY( delay )</code></td>
+<td>Delay a number of milliseconds</td>
+</tr>
+<tr>
+<td><code>DELAYMINS( delay )</code></td>
+<td>Delay a number of minutes</td>
+</tr>
+<tr>
+<td><code>DELAYRANDOM( min_delay, max_delay )</code></td>
+<td>Delay a random time between min and max milliseconds</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AFTER( sensor_id )</code></td>
+<td>Waits for sensor to trigger and then go off for 0.5 seconds, use negative values for active HIGH sensors</td>
+</tr>
+<tr>
+<td><code>WAITFOR( pin )</code></td>
+<td>Wait for servo to complete movement</td>
+</tr>
+<tr>
+<td><code>AT( sensor_id )</code></td>
+<td>Wait until sensor is active/triggered, use negative values for active HIGH sensors</td>
+</tr>
+<tr>
+<td><code>ATTIMEOUT( sensor_id, timeout_ms )</code></td>
+<td>Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable "timed out" flag, use negative values for active HIGH sensors</td>
+</tr>
+<tr>
+<td><code>AFTER( sensor_id )</code></td>
+<td>Waits for sensor to trigger and then go off for 0.5 seconds, use negative values for active HIGH sensors</td>
+</tr>
+</tbody>
+</table>
 <h4 id="command-station-commands">Command Station Commands<a class="headerlink" href="#command-station-commands" title="Permanent link">&para;</a></h4>
 <p>There are a substantial number of commands that you can explore in the <a href="../command-list/">EXRAIL Command List</a>. We will look at just a few here.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="c1">// use the drive away feature to recognise the loco on the</span>
@@ -10553,11 +10775,28 @@
 <span class="w">    </span><span class="n">UNJOIN</span><span class="w">    </span><span class="c1">// disconnect the programming track form the main</span>
 <span class="w">    </span><span class="c1">// see the &#39;Drive-Away Feature&#39; on this page for more information</span>
 </code></pre></div>
-<ul>
-<li><code>JOIN</code> - Joins <abbr title="Programming Track / Service Mode">PROG</abbr> and <abbr title="Main Track / Ops Mode">MAIN</abbr> track outputs to send the same <abbr title="Main Track / Ops Mode">MAIN</abbr> DCC signal on both tracks</li>
-<li><code>UNJOIN</code> - Disconnect Prog track from Main DCC signal</li>
-<li><code>READ_LOCO</code> - Read loco ID from Prog track</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>JOIN</code></td>
+<td>Joins <abbr title="Programming Track / Service Mode">PROG</abbr> and <abbr title="Main Track / Ops Mode">MAIN</abbr> track outputs to send the same <abbr title="Main Track / Ops Mode">MAIN</abbr> DCC signal on both tracks</td>
+</tr>
+<tr>
+<td><code>UNJOIN</code></td>
+<td>Disconnect Prog track from Main DCC signal</td>
+</tr>
+<tr>
+<td><code>READ_LOCO</code></td>
+<td>Read loco ID from Prog track</td>
+</tr>
+</tbody>
+</table>
 <p>See the <a href="../command-list/">EXRAIL Command List</a> for additional commands and additional information on these commands.</p>
 <hr />
 <h2 id="referencing-key-objects-in-sequences">Referencing Key Objects in Sequences<a class="headerlink" href="#referencing-key-objects-in-sequences" title="Permanent link">&para;</a></h2>
@@ -10609,6 +10848,24 @@
 <p>The READ_LOCO reads the loco address from the <abbr title="Programming Track / Service Mode">PROG</abbr> track and the current route takes on that loco. By altering the script slightly and adding another sensor, it's possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the <code>INVERT_DIRECTION</code> instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)</p>
 <!-- These are case sensitive -->
 
+<style>
+
+.md-typeset table:not([class]) {
+    width: 100% !important;
+    display: table;
+}
+
+.md-typeset table:not([class]) tr th:first-child,
+.md-typeset table:not([class]) tr td:first-child {
+  width:33% !important;
+}
+
+.md-typeset table:not([class]) tr th:nth-child(2),
+.md-typeset table:not([class]) tr td:nth-child(2) {
+  width:67%  !important;
+}
+</style>
+
 
 
 
@@ -10628,7 +10885,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 5, 2026 06:22:19 UTC">August 5, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 19, 2026 23:36:01 UTC">August 19, 2026</span>
   </span>
 
     
