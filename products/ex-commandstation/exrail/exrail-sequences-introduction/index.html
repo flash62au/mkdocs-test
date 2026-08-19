@@ -10266,12 +10266,12 @@
 </ul>
 <h3 id="sequence">SEQUENCE<a class="headerlink" href="#sequence" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Simply a list of things to be done in order. These things might be to actually drive a train around, or merely to set some <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr> or flash some scene or panel lights. Actions can be made to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.</li>
+<li>Simply a list of things to be done in order. These things might be to actually drive a train around, or merely to set some <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points or flash some scene or panel lights. Actions can be made to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.</li>
 <li>A generic <strong>SEQUENCE</strong> (unlike the variations below) can only be started by another SEQUENCE, or automatically at the start-up of the Command Station.</li>
 </ul>
 <h3 id="route">ROUTE<a class="headerlink" href="#route" title="Permanent link">&para;</a></h3>
 <ul>
-<li>A special type of SEQUENCE that is made visible to a throttle with a readable name, so the user can press a button to get the sequence executed. This might be best used to set a series of <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr> and signals to create a route through the layout.</li>
+<li>A special type of SEQUENCE that is made visible to a throttle with a readable name, so the user can press a button to get the sequence executed. This might be best used to set a series of <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points and signals to create a route through the layout.</li>
 </ul>
 <h3 id="automation">AUTOMATION<a class="headerlink" href="#automation" title="Permanent link">&para;</a></h3>
 <ul>
@@ -10331,6 +10331,24 @@
 </ul>
 <h4 id="manually-triggered-sequence-types">Manually Triggered Sequence Types<a class="headerlink" href="#manually-triggered-sequence-types" title="Permanent link">&para;</a></h4>
 <p>Manually triggered sequences are advertised to apps and devices that support the <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> protocol or Native Serial protocol so you can activate them on your throttles (e.g. Engine Driver or ThrottleCard). They are one of:</p>
+<style>
+.md-typeset table:not([class]) {
+    width: 100% !important;
+    display: table;
+    table-layout: fixed;
+}
+
+.md-typeset table:not([class]) tr th:first-child,
+.md-typeset table:not([class]) tr td:first-child {
+  width:33% !important;
+}
+
+.md-typeset table:not([class]) tr th:nth-child(2),
+.md-typeset table:not([class]) tr td:nth-child(2) {
+  width:67%  !important;
+}
+</style>
+
 <table>
 <thead>
 <tr>
@@ -10368,8 +10386,8 @@
 </table>
 <h4 id="event-triggered-sequence-types">Event Triggered Sequence Types<a class="headerlink" href="#event-triggered-sequence-types" title="Permanent link">&para;</a></h4>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">   </span><span class="c1">// Example</span>
-<span class="w">   </span><span class="n">ONTHROW</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="w">     </span><span class="c1">// When turnout 8 is thrown,</span>
-<span class="w">      </span><span class="n">THROW</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="w">    </span><span class="c1">// throw the facing turnout</span>
+<span class="w">   </span><span class="n">ONTHROW</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="w">     </span><span class="c1">// When turnout/point 8 is thrown,</span>
+<span class="w">      </span><span class="n">THROW</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="w">    </span><span class="c1">// throw the facing turnout/point</span>
 <span class="w">      </span><span class="n">RED</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span><span class="w">     </span><span class="c1">// signal 24 to red</span>
 <span class="w">      </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span><span class="w"> </span><span class="c1">// wait 2 seconds</span>
 <span class="w">      </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span><span class="w">   </span><span class="c1">// signal 27 to green</span>
@@ -10386,11 +10404,11 @@
 <tbody>
 <tr>
 <td><code>ONCLOSE( turnout_id )</code></td>
-<td>Event handler for <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> close</td>
+<td>Event handler for <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point close</td>
 </tr>
 <tr>
 <td><code>ONTHROW( turnout_id )</code></td>
-<td>Event handler for <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> thrown</td>
+<td>Event handler for <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point thrown</td>
 </tr>
 </tbody>
 </table>
@@ -10423,8 +10441,8 @@
 <p>This type of command will somehow change Objects of the system you have created and defined, like <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points, signals, servos, turntables, blocks and locos.</p>
 <p>There are a substantial number of commands that you can explore in the <a href="../command-list/">EXRAIL Command List</a>. We will look at just a few here.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">   </span><span class="c1">// Example</span>
-<span class="w">   </span><span class="n">ONTHROW</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="w">     </span><span class="c1">// When turnout 8 is thrown,</span>
-<span class="w">      </span><span class="n">THROW</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="w">    </span><span class="c1">// throw the facing turnout</span>
+<span class="w">   </span><span class="n">ONTHROW</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="w">     </span><span class="c1">// When turnout/point 8 is thrown,</span>
+<span class="w">      </span><span class="n">THROW</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="w">    </span><span class="c1">// throw the facing turnout/point</span>
 <span class="w">      </span><span class="n">RED</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span><span class="w">     </span><span class="c1">// signal 24 to red</span>
 <span class="w">      </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span><span class="w"> </span><span class="c1">// wait 2 seconds</span>
 <span class="w">      </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span><span class="w">   </span><span class="c1">// signal 27 to green</span>
@@ -10441,11 +10459,11 @@
 <tbody>
 <tr>
 <td><code>THROW( id )</code></td>
-<td>Throw a defined <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr></td>
+<td>Throw a defined <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point</td>
 </tr>
 <tr>
 <td><code>CLOSE( id)</code></td>
-<td>Close a defined <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr></td>
+<td>Close a defined <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point</td>
 </tr>
 </tbody>
 </table>
@@ -10619,11 +10637,11 @@
 <tbody>
 <tr>
 <td><code>IFTHROWN( turnout_id )</code></td>
-<td>Test if <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> is thrown</td>
+<td>Test if <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point is thrown</td>
 </tr>
 <tr>
 <td><code>IFCLOSED( turnout_id )</code></td>
-<td>Check if <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> is closed</td>
+<td>Check if <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point is closed</td>
 </tr>
 </tbody>
 </table>
@@ -10801,11 +10819,11 @@
 <hr />
 <h2 id="referencing-key-objects-in-sequences">Referencing Key Objects in Sequences<a class="headerlink" href="#referencing-key-objects-in-sequences" title="Permanent link">&para;</a></h2>
 <h3 id="referencing-turnoutspoints">Referencing Turnouts/Points<a class="headerlink" href="#referencing-turnoutspoints" title="Permanent link">&para;</a></h3>
-<p><strong>EX-CommandStation</strong> supports a number of different <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point hardware configurations, but your automation treats them all as simple ID numbers. Turnouts may be defined using <code>&lt;T&gt;</code> commands from <abbr title="Java Model Railroad Interface">JMRI</abbr>, or in <code>SETUP("&lt;T ...&gt;")</code> commands placed in your mySetup.h file, or C++ code in mySetup.h, just like earlier versions.</p>
+<p><strong>EX-CommandStation</strong> supports a number of different <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point hardware configurations, but your automation treats them all as simple ID numbers. Turnouts/Points may be defined using <code>&lt;T&gt;</code> commands from <abbr title="Java Model Railroad Interface">JMRI</abbr>, or in <code>SETUP("&lt;T ...&gt;")</code> commands placed in your mySetup.h file, or C++ code in mySetup.h, just like earlier versions.</p>
 <p>You may, however, find it more convenient to define <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points using <strong>EXRAIL</strong> commands, which may appear anywhere in the 'myAutomation.h' file, even after they are referenced in an <code>ONTHROW</code>, <code>ONCLOSE</code>, <code>THROW</code> or <code>CLOSE</code> command. (EXRAIL extracts the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> definitions just once from your script at Command Station startup.)</p>
 <p>Turnouts/Points defined in 'myAutomation.h' will still be visible to apps and devices that support the <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> protocol or Native Serial protocol and <abbr title="Java Model Railroad Interface">JMRI</abbr> in the normal way.</p>
-<p>A TURNOUT command sends DCC signals to a decoder attached to the track, a PIN_TURNOUT sends a "throw" or "close" (5V or 0V signal) to a pin on the Arduino, and a SERVO_TURNOUT sends an I2C serial command to a servo board connected to your servos.</p>
-<p>See the <a href="../command-list/">EXRAIL Command List</a> for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.</p>
+<p>A <code>TURNOUT</code> command sends DCC signals to a decoder attached to the track, a <code>PIN_TURNOUT</code> sends a "throw" or "close" (5V or 0V signal) to a pin on the Arduino, and a <code>SERVO_TURNOUT</code> sends an I2C serial command to a servo board connected to your servos.</p>
+<p>See the <a href="../command-list/">EXRAIL Command List</a> for <code>TURNOUT</code>, <code>PIN_TURNOUT</code> and <code>SERVO_TURNOUT</code> definitions.</p>
 <h3 id="referencing-signals">Referencing Signals<a class="headerlink" href="#referencing-signals" title="Permanent link">&para;</a></h3>
 <p>Signals can now simply be a decoration to be switched by the route process; they don't need to control anything.</p>
 <p><code>GREEN(55)</code> would turn signal 55 green, and <code>RED(55)</code> would turn it red. Somewhere in the script there must be a SIGNAL command like this: <code>SIGNAL(55,56,57)</code>.  This defines a signal with ID 55, where the Red/Stop lamp is connected to pin 55, the Amber/Caution lamp to pin 56, and the Green/Proceed lamp to pin 57. The pin allocations do not need to be contiguous, and the red pin number is also used as the signal ID. Thus you can change the signal by <code>RED(55)</code>, <code>AMBER(55)</code>, or <code>GREEN(55)</code>. This means you don't have to manually turn off the other lamps. A RED/GREEN only signal may be created with a zero amber pin.</p>
@@ -10848,24 +10866,6 @@
 <p>The READ_LOCO reads the loco address from the <abbr title="Programming Track / Service Mode">PROG</abbr> track and the current route takes on that loco. By altering the script slightly and adding another sensor, it's possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the <code>INVERT_DIRECTION</code> instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)</p>
 <!-- These are case sensitive -->
 
-<style>
-
-.md-typeset table:not([class]) {
-    width: 100% !important;
-    display: table;
-}
-
-.md-typeset table:not([class]) tr th:first-child,
-.md-typeset table:not([class]) tr td:first-child {
-  width:33% !important;
-}
-
-.md-typeset table:not([class]) tr th:nth-child(2),
-.md-typeset table:not([class]) tr td:nth-child(2) {
-  width:67%  !important;
-}
-</style>
-
 
 
 
@@ -10885,7 +10885,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 19, 2026 23:36:01 UTC">August 19, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 19, 2026 23:55:07 UTC">August 19, 2026</span>
   </span>
 
     
