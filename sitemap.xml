@@ -153,10 +153,6 @@
          <lastmod>2026-10-16</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/enhance/accessories/buying-i2c-devices/</loc>
-         <lastmod>2026-10-16</lastmod>
-    </url>
-    <url>
          <loc>https://dcc-ex.com/mkdocs-test/enhance/accessories/connecting-servo-turnout/</loc>
          <lastmod>2026-10-16</lastmod>
     </url>
@@ -165,27 +161,31 @@
          <lastmod>2026-10-16</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/enhance/accessories/i2c-displays/</loc>
-         <lastmod>2026-10-16</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/enhance/accessories/i2c-gpio-expanders/</loc>
-         <lastmod>2026-10-16</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/enhance/accessories/i2c-intro/</loc>
-         <lastmod>2026-10-16</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/enhance/accessories/i2c-multiplexers/</loc>
-         <lastmod>2026-10-16</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/enhance/accessories/i2c-servo-led-modules/</loc>
-         <lastmod>2026-10-16</lastmod>
-    </url>
-    <url>
          <loc>https://dcc-ex.com/mkdocs-test/enhance/accessories/sensors/</loc>
+         <lastmod>2026-10-16</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/enhance/accessories/i2c/</loc>
+         <lastmod>2026-10-16</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/enhance/accessories/i2c/buying-i2c-devices/</loc>
+         <lastmod>2026-10-16</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/enhance/accessories/i2c/i2c-displays/</loc>
+         <lastmod>2026-10-16</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/enhance/accessories/i2c/i2c-gpio-expanders/</loc>
+         <lastmod>2026-10-16</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/enhance/accessories/i2c/i2c-multiplexers/</loc>
+         <lastmod>2026-10-16</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/enhance/accessories/i2c/i2c-servo-led-modules/</loc>
          <lastmod>2026-10-16</lastmod>
     </url>
     <url>
