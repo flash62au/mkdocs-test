@@ -566,7 +566,7 @@
 
             
               <a href="../" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
-                Sounds (DFPlayer)
+                Sounds <small>(DFPlayer)</small>
               </a>
             
           </li>
@@ -6674,7 +6674,7 @@
   
   
   <span class="md-ellipsis">
-    Sounds (DFPlayer)
+    Sounds <small>(DFPlayer)</small>
     
   </span>
   
@@ -6691,7 +6691,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_6_7_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7_6_7_1">
             <span class="md-nav__icon md-icon"></span>
-            Sounds (DFPlayer)
+            Sounds <small>(DFPlayer)</small>
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -6887,7 +6887,7 @@
   
   
   <span class="md-ellipsis">
-    Real Time clock (DS1307)
+    Real Time Clock <small>(DS1307)</small>
     
   </span>
   
@@ -10325,11 +10325,11 @@
 <li>Only limited by your imagination</li>
 </ol>
 <h2 id="hardware-connection">Hardware connection<a class="headerlink" href="#hardware-connection" title="Permanent link">&para;</a></h2>
-<p>Because the DFPlayer is a Serial device, this can be inconvenient for <strong>EX-CommandStation</strong> with limited serial pins available (eg <strong>EX-CSB1</strong>) so <strong>DCC-EX</strong> provides an additional HAL driver to access the device over I2C with a suitable UART breakout board.</p>
+<p>Because the DFPlayer is a Serial device, this can be inconvenient for <strong>EX-CommandStation</strong> with limited serial pins available (eg <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong>) so <strong>DCC-EX</strong> provides an additional <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> driver to access the device over <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> with a suitable UART breakout board.</p>
 <p>Please see the relevant connection details:</p>
 <ul>
 <li><a href="../serial-dfplayer/">DFPlayer Serial connection</a></li>
-<li><a href="../i2c-dfplayer/">DFPlayer I2C connection</a></li>
+<li><a href="../i2c-dfplayer/">DFPlayer <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> connection</a></li>
 </ul>
 <h2 id="audio-file-storage-and-naming-convention">Audio file storage and naming convention<a class="headerlink" href="#audio-file-storage-and-naming-convention" title="Permanent link">&para;</a></h2>
 <p>The DFPlayer read audio files from a microSD flash card. If audio files are copied in the root directory, then the order of the copying determine which audio file will be the 1st.  So when a command is sent to the DFPlayer to play track 1, it will play the 1st audio file that was copied on the microSD card.</p>
@@ -10342,6 +10342,7 @@
 <p>Best practice is to compile an audio catalogue and store files in different folders, for example each folder is for a different category. It makes it easy to write <strong>EXRAIL</strong> scripts to control sound when each DFPLayer has the same sound catalogue on its microSD card. We have created an example sound catalogue, royalty free, full attribution document and open source to get you started.</p>
 <p>Files in WAV format are also supported, but take up more space, audio files in MP3 format are recommended.</p>
 <p>The <strong>EXRAIL</strong> <a href="../../../../exrail/cookbooks/">cookbooks</a> provide several worked example sound scenarios.</p>
+<!-- These are case sensitive -->
 
 
 
@@ -10362,7 +10363,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 12, 2026 05:47:19 UTC">October 12, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 16, 2026 01:19:34 UTC">October 16, 2026</span>
   </span>
 
     
