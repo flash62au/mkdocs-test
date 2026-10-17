@@ -229,6 +229,10 @@
          <lastmod>2026-10-17</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/enhance/exrail/exrail-startup-configuration/</loc>
+         <lastmod>2026-10-17</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/enhance/exrail/vpins/</loc>
          <lastmod>2026-10-17</lastmod>
     </url>
@@ -973,6 +977,10 @@
          <lastmod>2026-10-17</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/serial-commands/</loc>
+         <lastmod>2026-10-17</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/serial-commands/config-wifi-esp32/</loc>
          <lastmod>2026-10-17</lastmod>
     </url>
@@ -1185,7 +1193,23 @@
          <lastmod>2026-10-17</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/tools/serial-monitor_not_in_nav/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/tools/</loc>
+         <lastmod>2026-10-17</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/tools/diagnostic-d-ack-command/</loc>
+         <lastmod>2026-10-17</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/tools/diagnostic-d-command/</loc>
+         <lastmod>2026-10-17</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/tools/diagnostic-tools/</loc>
+         <lastmod>2026-10-17</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/tools/serial-monitor/</loc>
          <lastmod>2026-10-17</lastmod>
     </url>
     <url>
