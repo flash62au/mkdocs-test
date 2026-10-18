@@ -10534,16 +10534,16 @@
 <ul>
 <li><a href="#d-ack-on">Turn on Loco acknowledgement diagnostics</a></li>
 <li><a href="#d-ack-limit-ma">Override ACK processing mA pulse size</a></li>
-<li><a href="#d-ack-min-µs-and-d-ack-max-µs">Override ACK processing minimum pulse width</a></li>
-<li><a href="#d-ack-min-µs-and-d-ack-max-µs">Override ACK processing max pulse width</a></li>
+<li><a href="#d-ack-min-s-and-d-ack-max-s">Override ACK processing minimum pulse width</a></li>
+<li><a href="#d-ack-min-s-and-d-ack-max-s">Override ACK processing max pulse width</a></li>
 <li><a href="#diagnostics-d-ack-command">Override 250mA prog track limit while idle.</a></li>
 </ul>
 <hr />
 <h2 id="d-ack-on"><code>&lt;D ACK ON&gt;</code><a class="headerlink" href="#d-ack-on" title="Permanent link">&para;</a></h2>
-<p>If you encounter problems with ACKs from the Decoder (Reading or Writing <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr>) and you want help, the DCC-EX support team will ask you to provide a log. This is a very simple diagnostic test to provide us with the proper information. With your loco on the <abbr title="Programming Track / Service Mode">PROG</abbr> track, and using a serial monitor like the one in <strong>EX-Installer* or **Ex-WebThrottle</strong>, enter each of these two commands followed by pressing "send":</p>
+<p>If you encounter problems with ACKs from the Decoder (Reading or Writing <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr>) and you want help, the DCC-EX support team will ask you to provide a log. This is a very simple diagnostic test to provide us with the proper information. With your loco on the <abbr title="Programming Track / Service Mode">PROG</abbr> track, and using a serial monitor like the one in <strong>EX-Installer</strong> or <strong>Ex-WebThrottle</strong>, enter each of these two commands followed by pressing "send":</p>
 <p><code>&lt;D ACK ON&gt;</code>
 <code>&lt;R&gt;</code></p>
-<p>This will turn ACK diagnostics ON and then try to read the appropriate <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr> to determine your loco address. If you don't see your loco address at the end of the report (it could be incorrect or <r -1>), send us the log (see below for an example), and we can help you diagnose the problem.</p>
+<p>This will turn ACK diagnostics ON and then try to read the appropriate <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr> to determine your loco address. If you don't see your loco address at the end of the report (it could be incorrect or <code>&lt;r -1&gt;</code>), send us the log (see below for an example), and we can help you diagnose the problem.</p>
 <h3 id="more-detail">More Detail<a class="headerlink" href="#more-detail" title="Permanent link">&para;</a></h3>
 <p>When the ACK processing on the prog track does not work as expected, you may want to use the <code>&lt;D ACK ON&gt;</code> command in a serial command window. This is an example how to read CV8 with diagnostics on. You enter the first 2 lines, <code>&lt;D ACK ON&gt;</code> followed by <code>send</code>, then <code>&lt;R 8 1 1&gt;</code> followed by <code>send</code>. DCC-EX does not echo what you write, but your serial command window may. With diag on you get the extra 11 lines of output compared to if you just entered the command with diagnostics off. The last line is the answer, CV8=145:</p>
 <div class="language-console highlight"><pre><span></span><code><span class="go">&lt;D ACK ON&gt;</span>
@@ -10568,7 +10568,7 @@
 <p>The CURRENT should be over 60mA for a successful ACK and the length should be 6000µS +-1000µS but because of Decoder variations from the standard, DCC-EX has some extra pulse length margin.</p>
 <p>In this example, we are checking <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> 8, which is the manufacturer ID for your decoder. We then check each of the 8 "bits" in the "byte" that holds the value in that <abbr title="Configuration Variable (DCC Decoders)">CV</abbr>.</p>
 <p>The first test, <code>ACK-BASELINE</code> gets a baseline reading of the current on your programming track with the loco just sitting there.</p>
-<p>Since most bits will be 0, we check that first to save time. <code>V0</code> means <code>Verify zero</code>. If do not get a zero, we then try to verify a 1 - <code>V1</code> means "Verify one". If we don't get either, we display an error. A bit must be either a 0 or a 1 so the test will fail, but the data returned can help us see why. </p>
+<p>Since most bits will be 0, we check that first to save time. <code>V0</code> means <code>Verify zero</code>. If do not get a zero, we then try to verify a 1 - <code>V1</code> means "Verify one". If we don't get either, we display an error. A bit must be either a 0 or a 1 so the test will fail, but the data returned can help us see why.</p>
 <p>If we succeed on the first bit, we check each of the remaining 7 bits. <code>NO-ACK</code> means we did not see the bit value we were testing for, <code>ACK-OK</code> tells us we received an ACK. After each bit test, we show how long it took to receive the ACK (or the timeout value if we detected none), the Arduino raw pin reading being sent by your motor driver's current sense circuit, and what that translates to in milliAmps. Finally, we report the duration of the ACK Pulse, if detected.</p>
 <p>We do one final test at the end to <code>Verify Byte</code>, you see that as <code>VB</code>. This does a double-check to see if the byte contains what we found by checking it one bit at a time. The must match for a successful read.</p>
 <p>Other than when using the "decoder address test", <code>&lt;R&gt;</code> with no parameters, you need to enter <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> read commands with all 3 parameters. The format is <code>&lt;R CV x y&gt;</code> where R stands for read and <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> is the <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> number you want to check. The X and Y values can be anything, but must be entered. They are an advanced feature for programmers whose software can work with DCC-EX (like <abbr title="Java Model Railroad Interface">JMRI</abbr>). So you would enter <code>&lt;R 8 55 55&gt;</code> or <code>R 8 1 1&gt;</code> to try and read <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> 8. The response is <code>&lt;r CV x y&gt;</code> where "x" and "y" are whatever numbers you entered after the <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> value.</p>
@@ -10621,7 +10621,7 @@ Pick a setting a little bit higher than your highest reading like this:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 17, 2026 23:54:27 UTC">October 17, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 18, 2026 00:15:09 UTC">October 18, 2026</span>
   </span>
 
     
