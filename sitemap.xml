@@ -21,10 +21,6 @@
          <lastmod>2026-10-21</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/about/news/</loc>
-         <lastmod>2026-10-21</lastmod>
-    </url>
-    <url>
          <loc>https://dcc-ex.com/mkdocs-test/contributing/contributing/</loc>
          <lastmod>2026-10-21</lastmod>
     </url>
@@ -541,7 +537,11 @@
          <lastmod>2026-10-21</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/news/2025/06/new-documentation/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/news/2025/06/new-documentation-started/</loc>
+         <lastmod>2026-10-21</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/news/2026/10/assorted-new-feature-documentation/</loc>
          <lastmod>2026-10-21</lastmod>
     </url>
     <url>
@@ -1362,6 +1362,10 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/news/category/general-dcc-ex-news/</loc>
+         <lastmod>2026-10-21</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/news/category/exrail/</loc>
          <lastmod>2026-10-21</lastmod>
     </url>
 </urlset>
