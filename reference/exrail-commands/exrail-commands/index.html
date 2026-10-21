@@ -27,7 +27,7 @@
     
     
       
-        <title>EXRAIL Commands by Function Group - DCC-EX Model Train Control, Animation &amp; Automation</title>
+        <title>... by Function Group - DCC-EX Model Train Control, Animation &amp; Automation</title>
       
     
     
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              EXRAIL Commands <small>by&nbsp;Function&nbsp;Group</small>
+              ... by Function Group
             
           </span>
         </div>
@@ -527,7 +527,7 @@
       <li class="md-breadcrumbs__item" style="display: flex; align-items: center; gap: 8px;">
         <span style="opacity: 0.35; color: var(--md-typeset-color);">|</span>
         <span class="md-breadcrumbs__link" style="color: var(--md-typeset-color); font-weight: 700;">
-          EXRAIL Commands <small>by&nbsp;Function&nbsp;Group</small>
+          ... by Function Group
         </span>
       </li>
     
@@ -7364,7 +7364,7 @@
   
   
   <span class="md-ellipsis">
-    <br/>EXRAIL Command List
+    <br/>EXRAIL Commands <small><small>Full&nbsp;List</small></small>
     
   </span>
   
@@ -7396,7 +7396,7 @@
   
   
   <span class="md-ellipsis">
-    EXRAIL Commands <small>by&nbsp;Function&nbsp;Group</small>
+    ... by Function Group
     
   </span>
   
@@ -7409,7 +7409,7 @@
   
   
   <span class="md-ellipsis">
-    EXRAIL Commands <small>by&nbsp;Function&nbsp;Group</small>
+    ... by Function Group
     
   </span>
   
@@ -7450,9 +7450,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#flow-control" class="md-nav__link">
+  <a href="#general-flow-control" class="md-nav__link">
     <span class="md-ellipsis">
-      Flow Control
+      General Flow Control
     </span>
   </a>
   
@@ -7567,7 +7567,7 @@
           <li class="md-nav__item">
   <a href="#locos-definition-and-control" class="md-nav__link">
     <span class="md-ellipsis">
-      Locos: Definition and Control
+      Locos - Definition and Control
     </span>
   </a>
   
@@ -7677,7 +7677,7 @@
   
   
   <span class="md-ellipsis">
-    Serial Commands <small>Full&nbsp;List</small>
+    Serial Commands <small><small>Full&nbsp;List</small></small>
     
   </span>
   
@@ -7700,7 +7700,7 @@
   
   
   <span class="md-ellipsis">
-    Serial Commands <small>by&nbsp;Function&nbsp;Group</small>
+    ... by Function Group
     
   </span>
   
@@ -7748,7 +7748,7 @@
   
   
   <span class="md-ellipsis">
-    Serial Commands <small>Additional&nbsp;Info</small>
+    ... Additional Info
     
   </span>
   
@@ -7765,7 +7765,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9_7">
             <span class="md-nav__icon md-icon"></span>
-            Serial Commands <small>Additional&nbsp;Info</small>
+            ... Additional Info
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -7862,7 +7862,7 @@
   
   
   <span class="md-ellipsis">
-    <br/>Configuration Reference (config.h)
+    <br/>Configuration Reference <small><small>(config.h)</small></small>
     
   </span>
   
@@ -7879,7 +7879,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9_8">
             <span class="md-nav__icon md-icon"></span>
-            <br/>Configuration Reference (config.h)
+            <br/>Configuration Reference <small><small>(config.h)</small></small>
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -10660,9 +10660,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#flow-control" class="md-nav__link">
+  <a href="#general-flow-control" class="md-nav__link">
     <span class="md-ellipsis">
-      Flow Control
+      General Flow Control
     </span>
   </a>
   
@@ -10777,7 +10777,7 @@
           <li class="md-nav__item">
   <a href="#locos-definition-and-control" class="md-nav__link">
     <span class="md-ellipsis">
-      Locos: Definition and Control
+      Locos - Definition and Control
     </span>
   </a>
   
@@ -10968,7 +10968,7 @@
 </tbody>
 </table>
 <hr />
-<h2 id="flow-control">Flow Control<a class="headerlink" href="#flow-control" title="Permanent link">&para;</a></h2>
+<h2 id="general-flow-control">General Flow Control<a class="headerlink" href="#general-flow-control" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -11081,24 +11081,12 @@
 <td><a href="?ROUTE_DISABLED">ROUTE_DISABLED( route_id )</a></td>
 <td>disable a Route</td>
 </tr>
-<tr>
-<td><a href="?STASH">STASH( stash_id )</a></td>
-<td>Stashes the current loco/invert</td>
-</tr>
-<tr>
-<td><a href="?CLEAR_STASH">CLEAR_STASH( stash_id )</a></td>
-<td>Zeroes the specified stash</td>
-</tr>
-<tr>
-<td><a href="?CLEAR_ALL_STASH">CLEAR_ALL_STASH</a></td>
-<td>Zeroes all stashes</td>
-</tr>
-<tr>
-<td><a href="?PICKUP_STASH">PICKUP_STASH( stash_id )</a></td>
-<td>Retrieves and sets the loco/invert from the specified stash</td>
-</tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="admonition-title"><code>ON??()</code> <code>AT()</code> <code>IF??()</code> <code>AFTER()</code></p>
+<p>Also see the various <code>ON??()</code>, `AFTER??()<code>events and</code>AT()<code>,</code>IF??()`` conditions in the sections below for other types of flow control.</p>
+</div>
 <hr />
 <p><br/></p>
 <hr />
@@ -11588,6 +11576,7 @@
 <p><br/></p>
 <hr />
 <h2 id="locos-and-tracks">Locos and Tracks<a class="headerlink" href="#locos-and-tracks" title="Permanent link">&para;</a></h2>
+<h3 id="locos-definition-and-control">Locos - Definition and Control<a class="headerlink" href="#locos-definition-and-control" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -11692,6 +11681,22 @@
 <td><a href="?FORGET">FORGET</a></td>
 <td>Forget the loco in the running automation/sequence</td>
 </tr>
+<tr>
+<td><a href="?STASH">STASH( stash_id )</a></td>
+<td>Stashes the current loco/invert</td>
+</tr>
+<tr>
+<td><a href="?CLEAR_STASH">CLEAR_STASH( stash_id )</a></td>
+<td>Zeroes the specified stash</td>
+</tr>
+<tr>
+<td><a href="?CLEAR_ALL_STASH">CLEAR_ALL_STASH</a></td>
+<td>Zeroes all stashes</td>
+</tr>
+<tr>
+<td><a href="?PICKUP_STASH">PICKUP_STASH( stash_id )</a></td>
+<td>Retrieves and sets the loco/invert from the specified stash</td>
+</tr>
 </tbody>
 </table>
 <p><em>Parameters:</em>  </p>
@@ -11718,30 +11723,6 @@
 <li><strong>value</strong> - value to write</li>
 </ul>
 <hr />
-<h3 id="locos-definition-and-control">Locos: Definition and Control<a class="headerlink" href="#locos-definition-and-control" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="?SET_TRACK">SET_TRACK( track, mode )</a></td>
-<td>Configures the mode of a track</td>
-</tr>
-<tr>
-<td><a href="?SET_POWER">SET_POWER( track, ON/OFF )</a></td>
-<td>Enable/Disable power on a track</td>
-</tr>
-<tr>
-<td><a href="?SETFREQ">SETFREQ( frequency )</a></td>
-<td>Enable a specific frequency</td>
-</tr>
-</tbody>
-</table>
-<hr />
 <h3 id="trackmanager-control">TrackManager Control<a class="headerlink" href="#trackmanager-control" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -11765,10 +11746,13 @@
 </tr>
 </tbody>
 </table>
-<p><em>Parameters:</em></p>
+<p>The settings achievable vary slightly depending upon the processor running the <strong>EX‑CommandStation</strong> but broadly follow the following:</p>
+<p><em>Parameters:</em>  </p>
 <ul>
 <li><strong>track</strong> - - The track to configure, valid options are A to H</li>
-<li><strong>mode</strong> - - The mode to set the track to.<ul>
+<li>
+<p><strong>mode</strong> - - The mode to set the track to.</p>
+<ul>
 <li>valid options for DCC are:  <ul>
 <li><code>MAIN</code></li>
 <li><code>MAIN_INV</code></li>
@@ -11794,10 +11778,18 @@
 </li>
 </ul>
 </li>
+<li>
+<p><strong>frequency</strong> - - The frequency to set for the current track
+    -valid options are:
+        - <strong>0</strong> - Default - low frequency 131Hz
+        - <strong>1</strong> - Mid frequency - 490Hz
+        - <strong>2</strong> - High frequency - 3400Hz
+        - <strong>3</strong> - Supersonic - 62500Hz</p>
+</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">DC</p>
-<p>When setting at track mode to either DC or DC_INV / DCX, you must use the SETLOCO( loco ) command first to specify the loco ID that will be used for the DC track then SET_TRACK()</p>
+<p>When setting at track mode to either <code>DC</code> or <code>DC_INV</code> / <code>DCX</code>, you must use the <code>SETLOCO(loco)</code> command first to specify the loco ID that will be used for the DC track then <code>SET_TRACK()</code></p>
 </div>
 <hr />
 <h3 id="controlling-overloadshorts">Controlling Overload/Shorts<a class="headerlink" href="#controlling-overloadshorts" title="Permanent link">&para;</a></h3>
@@ -11994,11 +11986,11 @@
 </tr>
 <tr>
 <td><a href="?ONACON">ONACON(eventid)</a></td>
-<td>TBA</td>
+<td>Start task here when ACON for event received from MERG CBUS</td>
 </tr>
 <tr>
 <td><a href="?ONACOF">ONACOF(eventid)</a></td>
-<td>TBA</td>
+<td>Start task here when ACOF for event received from MERG CBUS</td>
 </tr>
 </tbody>
 </table>
@@ -12059,7 +12051,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 21, 2026 22:26:34 UTC">October 21, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 21, 2026 22:53:48 UTC">October 21, 2026</span>
   </span>
 
     
