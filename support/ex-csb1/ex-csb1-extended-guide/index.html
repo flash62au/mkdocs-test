@@ -7297,9 +7297,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#connect-the-smart-device-to-the-ex-csb1-ap-network" class="md-nav__link">
+  <a href="#connect-the-smart-device-to-the-ex-commandstation-ap-network" class="md-nav__link">
     <span class="md-ellipsis">
-      Connect the Smart Device to the EX-CSB1 AP Network
+      Connect the Smart Device to the EX-CommandStation AP Network
     </span>
   </a>
   
@@ -7398,9 +7398,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#full-ex-csb1-operating-manual" class="md-nav__link">
+  <a href="#full-ex-csb1-technical-manual" class="md-nav__link">
     <span class="md-ellipsis">
-      Full EX-CSB1 Operating Manual
+      Full EX-CSB1 Technical Manual
     </span>
   </a>
   
@@ -7441,7 +7441,7 @@
   
   
   <span class="md-ellipsis">
-    Full Manual
+    Technical Manual
     
   </span>
   
@@ -10715,9 +10715,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#connect-the-smart-device-to-the-ex-csb1-ap-network" class="md-nav__link">
+  <a href="#connect-the-smart-device-to-the-ex-commandstation-ap-network" class="md-nav__link">
     <span class="md-ellipsis">
-      Connect the Smart Device to the EX-CSB1 AP Network
+      Connect the Smart Device to the EX-CommandStation AP Network
     </span>
   </a>
   
@@ -10816,9 +10816,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#full-ex-csb1-operating-manual" class="md-nav__link">
+  <a href="#full-ex-csb1-technical-manual" class="md-nav__link">
     <span class="md-ellipsis">
-      Full EX-CSB1 Operating Manual
+      Full EX-CSB1 Technical Manual
     </span>
   </a>
   
@@ -10978,6 +10978,7 @@ Connecting Wires to Track</p>
 2.1mm screw terminal adapter</p>
 <p><img alt="12v 3A brick power supply" src="../../../_static/images/power/12v-3A-brick.png" width="200px" /><br />
 12v 3A brick power supply</p>
+<hr />
 <h2 id="testing-your-command-station">Testing Your Command Station<a class="headerlink" href="#testing-your-command-station" title="Permanent link">&para;</a></h2>
 <h3 id="connect-track-input-power">Connect Track Input Power<a class="headerlink" href="#connect-track-input-power" title="Permanent link">&para;</a></h3>
 <p>To fully power the <strong>EX‑CommandStation/Booster One Express</strong>, just plug your power supply into the mains power (aka wall outlet) and connect the barrel end to the Command Station.</p>
@@ -10994,13 +10995,18 @@ Barrel Plug Power LEDs</p>
 <p>If you do not have a display, you will need to connect a <a href="../../../reference/tools/serial-monitor/">Serial Monitor</a> to see the status, but this is not essential for ongoing use of the system. (See: <a href="../../../reference/tools/serial-monitor/">Using a Serial Monitor</a>).</p>
 <p><img alt="OLED Status Display" src="../../../_static/images/ex-csb1/csb1_oled.png" width="200px" /><br />
 OLED Status Display</p>
+<!-- ---- -->
+
 <h3 id="connecting-your-throttle-controller">Connecting Your Throttle (controller)<a class="headerlink" href="#connecting-your-throttle-controller" title="Permanent link">&para;</a></h3>
-<h4 id="connect-the-smart-device-to-the-ex-csb1-ap-network">Connect the Smart Device to the <abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr> <abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr> Network<a class="headerlink" href="#connect-the-smart-device-to-the-ex-csb1-ap-network" title="Permanent link">&para;</a></h4>
-<p>The <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> will power up in WiFi <strong>Access Point mode</strong> as configured out of the box, with its own unique WiFi network <abbr title="Service Set Identifier. Technical term for the WiFi network's name">SSID</abbr> of <code>DCCEX_xxxxxx</code> and password of <code>PASS_xxxxxx</code> (where <strong>xxxxxx</strong> is the last 6 digits of the MAC address of the <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong>), both of which will be visible on the OLED display (or <a href="../../../reference/tools/serial-monitor/">Serial Monitor</a> log). After it boots you can connect with a WiFi throttle like <a href="../../../throttles/engine-driver/">Engine Driver</a> or <a href="../../../throttles/throttlecard/">ThrottleCard</a>.</p>
+<div class="admonition note">
+<p>The instructions below refer to the <a href="../../../throttles/engine-driver/">Engine Driver</a> Android app, but the principles described will be similar for all of the many <a href="../../../throttles/">other throttle apps</a> Android, iOS,  MS Windows and MacOS apps and other physical devices that work with <strong>EX-CommandStation</strong>.</p>
+</div>
+<h4 id="connect-the-smart-device-to-the-ex-commandstation-ap-network">Connect the Smart Device to the EX-CommandStation <abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr> Network<a class="headerlink" href="#connect-the-smart-device-to-the-ex-commandstation-ap-network" title="Permanent link">&para;</a></h4>
+<p>The <strong>EX-CommandStation</strong> will power up in WiFi <strong>Access Point mode</strong> as configured out of the box, with its own unique WiFi network <abbr title="Service Set Identifier. Technical term for the WiFi network's name">SSID</abbr> of <code>DCCEX_xxxxxx</code> and password of <code>PASS_xxxxxx</code> (where <strong>xxxxxx</strong> is the last 6 digits of the MAC address of the <strong>EX-CommandStation</strong>), both of which will be visible on the OLED display (or <a href="../../../reference/tools/serial-monitor/">Serial Monitor</a> log). After it boots you can connect with a WiFi throttle like <a href="../../../throttles/engine-driver/">Engine Driver</a> or <a href="../../../throttles/throttlecard/">ThrottleCard</a>.</p>
 <p>This quick start covers initial testing with the <a href="../../../throttles/engine-driver/">Engine Driver</a> app, though it is a broadly similar process when using any other throttle app on a Smart device.</p>
-<p>For a USB Connection with <a href="../../../products/ex-webthrottle/">EX‑WebThrottle</a> or <a href="https://dcc-ex.com/throttles/software/jmri.html"><abbr title="Java Model Railroad Interface">JMRI</abbr></a> and a computer, please see the full <a href="../ex-csb1-full-guide/">CSB1 operating manual</a>.</p>
+<p>For a USB Connection with <a href="../../../products/ex-webthrottle/">EX‑WebThrottle</a> or <a href="https://dcc-ex.com/throttles/software/jmri.html"><abbr title="Java Model Railroad Interface">JMRI</abbr></a> and a computer, please see the full <a href="../ex-csb1-full-guide/"><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr> technical manual</a>.</p>
 <p><strong>Access Point (<abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr>) mode</strong> creates a separate WiFi network on the Command Station itself, whereas <strong>Station (<abbr title="Station Mode. Joins an existing WiFi network">STA</abbr>) mode</strong> allows the Command Station to join as a WiFi device on your home or layout WiFi network. We have the <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> set to default to <strong>Access Point (<abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr>) mode</strong> for the convenience of being able to get up and running quickly.</p>
-<p>To configure your <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> to connect to your home network, see <a href="../../../products/ex-csb1/config-wifi-esp32/">WiFi Configuration</a>.</p>
+<p>To configure your <strong>EX-CommandStation</strong> to connect to your home network, see <a href="../../../products/ex-csb1/config-wifi-esp32/">WiFi Configuration</a>.</p>
 <p>The WiFi LED will illuminate once WiFi is configured and ready as an Access Point (or Station if reconfigured for <abbr title="Station Mode. Joins an existing WiFi network">STA</abbr> mode.)</p>
 <p>In your smart device's system WiFi settings, select the network settings and find an available network that begins with 'DCCEX_'.</p>
 <p><img alt="Smart Device Available Network Screen" src="../../../_static/images/engine-driver/ed_wifi_select1.png" width="200px" /><br />
@@ -11112,12 +11118,15 @@ Operate Controls to Run trains</p>
 <p>For example, to always set outputs C and D to be the second and third DCC <abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr> outputs, you would create a AUTOSTART sequence that sets both outputs C and D to DCC <abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr> mode in <cite>myAutomation.h</cite>.</p>
 <div class="language-c++ highlight"><pre><span></span><code><span class="n">AUTOSTART</span><span class="w"> </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">MAIN</span><span class="p">)</span><span class="w"> </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">PROG</span><span class="p">)</span><span class="w"> </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="n">MAIN</span><span class="p">)</span><span class="w"> </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">MAIN</span><span class="p">)</span><span class="w"> </span><span class="n">POWEROFFDONE</span>
 </code></pre></div>
+<hr />
 <h3 id="dcc-operation">DCC Operation<a class="headerlink" href="#dcc-operation" title="Permanent link">&para;</a></h3>
 <p>The <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> is set to operate in DCC mode by default. If you want to switch to any of the outputs to DC mode, you can find instructions on how to do that on the <a href="../../../enhance/trackmanager/">TrackManager</a> page.</p>
+<hr />
 <h3 id="booster-mode">Booster Mode<a class="headerlink" href="#booster-mode" title="Permanent link">&para;</a></h3>
 <p>The <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> as the name implies can operate as a Command Station or a Booster. See <a href="https://dcc-ex.com/ex-commandstation/rtr-booster.html"><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr> as a booster page</a> for instructions on how to use the <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> as a booster.</p>
-<h3 id="full-ex-csb1-operating-manual">Full <abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr> Operating Manual<a class="headerlink" href="#full-ex-csb1-operating-manual" title="Permanent link">&para;</a></h3>
-<p><a href="../ex-csb1-full-guide/"><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr> Operating Manual</a>. <a href="../../../reference/microcontrollers/ex-csb1/csb1-technical/">Design files</a></p>
+<hr />
+<h3 id="full-ex-csb1-technical-manual">Full <abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr> Technical Manual<a class="headerlink" href="#full-ex-csb1-technical-manual" title="Permanent link">&para;</a></h3>
+<p><a href="../ex-csb1-full-guide/"><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr> Technical Manual</a>. <a href="../../../reference/microcontrollers/ex-csb1/csb1-technical/">Design files</a></p>
 <hr />
 <h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
 <p>If you are happy with the default configuration of your <strong>EX‑CommandStation/Booster One Express</strong> there is nothing more you need to do.</p>
@@ -11163,7 +11172,7 @@ Operate Controls to Run trains</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 19, 2026 06:52:06 UTC">October 19, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 21, 2026 01:11:13 UTC">October 21, 2026</span>
   </span>
 
     
@@ -11203,13 +11212,13 @@ Operate Controls to Run trains</p>
         
         
           
-          <a href="../ex-csb1-full-guide/" class="md-footer__link md-footer__link--next" aria-label="Next: Full Manual">
+          <a href="../ex-csb1-full-guide/" class="md-footer__link md-footer__link--next" aria-label="Next: Technical Manual">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Full Manual
+                Technical Manual
               </div>
             </div>
             <div class="md-footer__button md-icon">
