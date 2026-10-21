@@ -13,8 +13,8 @@
     <language>en</language>
 
     
-    <pubDate>Tue, 20 Oct 2026 21:58:03 -0000</pubDate>
-    <lastBuildDate>Tue, 20 Oct 2026 21:58:03 -0000</lastBuildDate>
+    <pubDate>Wed, 21 Oct 2026 00:11:10 -0000</pubDate>
+    <lastBuildDate>Wed, 21 Oct 2026 00:11:10 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -30,6 +30,26 @@
     
 
     
+    
+    <item>
+      <title>New Documentation</title>
+      
+      
+        
+      <author>peteGSX</author>
+        
+      
+      
+      
+      <description>&lt;h1&gt;New Documentation&lt;/h1&gt;
+&lt;p&gt;We have new documentation!&lt;/p&gt;</description>
+      <link>https://dcc-ex.com/mkdocs-test/news/2025/06/new-documentation/</link>
+      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
+      <source url="https://dcc-ex.com/mkdocs-test/feed_rss_created.xml">DCC-EX News</source>
+      
+      <guid isPermaLink="true">https://dcc-ex.com/mkdocs-test/news/2025/06/new-documentation/</guid>
+      
+    </item>
     
   </channel>
 </rss>
